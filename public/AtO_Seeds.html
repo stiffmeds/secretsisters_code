@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="bg-dark">
+<head>
+    <title>loading...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="generic.css" rel="stylesheet">
+    <link href="code.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script type="module">
+        import unyRandom from 'https://cdn.jsdelivr.net/npm/uny-random@1.0.1/+esm'
+        window.unyRandom = unyRandom;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/long@5.2.3/umd/index.min.js"></script>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha384-hG927x624PENgmWpFXvtXur3MEE0/cNnW0uTi+AcHTSFncBqimnzYyBzy8aFDA1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="autocomplete.js"></script>
+    <nav class="navbar navbar-expand meds-bg-darkest fixed-top" style="height: 56px !important;">
+        <div class="container-fluid py-0 mw-1920">
+            <a id="title-header" tabindex="0" class="navbar-brand" href="AtO" target="_blank"><span class="ato-title me-2">Across the Obelisk</span> <span class="text-light">Seed Checker v0.2.1</span></a>
+            <div class="float-end ms-2 me-1"><a class="meds-link" id="btn_show_settings" aria-label="Settings"><i class="bi bi-gear" style="font-size: 32px;"></i></a></div>
+        </div>
+    </nav>
+
+    <div id="meds-scrollbox" style="height: calc(100vh - 56px); overflow: auto;">
+        <div class="modal fade" id="modal_settings" tabindex="-1" aria-labelledby="label_modal_settings" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h1 class="modal-title fs-5" id="label_modal_settings">Settings</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="j">
+                            <div class="input-group flex-nowrap">
+                                <div class="form-floating">
+                                    <select class="form-select meds-text-bg-darker" id="select_party1">
+                                        <option selected="selected" value=""></option>
+                                        <option value="ranger">Andrin</option>
+                                        <option value="warden">Bree</option>
+                                        <option value="pyromancer">Cornelius</option>
+                                        <option value="elementalist">Evelyn</option>
+                                        <option value="berserker">Grukli</option>
+                                        <option value="minstrel">Gustav</option>
+                                        <option value="sentinel">Heiner</option>
+                                        <option value="paladin">Laia</option>
+                                        <option value="mercenary">Magnus</option>
+                                        <option value="voodoowitch">Malukah</option>
+                                        <option value="fallen">Navalea</option>
+                                        <option value="prophet">Nezglekt</option>
+                                        <option value="priest">Ottis</option>
+                                        <option value="cleric">Reginald</option>
+                                        <option value="archer">Sylvie</option>
+                                        <option value="assassin">Thuls</option>
+                                        <option value="loremaster">Wilbur</option>
+                                        <option value="bandit">Yogger</option>
+                                        <option value="warlock">Zek</option>
+                                        <option value="youngmagnus">Young Magnus</option>
+                                        <option value="youngyogger">Young Yogger</option>
+                                        <option value="youngbinks">Binks</option>
+                                        <option value="youngcharls">Charls</option>
+                                        <option value="youngheiner">Model C</option>
+                                        <option value="youngottis">Young Ottis</option>
+                                    </select>
+                                    <label for="select_party1" class="fw-6">Hero 1</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select meds-text-bg-darker" id="select_party2">
+                                        <option selected="selected" value=""></option>
+                                        <option value="ranger">Andrin</option>
+                                        <option value="warden">Bree</option>
+                                        <option value="pyromancer">Cornelius</option>
+                                        <option value="elementalist">Evelyn</option>
+                                        <option value="berserker">Grukli</option>
+                                        <option value="minstrel">Gustav</option>
+                                        <option value="sentinel">Heiner</option>
+                                        <option value="paladin">Laia</option>
+                                        <option value="mercenary">Magnus</option>
+                                        <option value="voodoowitch">Malukah</option>
+                                        <option value="fallen">Navalea</option>
+                                        <option value="prophet">Nezglekt</option>
+                                        <option value="priest">Ottis</option>
+                                        <option value="cleric">Reginald</option>
+                                        <option value="archer">Sylvie</option>
+                                        <option value="assassin">Thuls</option>
+                                        <option value="loremaster">Wilbur</option>
+                                        <option value="bandit">Yogger</option>
+                                        <option value="warlock">Zek</option>
+                                        <option value="youngmagnus">Young Magnus</option>
+                                        <option value="youngyogger">Young Yogger</option>
+                                        <option value="youngbinks">Binks</option>
+                                        <option value="youngcharls">Charls</option>
+                                        <option value="youngheiner">Model C</option>
+                                        <option value="youngottis">Young Ottis</option>
+                                    </select>
+                                    <label for="select_party2" class="fw-6">Hero 2</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select meds-text-bg-darker" id="select_party3">
+                                        <option selected="selected" value=""></option>
+                                        <option value="ranger">Andrin</option>
+                                        <option value="warden">Bree</option>
+                                        <option value="pyromancer">Cornelius</option>
+                                        <option value="elementalist">Evelyn</option>
+                                        <option value="berserker">Grukli</option>
+                                        <option value="minstrel">Gustav</option>
+                                        <option value="sentinel">Heiner</option>
+                                        <option value="paladin">Laia</option>
+                                        <option value="mercenary">Magnus</option>
+                                        <option value="voodoowitch">Malukah</option>
+                                        <option value="fallen">Navalea</option>
+                                        <option value="prophet">Nezglekt</option>
+                                        <option value="priest">Ottis</option>
+                                        <option value="cleric">Reginald</option>
+                                        <option value="archer">Sylvie</option>
+                                        <option value="assassin">Thuls</option>
+                                        <option value="loremaster">Wilbur</option>
+                                        <option value="bandit">Yogger</option>
+                                        <option value="warlock">Zek</option>
+                                        <option value="youngmagnus">Young Magnus</option>
+                                        <option value="youngyogger">Young Yogger</option>
+                                        <option value="youngbinks">Binks</option>
+                                        <option value="youngcharls">Charls</option>
+                                        <option value="youngheiner">Model C</option>
+                                        <option value="youngottis">Young Ottis</option>
+                                    </select>
+                                    <label for="select_party3" class="fw-6">Hero 3</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select meds-text-bg-darker" id="select_party4">
+                                        <option selected="selected" value=""></option>
+                                        <option value="ranger">Andrin</option>
+                                        <option value="warden">Bree</option>
+                                        <option value="pyromancer">Cornelius</option>
+                                        <option value="elementalist">Evelyn</option>
+                                        <option value="berserker">Grukli</option>
+                                        <option value="minstrel">Gustav</option>
+                                        <option value="sentinel">Heiner</option>
+                                        <option value="paladin">Laia</option>
+                                        <option value="mercenary">Magnus</option>
+                                        <option value="voodoowitch">Malukah</option>
+                                        <option value="fallen">Navalea</option>
+                                        <option value="prophet">Nezglekt</option>
+                                        <option value="priest">Ottis</option>
+                                        <option value="cleric">Reginald</option>
+                                        <option value="archer">Sylvie</option>
+                                        <option value="assassin">Thuls</option>
+                                        <option value="loremaster">Wilbur</option>
+                                        <option value="bandit">Yogger</option>
+                                        <option value="warlock">Zek</option>
+                                        <option value="youngmagnus">Young Magnus</option>
+                                        <option value="youngyogger">Young Yogger</option>
+                                        <option value="youngbinks">Binks</option>
+                                        <option value="youngcharls">Charls</option>
+                                        <option value="youngheiner">Model C</option>
+                                        <option value="youngottis">Young Ottis</option>
+                                    </select>
+                                    <label for="select_party4" class="fw-6">Hero 4</label>
+                                </div>
+                            </div>
+                            <div class="d-flex w-100 mt-3">
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio_nodes" id="check_nodes_all" checked>
+                                    <label class="form-check-label" for="check_nodes_all">
+                                        All Nodes
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio_nodes" id="check_nodes_optimal">
+                                    <label class="form-check-label" for="check_nodes_optimal">
+                                        Optimal Path Only
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="i j">Note this does not update event/corruptor counts in each accordion heading - all except Ulminin will continue to show optimal path only (for now...)</div>
+                            <div class="mt-3 h3"><a class="meds-link" href="/Offline/AtO Seed Checker 0.2.1.zip">Offline Version</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav-infoContent" class="tab-content mx-auto px-25 py-1 mw-1920">
+            <div id="nav-info" class="tab-pane ms-0 w-100 fade show active text-light">
+                <div class="my-2 j">This is a seed-checking tool for Across the Obelisk. It can also be set to only check the <b>optimal</b> path for each zone (as determined by the good folks in the <a href="https://discord.com/invite/VuQKR2yVxC" target="_blank" class="meds-link">AtO Discord</a>).</div>
+                <div class="my-2 j">Please ping @stiffmeds on Discord if you find any errors or have any questions. More features coming Soon™.</div>
+                <div class="my-2 j" id="loading_data">Please be patient while AtO v1.2.1 data is loading...</div>
+                <div class="input-group flex-nowrap mw-400 mx-auto my-2 sticky-top">
+                    <div class="form-floating">
+                        <input type="text" class="form-control text-bg-dark" id="text_seed">
+                        <label for="text_seed"><span class="fw-6">Seed</span></label>
+                    </div>
+                    <button disabled id="btn_checkseed" class="btn btn-success border-secondary mw-40px" type="button"><i class="bi bi-binoculars-fill"></i></button>
+                </div>
+                <div class="accordion my-2 visually-hidden">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-summary">
+                                Summary
+                            </button>
+                        </h2>
+                        <div id="accordion-summary" class="accordion-collapse collapse show">
+                            <div class="mx-3 mt-2 j">Note that the score for Ulminin <i>looks</i> very large because it shows includes all corruptors rather than just the optimal path (which has not yet been determined).</div>
+                            <div class="accordion-body">
+                                <table class="table table-dark table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-7">Zone</th>
+                                            <th scope="col" class="fw-7">Missing Nodes</th>
+                                            <th scope="col" class="fw-7">Events</th>
+                                            <th scope="col" class="fw-7">Corruptors</th>
+                                            <th scope="col" class="fw-7">Extreme</th>
+                                            <th scope="col" class="fw-7">Hard</th>
+                                            <th scope="col" class="fw-7">Average</th>
+                                            <th scope="col" class="fw-7">Easy</th>
+                                            <th scope="col" class="fw-7">Corruptor Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="summary-tbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-senenthia">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-senenthia">
+                                <div class="w-100 d-flex">Senenthia<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-senenthia" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-aquarfall">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-aquarfall">
+                                <div class="w-100 d-flex">Aquarfall<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-aquarfall" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-velkarath">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-velkarath">
+                                <div class="w-100 d-flex">Velkarath<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-velkarath" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-faeborg">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faeborg">
+                                <div class="w-100 d-flex">Faeborg<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-faeborg" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-ulminin">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-ulminin">
+                                <div class="w-100 d-flex">Ulminin<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-ulminin" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-voidlow">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-voidlow">
+                                <div class="w-100 d-flex">Void (low)<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-voidlow" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item meds-accordionbg-voidhigh">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-7" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-voidhigh">
+                                <div class="w-100 d-flex">Void (high)<span class="ms-auto me-2"></span></div>
+                            </button>
+                        </h2>
+                        <div id="accordion-voidhigh" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="row row-cols-2 row-cols-lg-3 gy-2 gx-4 gy-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-known-issues" aria-expanded="false" aria-controls="collapse-known-issues">Known Issues</a></div>
+                <div class="my-2 j collapse" id="collapse-known-issues">
+                    <ul class="mb-1">
+                        <li>Events do not indicate where they lead to combat or another event.</li>
+                        <li>Nodes, events and event replies ignore requirements.</li>
+                        <li>Combats do not take into account random monsters or monster upgrades (despair mode, etc). Soon™!</li>
+                        <li>Combats do not indicate when they lead to another event.</li>
+                        <li>Events do not indicate whether experience is given to one person or the group? but need to look into that a bit further...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="socket.io/socket.io.js"></script>-->
+    <script src="AtO_Seeds_Data.min.js"></script>
+    <script src="AtO_Seeds.js"></script>
+</body>
+</html>

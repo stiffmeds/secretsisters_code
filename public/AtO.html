@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="bg-dark">
+<head>
+    <title>Across the Obelisk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="generic.css" rel="stylesheet">
+    <link href="code.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha384-hG927x624PENgmWpFXvtXur3MEE0/cNnW0uTi+AcHTSFncBqimnzYyBzy8aFDA1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="autocomplete.js"></script>
+    <nav class="navbar navbar-expand meds-bg-darkest fixed-top" style="height: 56px !important;">
+        <div class="container-fluid py-0 mw-1920">
+            <a id="title-header" tabindex="0" class="navbar-brand" href="AtO" target="_blank"><span class="ato-title me-2">Across the Obelisk</span></a>
+        </div>
+    </nav>
+
+    <div id="meds-scrollbox" style="height: calc(100vh - 56px); overflow: auto;">
+        <div id="nav-infoContent" class="tab-content mx-auto px-25 py-1 mw-1920">
+            <div id="nav-info" class="tab-pane ms-0 w-100 fade show active text-light">
+                <div class="my-2 j">Here are some tools for <a href="https://store.steampowered.com/app/1385380/Across_the_Obelisk/" target="_blank" class="meds-link">Across the Obelisk</a>, an amazing roguelike deckbuilder.</div>
+                <ul>
+                    <li><a href="https://github.com/stiffmeds/Obeliskial-Options" class="meds-link">Obeliskial Options</a>, a mod for changing gameplay, duplicating characters and enabling custom content;</li>
+                    <li><a href="AtO_Seeds" target="_blank" class="meds-link">Seed Checker</a>, for ensuring you’re not wasting your time before starting a Madness 16 run;</li>
+                    <li><a href="AtO_Custom" target="_blank" class="meds-link">Card/Item Creator</a>, for use with Obeliskial Options;</li>
+                    <li><a href="https://github.com/stiffmeds/Stop-it-Sylvie" class="meds-link">Stop it, Sylvie!</a>, a mod that replaces Sylvie’s hit sound;</li>
+                    <li><a href="https://github.com/stiffmeds/Backseating_Begone" class="meds-link">Backseating Begone</a>, a mod that disables receipt of some emotes;</li>
+                    <li><a href="https://github.com/stiffmeds/Deaths-Reach-Returns" class="meds-link">Death’s Reach Returns</a>, a mod that reverts audio changes to the Death’s Reach card;</li>
+                    <li><a href="https://github.com/stiffmeds/Superlative-Sandbox" class="meds-link">Superlative Sandbox</a>, a mod that increases Sandbox Mode limits;</li>
+                    <li><a href="https://github.com/stiffmeds/Deck-Distributor" class="meds-link">Deck Distributor</a>, a mod that enables import/export of decks at the Magic Forge; <i>and</i></li>
+                    <li>a fork of DontTouchFranky’s <a href="https://github.com/stiffmeds/AcrossTheObelisk_MoreTranslations/" class="meds-link">MoreTranslations</a>, updated for Sands of Ulminin and the Japanese language.</li>
+                </ul>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-planned" aria-expanded="true" aria-controls="collapse-planned">Planned</a></div>
+                <div class="my-2 j collapse show" id="collapse-planned">
+                    <div class="j">in rough order of priority, noting that I am taking a very 'scattershot' approach to development right now</div>
+                    <ul class="mb-1">
+                        <li>CUSTOM OBELISKIAL OPTIONS UI, PLEASE. I AM SO SICK OF MANUALLY CALLING METHODS</li>
+                        <li>shop/loot checker</li>
+                        <li>finish notes on Sands of Ulminin code changes</li>
+                        <li>full testing of Obeliskial Options for Sands of Ulminin</li>
+                        <li>add Obelisk Challenge to Seed Checker</li>
+                        <li>Seed Checker update to include detailed event/shop/loot/etc data</li>
+                        <li>add export for CardPlayerPairsPackData</li>
+                        <li>update turn order list/flow documentation with new carddata properties</li>
+                        <li>profile editor</li>
+                        <li>proper understanding of Random Combats madness modifier so I can build it into Seed Checker</li>
+                        <li>auras/curses (pray for my victory against the fell beast TextMeshPro)</li>
+                        <li>MOVE ALL THE DATA INTO MYSQL, IT'S TIME, I'VE HAD ENOUGH OF THESE SHITTY LITTLE JSON FILES</li>
+                        <li>learning to actually use Unity so I can build my own character models</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
