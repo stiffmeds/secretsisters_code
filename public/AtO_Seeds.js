@@ -463,8 +463,19 @@ $(document).ready(function () {
         var newTooltipTriggerList = document.querySelectorAll('.col .input-group [data-bs-toggle="tooltip"]');
         var newTooltipList = [...newTooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         $("#summary-tbody").html("");
+        // vars for total corruptor score
+        let totalMaxCurroptorScore = 0;
+        let totalCurroptorScore = 0;
+        let potentialMaxCurroptor = [];
+        let potentialCurroptor = [];
+         // list of zones we must include in total
+        const baseZoneList = ["senenthia", "voidlow", "voidhigh"];
+        // list of zones that might not be included in total
+        const extraZoneList = ["aquarfall", "velkarath", "faeborg", "ulminin"];
+        // end vars for total corruptor
         zoneList.forEach(function (zone) {
             // this is messy af and v. overkill (so many variables!) but the witching hour has come and I miss painkillers. will revisit when I do score estimates.
+            // should probably add these vars to global object, in case we want to do more calculations outside of this scope. #TODO
             var iOptimalEvents = (typeof optimalEvents[zone] === "undefined") ? 0 : optimalEvents[zone];
             var iSuboptimalEvents = (typeof suboptimalEvents[zone] === "undefined") ? 0 : suboptimalEvents[zone];
             var iMissingNodes = (typeof missingNodes[zone] === "undefined") ? 0 : missingNodes[zone];
@@ -493,7 +504,52 @@ $(document).ready(function () {
     <td>` + iCorruptorScore + `/` + iMaxCorruptorScore + `</td>
 </tr>`;
             $("#summary-tbody").append(newHTML);
+            // start logic for total corruptor score
+            if (baseZoneList.includes(zone)){
+                // always add these to total
+                totalMaxCurroptorScore += iMaxCorruptorScore;
+                totalCurroptorScore += iCorruptorScore;
+            } else if (extraZoneList.includes(zone)){
+                // add to list
+                potentialMaxCurroptor.push(iMaxCorruptorScore);
+                potentialCurroptor.push(iCorruptorScore);
+                // check if it's more than 2 zones
+                if (potentialMaxCurroptor.length > 2){
+                    // get index of lowest value
+                    var lowestIndex = potentialCurroptor.indexOf(Math.min(...potentialCurroptor));
+                    // remove lowest corruptor score from both lists
+                    potentialCurroptor.splice(lowestIndex, 1);
+                    potentialMaxCurroptor.splice(lowestIndex, 1);
+                }
+            } else {
+                console.log('bug hunting....'); // ??? lol bug hunting, maybe not es15 compliant?
+            }
+            // end logic for total corruptor score
         });
+        // add code to generate new Total column:
+        // first, add up all the potential max corruptor scores
+        var potentialMaxCurroptorSum = potentialMaxCurroptor.reduce((a, b) => a + b, 0);
+        var potentialCurroptorSum = potentialCurroptor.reduce((a, b) => a + b, 0);
+        // then add the base zones to the total
+        var actualTotalMaxCurroptorScore = totalMaxCurroptorScore + potentialMaxCurroptorSum;
+        var actualTotalCurroptorScore = totalCurroptorScore + potentialCurroptorSum;
+        var extrHTML = `
+            <tr>
+                <th scope="row" class="fw-7">
+                    Total:
+                </th>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5"></td>
+                <td class="fw-5">${actualTotalCurroptorScore}/${actualTotalMaxCurroptorScore}</td>
+            </tr>
+        `;
+        $("#summary-tbody").append(extrHTML);
+
         $(".accordion.visually-hidden").removeClass("visually-hidden");
 
     });
