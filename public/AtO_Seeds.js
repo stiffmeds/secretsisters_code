@@ -108,6 +108,21 @@ $.fn.digits = function () {
     });
 };
 
+var optimalEvents = {};
+var suboptimalEvents = {};
+var missingNodes = {};
+var combatCommon = {};
+var combatUncommon = {};
+var combatRare = {};
+var combatEpic = {};
+var combatMissing = {};
+var eventMissing = {};
+var totalEvents = {};
+var doneCombats = {};
+var totalCombats = {};
+var corruptorScore = {};
+var maxCorruptorScore = {};
+
 $(document).ready(function () {
     document.title = "AtO Seed Checker";
     $("#loading_data").text("AtO v1.2.1 data has loaded!");
@@ -233,15 +248,20 @@ $(document).ready(function () {
 
         });
         console.log(outcomes);
-        var optimalEvents = {};
-        var suboptimalEvents = {};
-        var missingNodes = {};
-        var combatCommon = {};
-        var combatUncommon = {};
-        var combatRare = {};
-        var combatEpic = {};
-        var combatMissing = {};
-        var eventMissing = {};
+        optimalEvents = {};
+        suboptimalEvents = {};
+        missingNodes = {};
+        combatCommon = {};
+        combatUncommon = {};
+        combatRare = {};
+        combatEpic = {};
+        combatMissing = {};
+        eventMissing = {};
+        totalEvents = {};
+        doneCombats = {};
+        totalCombats = {};
+        corruptorScore = {};
+        maxCorruptorScore = {};
         outcomes.forEach(function (curNode) {
             var node = nodeData[curNode.nodeID];
             var zone = "";
@@ -463,93 +483,94 @@ $(document).ready(function () {
         var newTooltipTriggerList = document.querySelectorAll('.col .input-group [data-bs-toggle="tooltip"]');
         var newTooltipList = [...newTooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         $("#summary-tbody").html("");
-        // vars for total corruptor score
-        let totalMaxCurroptorScore = 0;
-        let totalCurroptorScore = 0;
-        let potentialMaxCurroptor = [];
-        let potentialCurroptor = [];
-         // list of zones we must include in total
-        const baseZoneList = ["senenthia", "voidlow", "voidhigh"];
-        // list of zones that might not be included in total
-        const extraZoneList = ["aquarfall", "velkarath", "faeborg", "ulminin"];
-        // end vars for total corruptor
         zoneList.forEach(function (zone) {
             // this is messy af and v. overkill (so many variables!) but the witching hour has come and I miss painkillers. will revisit when I do score estimates.
-            // should probably add these vars to global object, in case we want to do more calculations outside of this scope. #TODO
-            var iOptimalEvents = (typeof optimalEvents[zone] === "undefined") ? 0 : optimalEvents[zone];
-            var iSuboptimalEvents = (typeof suboptimalEvents[zone] === "undefined") ? 0 : suboptimalEvents[zone];
-            var iMissingNodes = (typeof missingNodes[zone] === "undefined") ? 0 : missingNodes[zone];
-            var iCombatCommon = (typeof combatCommon[zone] === "undefined") ? 0 : combatCommon[zone];
-            var iCombatUncommon = (typeof combatUncommon[zone] === "undefined") ? 0 : combatUncommon[zone];
-            var iCombatRare = (typeof combatRare[zone] === "undefined") ? 0 : combatRare[zone];
-            var iCombatEpic = (typeof combatEpic[zone] === "undefined") ? 0 : combatEpic[zone];
-            var iCombatMissing = (typeof combatMissing[zone] === "undefined") ? 0 : combatMissing[zone];
-            var iEventMissing = (typeof eventMissing[zone] === "undefined") ? 0 : eventMissing[zone];
-            var iTotalEvents = iOptimalEvents + iSuboptimalEvents + iEventMissing;
-            var iDoneCombats = iCombatCommon + iCombatUncommon + iCombatRare + iCombatEpic;
-            var iTotalCombats = iDoneCombats + iCombatMissing;
-            var iCorruptorScore = iCombatCommon * 40 + iCombatUncommon * 80 + iCombatRare * 130 + iCombatEpic * 200;
-            var iMaxCorruptorScore = iTotalCombats * 200;
-            var newHTML = iTotalEvents == 0 ? "" : `<span class="text-` + (iOptimalEvents == iTotalEvents ? `success` : `danger`) + `">` + iOptimalEvents + `/` + iTotalEvents + ` events</span>, `;
-            newHTML += `<span class="text-` + (iCombatMissing == 0 ? `success` : `danger`) + `">` + iDoneCombats + `/` + iTotalCombats + ` corruptors</span> (<span class="meds-text-epic">` + iCombatEpic + ` Extreme</span>, <span class="text-primary">` + iCombatRare + ` Hard</span>, <span class="text-success">` + iCombatUncommon + ` Average</span>, <span class="text-secondary">` + iCombatCommon + ` Easy</span>)`;
+            optimalEvents[zone] = (typeof optimalEvents[zone] === "undefined") ? 0 : optimalEvents[zone];
+            suboptimalEvents[zone] = (typeof suboptimalEvents[zone] === "undefined") ? 0 : suboptimalEvents[zone];
+            missingNodes[zone] = (typeof missingNodes[zone] === "undefined") ? 0 : missingNodes[zone];
+            combatCommon[zone] = (typeof combatCommon[zone] === "undefined") ? 0 : combatCommon[zone];
+            combatUncommon[zone] = (typeof combatUncommon[zone] === "undefined") ? 0 : combatUncommon[zone];
+            combatRare[zone] = (typeof combatRare[zone] === "undefined") ? 0 : combatRare[zone];
+            combatEpic[zone] = (typeof combatEpic[zone] === "undefined") ? 0 : combatEpic[zone];
+            combatMissing[zone] = (typeof combatMissing[zone] === "undefined") ? 0 : combatMissing[zone];
+            eventMissing[zone] = (typeof eventMissing[zone] === "undefined") ? 0 : eventMissing[zone];
+            totalEvents[zone] = optimalEvents[zone] + suboptimalEvents[zone] + eventMissing[zone];
+            doneCombats[zone] = combatCommon[zone] + combatUncommon[zone] + combatRare[zone] + combatEpic[zone];
+            totalCombats[zone] = doneCombats[zone] + combatMissing[zone];
+            corruptorScore[zone] = combatCommon[zone] * 40 + combatUncommon[zone] * 80 + combatRare[zone] * 130 + combatEpic[zone] * 200;
+            maxCorruptorScore[zone] = totalCombats[zone] * 200;
+            var newHTML = totalEvents[zone] == 0 ? "" : `<span class="text-` + (optimalEvents[zone] == totalEvents[zone] ? `success` : `danger`) + `">` + optimalEvents[zone] + `/` + totalEvents[zone] + ` events</span>, ` + `<span class="text-` + (combatMissing[zone] == 0 ? `success` : `danger`) + `">` + doneCombats[zone] + `/` + totalCombats[zone] + ` corruptors</span> (<span class="meds-text-epic">` + combatEpic[zone] + ` Extreme</span>, <span class="text-primary">` + combatRare[zone] + ` Hard</span>, <span class="text-success">` + combatUncommon[zone] + ` Average</span>, <span class="text-secondary">` + combatCommon[zone] + ` Easy</span>)`;
             $('[data-bs-target="#accordion-' + zone + '"] div span.ms-auto.me-2').html(newHTML);
             newHTML = `<tr><th scope="row" class="fw-7">` + zoneName[zone] + `</th>
-    <td class="fw-5 text-` + (iMissingNodes == 0 ? `success` : `danger`) + `">` + iMissingNodes + `</td>
-    <td class="fw-5 text-` + (iEventMissing == 0 ? `success` : `danger`) + `">` + iOptimalEvents + `/` + iTotalEvents + `</td>
-    <td class="fw-5 text-` + (iCombatMissing == 0 ? `success` : `danger`) + `">` + iDoneCombats + `/` + iTotalCombats + `</td>
-    <td class="fw-5 meds-text-epic">` + iCombatEpic + `</td>
-    <td class="fw-5 text-primary">` + iCombatRare + `</td>
-    <td class="fw-5 text-success">` + iCombatUncommon + `</td>
-    <td class="fw-5 text-secondary">` + iCombatCommon + `</td>
-    <td>` + iCorruptorScore + `/` + iMaxCorruptorScore + `</td>
+    <td class="fw-5 text-` + (missingNodes[zone] == 0 ? `success` : `danger`) + `">` + missingNodes[zone] + `</td>
+    <td class="fw-5 text-` + (eventMissing[zone] == 0 ? `success` : `danger`) + `">` + optimalEvents[zone] + `/` + totalEvents[zone] + `</td>
+    <td class="fw-5 text-` + (combatMissing[zone] == 0 ? `success` : `danger`) + `">` + doneCombats[zone] + `/` + totalCombats[zone] + `</td>
+    <td class="fw-5 meds-text-epic">` + combatEpic[zone] + `</td>
+    <td class="fw-5 text-primary">` + combatRare[zone] + `</td>
+    <td class="fw-5 text-success">` + combatUncommon[zone] + `</td>
+    <td class="fw-5 text-secondary">` + combatCommon[zone] + `</td>
+    <td>` + corruptorScore[zone] + `/` + maxCorruptorScore[zone] + `</td>
 </tr>`;
             $("#summary-tbody").append(newHTML);
-            // start logic for total corruptor score
-            if (baseZoneList.includes(zone)){
-                // always add these to total
-                totalMaxCurroptorScore += iMaxCorruptorScore;
-                totalCurroptorScore += iCorruptorScore;
-            } else if (extraZoneList.includes(zone)){
-                // add to list
-                potentialMaxCurroptor.push(iMaxCorruptorScore);
-                potentialCurroptor.push(iCorruptorScore);
-                // check if it's more than 2 zones
-                if (potentialMaxCurroptor.length > 2){
-                    // get index of lowest value
-                    var lowestIndex = potentialCurroptor.indexOf(Math.min(...potentialCurroptor));
-                    // remove lowest corruptor score from both lists
-                    potentialCurroptor.splice(lowestIndex, 1);
-                    potentialMaxCurroptor.splice(lowestIndex, 1);
-                }
-            } else {
-                console.log('bug hunting....'); // ??? lol bug hunting, maybe not es15 compliant?
-            }
-            // end logic for total corruptor score
         });
-        // add code to generate new Total column:
-        // first, add up all the potential max corruptor scores
-        var potentialMaxCurroptorSum = potentialMaxCurroptor.reduce((a, b) => a + b, 0);
-        var potentialCurroptorSum = potentialCurroptor.reduce((a, b) => a + b, 0);
-        // then add the base zones to the total
-        var actualTotalMaxCurroptorScore = totalMaxCurroptorScore + potentialMaxCurroptorSum;
-        var actualTotalCurroptorScore = totalCurroptorScore + potentialCurroptorSum;
+        // add code to generate new Total column
+        var optimalZones = ["senenthia"];
+        // list of zones that might not be included in total
+        var extraZoneList = ["aquarfall", "velkarath", "faeborg", "ulminin"];
+        var extraZoneScore = [];
+        extraZoneList.forEach(zone => extraZoneScore.push(corruptorScore[zone]));
+        while (extraZoneScore.length > 2) {
+            // get index of lowest value
+            var lowestIndex = extraZoneScore.indexOf(Math.min(...extraZoneScore));
+            // remove lowest corruptor score + zone
+            extraZoneList.splice(lowestIndex, 1);
+            extraZoneScore.splice(lowestIndex, 1);
+        };
+        optimalZones = optimalZones.concat(extraZoneList, "voidlow", "voidhigh");
+        // add up totals
+        var iMissingNodes = 0;
+        var iOptimalEvents = 0;
+        var iTotalEvents = 0;
+        var iDoneCombats = 0;
+        var iTotalCombats = 0;
+        var iCombatEpic = 0;
+        var iCombatRare = 0;
+        var iCombatUncommon = 0;
+        var iCombatCommon = 0;
+        var iCorruptorScore = 0;
+        var iMaxCorruptorScore = 0;
+        var sZoneNames = [];
+        optimalZones.forEach(zone => {
+            iMissingNodes += missingNodes[zone];
+            iOptimalEvents += optimalEvents[zone];
+            iTotalEvents += totalEvents[zone];
+            iDoneCombats += doneCombats[zone];
+            iTotalCombats += totalCombats[zone];
+            iCombatEpic += combatEpic[zone];
+            iCombatRare += combatRare[zone];
+            iCombatUncommon += combatUncommon[zone];
+            iCombatCommon += combatCommon[zone];
+            iCorruptorScore += corruptorScore[zone];
+            iMaxCorruptorScore += maxCorruptorScore[zone];
+            sZoneNames.push(zoneName[zone]);
+        });
         var extrHTML = `
             <tr>
-                <th scope="row" class="fw-7">
-                    Total:
+                <th scope="row" class="fw-7 i">
+                    <a id="total-row-tooltip" class="meds-link" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="${sZoneNames.join(", ")}">Total</a>
                 </th>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5"></td>
-                <td class="fw-5">${actualTotalCurroptorScore}/${actualTotalMaxCurroptorScore}</td>
+                <td class="i">${iMissingNodes}</td>
+                <td class="i">${iOptimalEvents}/${iTotalEvents}</td>
+                <td class="i">${iDoneCombats}/${iTotalCombats}</td>
+                <td class="i">${iCombatEpic}</td>
+                <td class="i">${iCombatRare}</td>
+                <td class="i">${iCombatUncommon}</td>
+                <td class="i">${iCombatCommon}</td>
+                <td class="i">${iCorruptorScore}/${iMaxCorruptorScore}</td>
             </tr>
         `;
         $("#summary-tbody").append(extrHTML);
-
+        const tooltip = bootstrap.Tooltip.getOrCreateInstance('#total-row-tooltip');
         $(".accordion.visually-hidden").removeClass("visually-hidden");
 
     });
