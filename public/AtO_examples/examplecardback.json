@@ -1,0 +1,15 @@
+{
+    "AdventureLevel": 0,
+    "BaseCardback": false,
+    "CardbackID": "examplecardback",
+    "CardbackName": "Example",
+    "CardbackOrder": 1000,
+    "CardbackSprite": "exampleCardbackSprite",
+    "CardbackSubclass": "mercenary",
+    "Locked": false,
+    "ObeliskLevel": 0,
+    "RankLevel": 0,
+    "ShowIfLocked": false,
+    "Sku": "",
+    "SteamStat": ""
+}

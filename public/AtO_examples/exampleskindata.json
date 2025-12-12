@@ -1,0 +1,15 @@
+{
+    "SkinID": "exampleskin",
+    "SkinName": "Example",
+    "SkinGO": "examplegameobject",
+    "SkinSubclass": "mercenary",
+    "BaseSkin": false,
+    "PerkLevel": 0,
+    "SkinOrder": 4,
+    "Sku": "",
+    "SpritePortrait": "exampleSpritePortrait",
+    "SpritePortraitGrande": "exampleSpritePortraitGrande",
+    "SpriteSilueta": "exampleSpriteSilueta",
+    "SpriteSiluetaGrande": "exampleSpriteSiluetaGrande",
+    "SteamStat": ""
+}

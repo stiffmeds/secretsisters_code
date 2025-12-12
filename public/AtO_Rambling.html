@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="bg-dark">
+<head>
+    <title>Across the Obelisk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="generic.css" rel="stylesheet">
+    <link href="code.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha384-hG927x624PENgmWpFXvtXur3MEE0/cNnW0uTi+AcHTSFncBqimnzYyBzy8aFDA1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs.min.css" integrity="sha384-Ao8ogxjh8YOpD0QuD98ftM0JgunR9NBRo18vvW76DgMR3Ek/XScY5KdUdV1Ams5S" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js" integrity="sha384-F/bZzf7p3Joyp5psL90p/p89AZJsndkSoGwRpXcZhleCWhd8SnRuoYo4d0yirjJp" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/csharp.min.js" integrity="sha384-wWP4JQEhRVshehTP7lUMDn3yhDI2+398vN2QW5LBt1xIpK0Gfu4dPviO8tP9XRo5" crossorigin="anonymous"></script>-->
+    <script src="autocomplete.js"></script>
+    <nav class="navbar navbar-expand meds-bg-darkest fixed-top" style="height: 56px !important;">
+        <div class="container-fluid py-0 mw-1920">
+            <a id="title-header" tabindex="0" class="navbar-brand" href="AtO" target="_blank"><span class="ato-title me-2">Across the Obelisk</span> <span class="text-light">Semi-Weekly Modding Updates</span></a>
+        </div>
+    </nav>
+    <div id="meds-scrollbox" style="height: calc(100vh - 56px);" class="d-flex">
+        <div id="nav-infoContent" class="tab-content mx-auto px-25 py-1">
+            <div id="nav-info" class="tab-pane ms-0 w-100 fade show active text-light pb-3">
+                <h1><span class="meds-text-purple-shadow">Greater Ectoplasm</span> and <span class="shimmer-jank">Jank</span></h1>
+                <div class="my-2 j">
+                    I don’t have a proper Semi-Weekly Modding Update, because I’ve been a bit burnt out and mostly working on esoteric code for developers (more on that when I have something cool to show!). Instead, I’m going to <del>ramble</del> talk about the code side of the development of the <span class="meds-text-purple-shadow">Greater Ectoplasm</span> miniboss featured in <b>@DudeBroManFoSho</b>’s <a class="meds-link" target="_blank" href="https://across-the-obelisk.thunderstore.io/package/dudebrobelisk/Act_1_Alternate_Subzone/">Act 1 Alternate Subzone</a> mod, particularly where I ran into limitations of vanilla AtO mechanics and had to create workarounds. I love reading this kind of perspective from other developers, so pls react accordingly if you want more of these supplementing the Semi-Weekly Modding Updates, rather than just focussing on mod demos!
+                </div>
+                <figure class="figure my-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/h6vo_RZYEeA?si=nJl7aBxolrjT3I_4&amp;controls=0" title="AAAAAAAAAAAAHHHHHHHH.mkv" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+                    </div>
+                    <figcaption class="figure-caption"><span class="i fw-7">AAAAAAAAAAAAHHHHHHHH.mkv</span>, recorded at 11.43 pm on Wednesday, 18 October 2023, shows the first working implementation of <a tabindex="0" class="meds-link" card-display="mccytokinesis1">Cytokinesis</a>.</figcaption>
+                </figure>
+                <hr />
+                <h2>The Goal</h2>
+                <div class="my-2 j">
+                    Create a “slime” monster that splits after taking damage - the <span class="meds-text-purple-shadow">Greater Ectoplasm</span> splits into two Lesser Ectoplasms, which in turn each split into two Minor Ectoplasms. This is a staple of fantasy games - you see it in <i>Dungeons & Dragons</i>, in RPGs like <i>Final Fantasy</i> and <i>Dragon Quest</i>, in other deckbuilders like <i>Slay the Spire</i> and <i>Magic: The Gathering</i>, in MOBAs like <i>League of Legends</i> and even in shooters like <i>Risk of Rain</i>. There are three vanilla effects that look like they can be combined to do this:
+                    <ul class="mt-1 mb-2">
+                        <li class="mb-1">“<b>damaged by others &lt;X% HP</b>”, an enchantment trigger seen on Heiner’s <a tabindex="0" class="meds-link" card-display="lastguardian">Last Guardian</a> and Reginald’s <a tabindex="0" class="meds-link" card-display="holysymbol">Holy Symbol</a>;</li>
+                        <li class="mb-1"><b>SummonUnit</b>, a card effect that summons (adds to the fight) a monster when the card is cast; an example usage is <a tabindex="0" class="meds-link" card-display="dinnerisready" card-name="Dinner is Ready!">Yogger summoning allies</a>; and</li>
+                        <li class="mb-1"><b>SelfKillHiddenSeconds</b>, a card effect that causes the caster to die after the specified number of seconds; this is used by <a tabindex="0" class="meds-link" card-display="escapejade" card-name="Fly Away (Jade)">scarabs</a> and <a tabindex="0" class="meds-link" card-display="divinepardon" card-name="Divine Pardon">Basthet</a>.</li>
+                    </ul>
+                    However, five problems prevented us from achieving our goal.
+                </div>
+                <hr />
+                <h2>The Problems</h2>
+                <h4>Problem 1: card effects vs enchantment effects</h4>
+                <div class="my-2 j">SummonUnit and SelfKillHiddenSeconds are <b>card</b> effects - if you put them on an enchantment then they will activate when the card is played, not when the enchantment activates (i.e. the <span class="meds-text-purple-shadow">Greater Ectoplasm</span> would die when it initially cast <a tabindex="0" class="meds-link" card-display="mccytokinesis1">Cytokinesis</a>!).</div>
+                <figure class="figure mt-0 mw-1000">
+                    <img src="AtO_images/rambling/Early Cytokinesis Attempt.png" class="figure-img img-fluid rounded" alt="An early Cytokinesis attempt that dealt 10002 damage to the owner and cast Cytokinetic Split">
+                    <figcaption class="figure-caption">We tried a couple of different ways to use enchantment effects rather than card effects, but they were ugly and/or didn’t work.</figcaption>
+                </figure>
+                <h4>Problem 2: cards cast by enchantments are cast by the character whose turn it currently is, not the character that has the enchantment</h4>
+                <div class="my-2 j">Enchantments can cast cards when triggered (for instance, the Gorio NPC in Wolf Wars uses an <a tabindex="0" class="meds-link" card-display="astralwolf">Astral Wolf</a> enchantment that casts <a tabindex="0" class="meds-link" card-display="astralhowl">Astral Howl</a> when it is activated at the start of every turn), which we <i>could</i> use to make the <a tabindex="0" class="meds-link" card-display="mccytokinesis1">Cytokinesis</a> enchantment cast a <a tabindex="0" class="meds-link" card-display="mccytokineticsplit1">Cytokinetic Split</a> card. <b>However,</b> cards cast in this way are played by the character whose turn it currently is, not the character that has the enchantment! This led to some unfortunate situations where a hero would damage the <span class="meds-text-purple-shadow">Greater Ectoplasm</span> below 50% HP and activate the <a tabindex="0" class="meds-link" card-display="mccytokinesis1">Cytokinesis</a> enchantment... and then the <b>hero</b> would cast <a tabindex="0" class="meds-link" card-display="mccytokineticsplit1">Cytokinetic Split</a> and die!</div>
+                <figure class="figure mt-0 mb-1 mw-1000">
+                    <img src="AtO_images/rambling/RIP Sylvie.png" class="figure-img img-fluid rounded" alt="Sylvie dying after casting Cytokinetic Split">
+                    <figcaption class="figure-caption">RIP Sylvie</figcaption>
+                </figure>
+                <div class="my-2 j">We also can’t instead add <a tabindex="0" class="meds-link" card-display="mccytokineticsplit1">Cytokinetic Split</a> to the <span class="meds-text-purple-shadow">Greater Ectoplasm</span>’s hand or deck, because these don’t work the same way that hero hands/decks do - NPCs instead use a system called AICards (more on that later).</div>
+                <h4>Problem 3: limited slots for characters in combat</h4>
+                <div class="my-2 j">There are only four “slots” for either side in combat, with “big” NPCs (e.g. most bosses) taking up two slots. SummonUnit activates before SelfKillHiddenSeconds, so there isn’t enough room to spawn two Lesser Ectoplasms (four slots total) due to the <span class="meds-text-purple-shadow">Greater Ectoplasm</span> still being alive and taking up two slots! We could have made the Lesser Ectoplasms smaller (one slot each), but that just pushes the problem down the line because we would run into the same issue when summoning the Minor Ectoplasms.</div>
+                <h4>Problem 4: if a new NPC is spawned at the same time as all other NPCs die, combat ends</h4>
+                <div class="my-2 j">Despite SummonUnit activating first, due to the way combat is coded if both SummonUnit and SelfKillHiddenSeconds are on the same card then the NPC that cast the card will die and the game will detect that all monsters are dead before the new NPC actually appears... so combat will end as the new NPC spawns in!</div>
+                <h4>Problem 5: getting summoned NPCs to play a particular card on their first turn (but never again)</h4>
+                <div class="my-2 j">Lesser Ectoplasms need to cast their own <a tabindex="0" class="meds-link" card-display="mccytokinesis2">Cytokinesis</a> enchantment. NPCs use a system called AICards to determine what cards they play, and can be set up to play cards on particular rounds (e.g. first round of combat) but will otherwise draw from a prioritised pool of cards meeting criteria (e.g. only draw a “convert Sharp to Dark” card when the target has Sharp stacks). If Lesser Ectoplasms played <a tabindex="0" class="meds-link" card-display="mccytokinesis2">Cytokinesis</a> on a particular round, then they wouldn’t use it if they were summoned after this round; if <a tabindex="0" class="meds-link" card-display="mccytokinesis2">Cytokinesis</a> were in the regular pool of cards then it could end up being played more than once (which would have no effect, but would look strange).</div>
+                <hr />
+                <h2>The Solutions</h2>
+                <h4>Solution 1&2: Extended Enchantments</h4>
+                <div class="my-2 j">During content loading, <abbr title="Obeliskial Content">OC</abbr> identifies all enchantments that use SummonUnit or SelfKillHiddenSeconds, stores this information and then hides these values from the game (so they’re not triggered when the enchantment card is cast). After any enchantment activates, <abbr title="Obeliskial Content">OC</abbr> checks if the original card uses these effects and manually activates them on behalf of the enchantment owner. A similar system is used for Binks’s <a tabindex="0" class="meds-link" card-display="binksmagicbullet">Magic Bullet</a> and <a tabindex="0" class="meds-link" card-display="binksmidastouch">Midas Touch</a> enchantments, and I would like to expand this to include <i>all</i> card properties, so they can be used for enchantments whenever you’d like!</div>
+                <h4>Solution 3: slaughter before summons</h4>
+                <div class="my-2 j">If an enchantment uses both the SummonUnit and SelfKillHiddenSeconds effects, <abbr title="Obeliskial Content">OC</abbr> stores the owner’s ID in an <i>AwaitingKill</i> property; the property is emptied after the <i>KillNPC</i> method (which does what you would expect) has run. <abbr title="Obeliskial Content">OC</abbr> will not attempt to create new NPCs until the <i>AwaitingKill</i> property is cleared, and will therefore wait patiently for character slots to be freed up so that NPCs can appear as expected.</div>
+                <h4>Solution 4: blocking FinishCombat</h4>
+                <div class="my-2 j">
+                    When an enchantment using both SummonUnit and SelfKillHiddenSeconds activates, <abbr title="Obeliskial Content">OC</abbr> sets a <i>DoNotLetCombatFinish</i> property. You can probably guess what this does, but there are a few circumstances where the <i>FinishCombat</i> method should still be allowed to run:
+                    <ul>
+                        <li>the player should still be able to resign from combat; and</li>
+                        <li>if all heroes are dead!</li>
+                    </ul>
+                </div>
+                <h4>Solution 5: <span class="fw-7 shimmer-jank">Jank</span></h4>
+                <div class="my-2 j"><a class="meds-link" target="_blank" href="https://across-the-obelisk.thunderstore.io/package/dudebrobelisk/Act_1_Alternate_Subzone/">Act 1 Alternate Subzone</a> introduces a new aura. This may come as a surprise to those that have played through it, since the new aura isn’t mentioned anywhere in text or on monster cards! This new aura, called <a id="popover-jank" class="meds-link" tabindex="0">Jank</a>, is used for targetting and selection of monster cards.</div>
+                <figure class="figure mt-0 mb-2 mw-1000">
+                    <img src="AtO_images/rambling/Andrin & AAAJANK.png" class="figure-img img-fluid rounded" alt="Andrin and a card named AAAJANK that applies the Jank aura">
+                    <figcaption class="figure-caption">Andrin has the (invisible) <i>Jank</i> aura, applied with the <i>AAAJANK</i> card.</figcaption>
+                </figure>
+                <div class="my-2 j">The <span class="meds-text-purple-shadow">Greater Ectoplasm</span>’s <a tabindex="0" class="meds-link" card-display="mccytokinesis1">Cytokinesis</a> uses the <i>SummonAura</i> property to summon Lesser Ectoplasms with the with the <span class="fw-7 shimmer-jank">Jank</span> aura. When cards from the Lesser Ectoplasms’ decks are added to their hands, <abbr title="Obeliskial Content">OC</abbr> checks if they have the <span class="fw-7 shimmer-jank">Jank</span> aura and, if they do, ensures that the first card added is <i>their</i> <a tabindex="0" class="meds-link" card-display="mccytokinesis2">Cytokinesis</a>, which splits them into two Minor Ectoplasms. <span class="fw-7 shimmer-jank">Jank</span> has the <i>ConsumedAtTurn</i> property enabled, so it is removed at the end of each Lesser Ectoplasm’s turn (just like Bless, Fury or Powerful) and they never cast <a tabindex="0" class="meds-link" card-display="mccytokinesis2">Cytokinesis</a> again.</div>
+                <figure class="figure mt-0 mb-3 mw-1000 w-100">
+                    <img src="AtO_images/rambling/do any of us.png" class="figure-img img-fluid rounded" alt="DudeManBroFoSho saying “wait does Jank exist”">
+                    <figcaption class="figure-caption">Do any of us?</figcaption>
+                </figure>
+                <figure class="figure my-0 mb-1 mw-1000">
+                    <img src="AtO_images/rambling/we love the jank.png" class="figure-img img-fluid rounded" alt="DudeManBroFoSho saying “we love the jank”">
+                    <figcaption class="figure-caption">It didn’t take long for the new <i>Jank Janissary</i> to settle in.</figcaption>
+                </figure>
+                <hr />
+                <div class="my-2 j">Many of the solutions look simple now that they’ve been implemented, but actually getting there took dozens of iterations and many hours of brainstorming and programming. Kudos to <b>@DudeBroManFoSho</b> for putting up with the receipt of 100+ messages as he slept, and kudos to the AtO devs for the countless hours it must have taken to make this all from scratch! Though if you’re interested in refactoring the CardData class to transform the <b>135</b> effect-related properties into just one, or refactoring the EventReplyData class to transform the <b>182</b> results-related properties into just four... hit me up!</div>
+                <div class="my-2 j">&#8212; stiffmeds</div>
+            </div>
+        </div>
+    </div>
+    <script src="AtO_Rambling.js"></script>
+</body>
+</html>

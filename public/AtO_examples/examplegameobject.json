@@ -1,0 +1,8 @@
+{
+    "BaseGameObjectID": "lordhansek-shadow",
+    "NewGameObjectID": "examplegameobject",
+    "SpriteToUse": "myNewSkin",
+    "ScaleX": 1,
+    "ScaleY": 1,
+    "Flip": true
+}

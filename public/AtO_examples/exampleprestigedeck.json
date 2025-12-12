@@ -1,0 +1,6 @@
+{
+	"ID": "exampleprestigedeck",
+	"Name": "Example Prestige Deck",
+	"Traits": ["energizer", "temperate"],
+	"Cards": ["camouflage", "massinvisibility", "sneekpeek"]	
+}

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html class="bg-dark">
+<head>
+    <title>Across the Obelisk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="generic.css" rel="stylesheet">
+    <link href="code.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha384-hG927x624PENgmWpFXvtXur3MEE0/cNnW0uTi+AcHTSFncBqimnzYyBzy8aFDA1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/nnfx-dark.min.css" integrity="sha384-gg3nbaPNOUQptaRzVuabeqMNRXWXHarpjAW9EpaimIpptj1pRiP54YanUVh56Ld7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js" integrity="sha384-F/bZzf7p3Joyp5psL90p/p89AZJsndkSoGwRpXcZhleCWhd8SnRuoYo4d0yirjJp" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/csharp.min.js" integrity="sha384-wWP4JQEhRVshehTP7lUMDn3yhDI2+398vN2QW5LBt1xIpK0Gfu4dPviO8tP9XRo5" crossorigin="anonymous"></script>-->
+    <script src="autocomplete.js"></script>
+    <nav class="navbar navbar-expand meds-bg-darkest fixed-top" style="height: 56px !important;">
+        <div class="container-fluid py-0 mw-1920">
+            <a id="title-header" tabindex="0" class="navbar-brand" href="AtO" target="_blank"><span class="ato-title me-2">Across the Obelisk</span> <span class="text-light">How To...</span></a>
+        </div>
+    </nav>
+    <div id="meds-scrollbox" style="height: calc(100vh - 56px);" class="d-flex">
+        <div id="nav-toc" style="width: 300px;" class="text-light">
+            <b>UTTERLY INCOMPLETE AND UNLINKED TABLE OF CONTENTS</b>
+            <div style="text-indent: -36px; padding-left: 36px;">General Comments and Frequently Asked Questions</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…install mods (manual)</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…export vanilla content</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new cards/items</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make Prestige Decks</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new skins</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new cardbacks</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new Obelisk Challenge card packs</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new traits</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new heroes</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new enemies</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new enemies appear in combats</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new choices for existing events</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new events</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new quests</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new nodes (and roads)</div>
+            <div style="text-indent: -36px; padding-left: 36px;">…make new zones (and conditional map changes)</div>
+        </div>
+        <div id="nav-infoContent" class="tab-content px-25 py-1 w-100" style="overflow: auto;">
+            <div id="nav-info" class="tab-pane ms-0 w-100 fade show active text-light">
+                This is a <b>work in progress</b>. Feedback is very welcome!
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-general" aria-expanded="false" aria-controls="collapse-general">General Comments and Frequently Asked Questions</a></div>
+                <div class="my-2 j collapse" id="collapse-general">
+                    <div><a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> can only import <i>.png</i> images and <i>.wav</i> audio; if you need to import any other file types, ping me in the AtO Discord and I’ll see what I can do.</div>
+                    <div>test</div>
+                    <ul class="mb-1">
+                        <li>
+                            <b>Q. How do I get help?</b><br />
+                            A. Ping @stiffmeds in the #modding channel of the <a href="https://discord.gg/across-the-obelisk-679706811108163701" class="meds-link">official Across the Obelisk Discord</a>.
+                        </li>
+                        <li>
+                            <b>Q. How do I load custom content?</b><br />
+                            A. <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> will load any content in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\</i> folder, as well as any content packs that either (a) are registered with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Essentials/" class="meds-link">Obeliskial Essentials</a> (requires the _contentFolder property); or (b) have a mod metadata JSON in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\</i> folder.
+                        </li>
+                        <li>
+                            <b>Q. I can’t find my BepInEx folder!</b><br />
+                            A. If you are using <b>r2modman</b>, it stores your BepInEx folder in <a id="popover-bepinex-r2modman" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="r2modman BepInEx folder location" data-bs-content="">a different location</a>.
+                        </li>
+                        <li>
+                            <b>Q. Can I edit vanilla content?</b><br />
+                            A. Yes! Any custom content (loaded from the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\</i> folder) will overwrite any vanilla content with the same ID.
+                        </li>
+                        <li>
+                            <b>Q. Can I make completely new character models, rather than just editing existing ones?</b><br />
+                            A. Not yet. I am still relatively new to Unity modding and have no experience at all creating character models, so this is beyond my current ability. If you would like to see this functionality, please help me get some support from the devs by letting them now that you’re interested!
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-install-mods" aria-expanded="false" aria-controls="collapse-install-mods">…install mods (manual)</a></div>
+                <div class="my-2 j collapse" id="collapse-install-mods">
+                    <ul class="mb-1">
+                        <li>Right-click Across the Obelisk in Steam and select <a class="meds-link popover-how-to-install-mods-steam-browse" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Browse Local Files&#x2026;" data-bs-content=""><i>Manage</i>&#x2192<i>Browse local files&#x2026;</i></a></li>
+                        <li>Download the <a href="https://across-the-obelisk.thunderstore.io/package/BepInEx/BepInExPack_AcrossTheObelisk/" class="meds-link">AtO BepInEx Pack</a>.</li>
+                        <li>Extract the downloaded zip to the folder from step 1, so it <a id="popover-how-to-install-mods-folder" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Across the Obelisk folder" data-bs-content="">looks like this</a>.</li>
+                        <li>Download mods of your choice from <a href="https://across-the-obelisk.thunderstore.io/package/" class="meds-link">Thunderstore</a>.</li>
+                        <li>If the mod has dependencies (<a id="popover-how-to-install-mods-dependencies" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="mod with dependencies" data-bs-content="">example</a>), download these too.</li>
+                        <li>
+                            Extract the mod:
+                            <ul>
+                                <li>If mod zip contains <a id="popover-how-to-install-mods-zip-bepinex" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="example zip with <i>BepInEx</i> folder" data-bs-content="">a <i>BepInEx</i> folder</a>, extract to the Across the Obelisk from step 1.</li>
+                                <li>If mod zip contains <a id="popover-how-to-install-mods-zip-plugins" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="example zip with <i>plugins</i> folder" data-bs-content="">a <i>plugins</i> folder</a>, extract to the Across the Obelisk/BepInEx folder.</li>
+                                <li>If mod zip contains <a id="popover-how-to-install-mods-zip-dll" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="example zip with <i>dll</i> file" data-bs-content="">just a <i>dll</i> file</a>, extract to the Across the Obelisk/BepInEx/plugins folder.</li>
+                            </ul>
+                        </li>
+                        <li>Run AtO.</li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-export-vanilla-content" aria-expanded="false" aria-controls="collapse-export-vanilla-content">…export vanilla content</a></div>
+                <div class="my-2 j collapse" id="collapse-export-vanilla-content">
+                    <ul class="mb-1">
+                        <li>Install <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Essentials/" class="meds-link">Obeliskial Essentials</a></li>
+                        <li>Run Across the Obelisk.</li>
+                        <li>At the main menu, press F5 to open the Config Manager.</li>
+                        <li>Select <i>Obeliskial Essentials</i> on the left-hand side.</li>
+                        <li>Enable <i>Export Vanilla Content</i> and save.</li>
+                        <li>Restart Across the Obelisk. Export may take a few minutes.</li>
+                        <li>Right-click Across the Obelisk in Steam and select <a class="meds-link popover-how-to-install-mods-steam-browse" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Browse Local Files&#x2026;" data-bs-content=""><i>Manage</i>&#x2192<i>Browse local files&#x2026;</i></a></li>
+                        <li>Navigate to <i>BepInEx\config\Obeliskial_exported\</i> to find the exported content.</li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-package-custom-content" aria-expanded="false" aria-controls="collapse-package-custom-content">…package custom content for distribution</a> (<abbr title="Obeliskial Content">OC</abbr> v1.1+)</div>
+                <div class="my-2 j collapse" id="collapse-package-custom-content">
+                    <ul class="mb-1">
+                        <li>
+                            <b>If your package includes JSON files:</b>
+                            <ul>
+                                <li>Create a folder to store all of your mod content and name it after your mod. Put your custom content (your “card”, “trait”, “subclass”, etc folders) inside this folder.</li>
+                                <li>Put the new folder that you created inside an <i>Obeliskial_importing</i> folder.</li>
+                                <li>Put the <i>Obeliskial_importing</i> folder inside a <i>config</i> folder.</li>
+                                <li>Put the <i>config</i> folder inside a <i>BepInEx</i> folder.</li>
+                                <li>
+                                    <b>If your package <i>does not</i> contain a DLL plugin</b>, in the <i>Obeliskial_importing</i> folder that you created above, make a JSON file containing your mod’s metadata in the following format:
+                                    <pre><code class="language-json">{
+    "Name": "My Cool Mod (no hyphens)",
+    "Author": "Me (no hyphens)",
+    "Description": "Description of mod.",
+    "Version": "Current version number (no hyphens)",
+    "Date": YYYYMMDD (e.g. 20231225 for 25 December 2023),
+    "Link": "JSON-escaped link to mod (ideally on Thunderstore)",
+    "Dependencies": [
+        "dependencies in Thunderstore format"
+    ],
+    "ContentFolder": "Name of folder made in first step above",
+    "Priority": 100 (higher number loads earlier - use 100 unless you have a good reason),
+    "Type": [
+        "hero",
+        "card",
+        "npc"
+    ],
+    "Comment": "Any additional comments.",
+    "Enabled": true
+}
+</code></pre>
+                                </li>
+                                <li><a id="popover-package-custom-content-folder" class="meds-link" tabindex="0" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="example mod folder" data-bs-content="">Example mod folder</a>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>If your package includes a DLL plugin (i.e. code):</b>
+                            <ul>
+                                <li>
+                                    Ensure that you use the <a class="meds-link" target="_blank" href="https://docs.bepinex.dev/master/api/BepInEx.BepInDependency.html">BepInDependency</a> attribute to specify a dependency on <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Essentials/" class="meds-link">Obeliskial Essentials</a> and <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a>. For example:
+                                    <pre><code class="language-csharp">namespace MyCoolMod
+{
+    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInDependency("com.stiffmeds.obeliskialessentials")] // declare dependency on Obeliskial Essentials
+    [BepInDependency("com.stiffmeds.obeliskialcontent")] // declare dependency on Obeliskial Content
+    [BepInProcess("AcrossTheObelisk.exe")]
+    public class Plugin : BaseUnityPlugin
+    {
+        // your mod code</code></pre>
+                                </li>
+                                <li>
+                                    In your plugin’s <i>Awake</i> method, call the <a class="meds-link" target="_blank" href="https://github.com/stiffmeds/Obeliskial-Essentials/blob/master/Essentials.cs#:~:text=public%20static%20void%20RegisterMod">RegisterMod function</a>. The <i>minimum</i> that you need to specify is the name of your plugin, but you should ideally fill in as many properties as possible. For example:
+<pre><code class="language-csharp">private readonly Harmony harmony = new(PluginInfo.PLUGIN_GUID);
+internal static ManualLogSource Log;
+private void Awake()
+{
+    Log = Logger; // set up logging
+    Log.LogInfo($"{PluginInfo.PLUGIN_GUID} {PluginInfo.PLUGIN_VERSION} has loaded!");
+    // register with Obeliskial Essentials
+    Obeliskial_Essentials.Essentials.RegisterMod(
+        _name: PluginInfo.PLUGIN_NAME,
+        _author: "myname",
+        _description: "My cool mod, which gives all heroes sunglasses.",
+        _version: PluginInfo.PLUGIN_VERSION,
+        _date: 20231225, // 25 December 2023
+        _link: @"https://across-the-obelisk.thunderstore.io/package/myname/My_Cool_Mod/",
+        _contentFolder: "MyCoolModFolder",
+        _type: new string[1] { "hero" }
+    );
+    // apply patches
+    harmony.PatchAll();
+}</code></pre>
+                                </li>
+                                <li>
+                                    Some of the properties that you might use (all strings unless specified otherwise):
+                                    <ul>
+                                        <li><b>_name:</b> name of the mod. Cannot contain hyphens!</li>
+                                        <li><b>_author:</b> your name. Cannot contain hyphens!</li>
+                                        <li><b>_description:</b> a (brief) description of your mod.</li>
+                                        <li><b>_version:</b> current mod version. Cannot contain hyphens!</li>
+                                        <li><b>_date:</b> an <b>integer</b> with the your mod’s most recent release date in the format YYYYMMDD.</li>
+                                        <li><b>_link:</b> a link to your mod’s website (preferably the Thunderstore page).</li>
+                                        <li><b>_contentFolder:</b> name of folder made in first step above (Obeliskial Content will try and load your custom content JSONs from this folder).</li>
+                                        <li><b>_type:</b> a string array listing the types of content included in your mod e.g. "hero", "card", "item", "npc", "event".</li>
+                                        <li><b>_comment:</b> any additional comments regarding your mod.</li>
+                                    </ul>
+                                </li>
+                                <li>Make a <i>plugins</i> folder. Put your DLL in it, then put the <i>plugins</i> folder into the <i>BepInEx</i> folder that you created above.</li>
+                            </ul>
+                        </li>
+                        <li>Make a zip containing the <i>BepInEx</i> folder created above and <a class="meds-link" target="_blank" href="https://across-the-obelisk.thunderstore.io/package/create/docs/">other components of a Thunderstore package</a>. Make sure you are zipping the <b>new BepInEx folder that you made</b> - you made a new one to store your content so that you are only distributing <i>your</i> content (and not every mod you have ever downloaded)!</li>
+                        <li>
+                            Example zip structure:
+                            <pre><code class="language-plaintext">myname-MyCoolMod-1.0.0.zip
+├─ CHANGELOG.md
+├─ icon.png
+├─ LICENSE
+├─ manifest.json
+├─ README.md
+├─ BepInEx/
+│  ├─ config/
+│  │  ├─ Obeliskial_importing/
+│  │  │  ├─ (note that MyCoolMod.json is not required here, because we have a DLL plugin below. If there were no DLL plugin, it would be required)
+│  │  │  ├─ MyCoolMod/
+│  │  │  │  ├─ subclass/
+│  │  │  │  │  ├─ CoolMalukah.json
+│  │  │  │  │  ├─ CoolWilbur.json
+│  │  │  │  │  ├─ CoolZek.json
+│  │  │  │  ├─ trait/
+│  │  │  │  │  ├─ coolinventor.json
+│  │  │  │  │  ├─ coolpestilence.json
+│  │  │  │  │  ├─ coolvoodoo.json
+│  ├─ plugins/
+│  │  ├─ MyCoolMod.dll</code></pre>
+                        </li>
+                        <li>Distribute your mod (ideally to Thunderstore)!</li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-cards-items" aria-expanded="false" aria-controls="collapse-new-cards-items">…make new cards/items</a></div>
+                <div class="my-2 j collapse" id="collapse-new-cards-items">
+                    The <a href="AtO_Custom" target="_blank" class="meds-link">Card/Item Creator</a> can be used for all card/item types except pets (coming Soon™ - <a href="#collapse-new-pets" class="meds-link">see below</a> in the meantime).
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-make-prestige-decks" aria-expanded="false" aria-controls="collapse-make-prestige-decks">…make Prestige Decks</a></div>
+                <div class="my-2 j collapse" id="collapse-make-prestige-decks">
+                    <ul class="mb-1">
+                        <li>Download the <a class="meds-link" href="AtO_examples\exampleprestigedeck.json" target="_blank">example Prestige Deck</a>.</li>
+                        <li>
+                            Fill in the properties:
+                            <ul>
+                                <li><b>ID:</b> a unique identifier for your Prestige Deck. Lowercase only, no spaces.</li>
+                                <li><b>Name:</b> the name of the Prestige Deck. Players can search for this in the Magic Forge to find all cards in the deck.</li>
+                                <li><b>Traits:</b> a list of IDs for the hero traits that allow access to this deck. The example makes Wilbur’s L5 trait <i>Energizer</i> and Evelyn’s innate trait <i>Temperate</i> give access to the deck.</li>
+                                <li><b>Cards:</b> a list of IDs for the cards that this deck gives access to. You only need to enter the unupgraded card’s ID and <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> will automatically include the blue/yellow/corrupt upgrades. Your deck <b>needs</b> to contain at least one card of each rarity (Common, Uncommon, Rare, Epic, Mythic)!</li>
+                            </ul>
+                        </li>
+                        <li>Rename the file to match the <i>ID</i>.</li>
+                        <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\prestigeDecks\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-skins" aria-expanded="false" aria-controls="collapse-new-skins">…make new skins</a></div>
+                <div class="my-2 j collapse" id="collapse-new-skins">
+                    <ul class="mb-1">
+                        <li><a href="#collapse-export-vanilla-content" class="meds-link">Export vanilla skin sprites</a> using <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Essentials/" class="meds-link">Obeliskial Essentials</a>.</li>
+                        <li>
+                            Edit the <i>.png</i> images:
+                            <ul>
+                                <li><b>Skin:</b> the actual in-combat appearance</li>
+                                <li><b>SpritePortrait:</b> the smaller portrait image, used in the speed bar at the top during combat.</li>
+                                <li><b>SpritePortraitGrande:</b> the larger portrait image, used in the hero images on the left side of the world map.</li>
+                                <li><b>SpriteSilueta:</b> the smaller non-portrait image, used in the hero selection screen.</li>
+                                <li><b>SpriteSiluetaGrande:</b> the larger non-portrait image, used in the combat rewards screen.</li>
+                                <li>Place your <i>png</i> images in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\sprite\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                        <li>Download the <a class="meds-link" href="AtO_examples\examplegameobject.json" target="_blank">example GameObject</a>.</li>
+                        <li>
+                            Fill in the properties:
+                            <ul>
+                                <li>
+                                    <b>BaseGameObjectID:</b> the ID of the vanilla GameObject that you are making a new version of.<br />
+                                    A list of hero skin GameObjects can be found in the <a href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=789548583" class="meds-link">DataText Reference</a> <i>SkinData</i> tab in the <i>SkinGO</i> column.<br />
+                                    A list of enemy GameObjects can be found in the <a href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=789548583" class="meds-link">DataText Reference</a> <i>NPCData</i> tab in the <i>GameObjectAnimated</i> column. The example GameObject uses <i>lordhansek-shadow</i>, which we can see in the <i>NPCData</i> tab is the GameObject for Lord Hanshek’s shadow clones.
+                                </li>
+                                <li><b>NewGameObjectID:</b> a unique identifier for your new GameObject. Lowercase only, no spaces.</li>
+                                <li>
+                                    <b>SpriteToUse:</b> the filename for the Skin sprite that you edited in the previous step.<br />
+                                    Do not include the <i>.png</i> file extension! If your file is <i>myNewSkin.png</i>, enter <i>myNewSkin</i>.<br />
+                                    If this is left empty, the sprite will not be replaced (i.e. the GameObject will look the same as the original).
+                                </li>
+                                <li><b>ScaleX:</b> multiplier for the width of the GameObject (e.g. making this 0.5 would make the character model half as wide).</li>
+                                <li><b>ScaleY:</b> multiplier for the height of the GameObject (e.g. making this 2 would make the character model twice as tall).</li>
+                                <li><b>Flip:</b> if set to true, flips the character model from left to right (or vice versa).<br />By default, heroes face right and enemies face left, so if you want to use an enemy as a hero skin you need to flip them around to face the right (as you can see in the example file).</li>
+                            </ul>
+                        </li>
+                        <li>Rename the file to match the <i>NewGameObjectID</i>.</li>
+                        <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\gameObject\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                        <li>Download the <a class="meds-link" href="AtO_examples\exampleskindata.json" target="_blank">example SkinData</a>.</li>
+                        <li>
+                            Fill in the properties:
+                            <ul>
+                                <li><b>SkinID:</b> a unique identifier for your skin. Lowercase only, no spaces.</li>
+                                <li><b>SkinName:</b> the name of the skin, displayed in the skin selection screen.</li>
+                                <li><b>SkinGO:</b> the ID of the GameObject to use for your skin. If you made a new GameObject using the above instructions, this should be the same as your <i>NewGameObjectID</i>.</li>
+                                <li><b>SkinSubclass:</b> the ID of the class that the skin is for. A list of IDs can be found in the <i>SubClassData</i> tab of the <a href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=789548583" class="meds-link">DataText Reference</a> – e.g. mercenary in the example is Magnus.</li>
+                                <li><b>BaseSkin:</b> set to true if this is the default skin for that class and false otherwise.</li>
+                                <li><b>PerkLevel:</b> required class rank to unlock this skin. Vanilla AtO unlocks new skins at ranks 16 and 32.</li>
+                                <li><b>SkinOrder:</b> the order in which this skin appears in the skin selection screen.</li>
+                                <li><b>Sku:</b> ID of the DLC required to unlock this skin, in case you want a <i>Wolf Wars</i>-specific unlock for your future Gorio character.</li>
+                                <li><b>SpritePortrait:</b> the smaller portrait image you created above.</li>
+                                <li><b>SpritePortraitGrande:</b> the larger portrait image you created above.</li>
+                                <li><b>SpriteSilueta:</b> the smaller non-portait image you created above.</li>
+                                <li><b>SpriteSiluetaGrande:</b> the larger non-portriat image you created above.</li>
+                                <li><b>SteamStat:</b> Steam stat required to unlock this skin (e.g. for only unlocking a skin when the player gets a specific Steam achievement).</li>
+                            </ul>
+                        </li>
+                        <li>Rename the file to match the <i>SkinID</i>.</li>
+                        <li>Put the file in the Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\skin folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                    </ul>
+                    Then you can load into the game and show off your new fashion!
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-cardbacks" aria-expanded="false" aria-controls="collapse-new-cardbacks">…make new cardbacks</a></div>
+                <div class="my-2 j collapse" id="collapse-new-cardbacks">
+                    <ul class="mb-1">
+                        <li>Create a new cardback image and place it in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\sprite\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                        <li>Download the <a class="meds-link" href="AtO_examples\examplecardback.json" target="_blank">example cardback</a>.</li>
+                        <li>
+                            Fill in the properties:
+                            <ul>
+                                <li><b>AdventureLevel:</b> the Adventure Mode madness level that must be completed to unlock the cardback.</li>
+                                <li><b>BaseCardback:</b> set to true if this is the default cardback for that class and false otherwise.</li>
+                                <li><b>CardbackID:</b> a unique identifier for your cardback. Lowercase only, no spaces.</li>
+                                <li><b>CardbackName:</b> the name of the cardback, displayed in the cardback selection screen.</li>
+                                <li><b>CardbackOrder:</b> the order in which this cardback appears in the cardback selection screen.</li>
+                                <li><b>CardbackSprite:</b> the filename for the cardback sprite that you created in the previous step.<br />Do not include the <i>.png</i> file extension! If your file is <i>myNewCardback.png</i>, enter <i>myNewCardback</i>.</li>
+                                <li><b>CardbackSubclass:</b> the ID of the class that the skin is for; leave blank to make this cardback available to all classes. A list of IDs can be found in the <i>SubClassData</i> tab of the <a href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=789548583" class="meds-link">DataText Reference</a> – e.g. mercenary in the example is Magnus.</li>
+                                <li><b>Locked:</b> set to false to have the cardback unlocked by default.</li>
+                                <li><b>ObeliskLevel:</b> the Obelisk Challenge madness level that must be completed to unlock the cardback.</li>
+                                <li><b>RankLevel:</b> the subclass rank required to unlock this class. Vanilla AtO unlocks new cardbacks at ranks 8, 24 and 40.</li>
+                                <li><b>ShowIfLocked:</b> set to false to hide the cardback from the cardback selection screen if it hasn’t been unlocked.</li>
+                                <li><b>Sku:</b> ID of the DLC required to unlock this skin, in case you want a <i>Wolf Wars</i>-specific unlock for your future Gorio character.</li>
+                                <li><b>SteamStat:</b> [chk, but I think:] Steam stat required to unlock this skin (e.g. for only unlocking a skin when the player gets a specific Steam achievement).</li>
+                            </ul>
+                        </li>
+                        <li>Rename the file to match the <i>CardbackID</i>.</li>
+                        <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\cardback\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-OC-card-packs" aria-expanded="false" aria-controls="collapse-new-OC-card-packs">…make new Obelisk Challenge card packs</a></div>
+                <div class="my-2 j collapse" id="collapse-new-OC-card-packs">
+                    There are two kinds of Obelisk Challenge Card packs: <i>Starter</i> packs, which are the five cards that the hero starts with every time; and <i>Choice</i> packs, which are the options you can choose from to fill out the deck.
+                    <ul>
+                        <li>
+                            Creating <i>Starter</i> Packs
+                            <ul>
+                                <li>Download the <a class="meds-link" href="AtO_examples\examplestarterpack.json" target="_blank">example <i>starter</i> card pack</a></li>
+                                <li>
+                                    Fill in the properties:
+                                    <ul>
+                                        <li><b>Card0</b> through <b>Card4:</b> IDs for the five cards that the hero will always start with.</li>
+                                        <li><b>PackClass:</b> Warrior/Scout/Mage/Healer. For dualclass characters, use the primary class.</li>
+                                        <li><b>PackID:</b> unique identifier for this card pack; lowercase only, no spaces. Ideally the character’s name.</li>
+                                        <li><b>PackName:</b> Character’s name.</li>
+                                        <li><b>RequiredClass:</b> ID for the character’s subclass (e.g. mercenary for Magnus).</li>
+                                        <li>Leave the <b>Card5</b>, <b>CardSpecial0</b>, <b>CardSpecial1</b> and <b>PerkList</b> properties blank.</li>
+                                    </ul>
+                                </li>
+                                <li>Rename the file to match the <i>ID</i>.</li>
+                                <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\pack\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Creating Choice Packs
+                            <ul>
+                                <li>Download the <a class="meds-link" href="AtO_examples\examplechoicepack.json" target="_blank">example <i>choice</i> card pack</a></li>
+                                <li>
+                                    Fill in the properties:
+                                    <ul>
+                                        <li><b>Card0</b> through <b>Card5:</b> IDs for the base/unupgraded versions of six cards that are randomly split into two groups of three (initially shown and then rerolled).</li>
+                                        <li><b>CardSpecial0</b> and <b>CardSpecial1:</b> IDs for the base/unupgraded versions of two cards that are given as choices in the final/“special” card selection. CardSpecial0 is given as a choice if the player selects the un-rerolled pack; CardSpecial1 is given as a choice if the player selects the rerolled pack.</li>
+                                        <li><b>PackClass:</b> Warrior/Scout/Mage/Healer.</li>
+                                        <li><b>PackID:</b> unique identifier for this card pack; lowercase only, no spaces.</li>
+                                        <li><b>PackName:</b> Name of the pack, shown on the pack selection screen.</li>
+                                        <li><b>PerkList:</b> unused, can be ignored.</li>
+                                        <li>Leave <b>RequiredClass</b> empty.</li>
+                                    </ul>
+                                </li>
+                                <li>Rename the file to match the <i>ID</i>.</li>
+                                <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\pack\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-traits" aria-expanded="false" aria-controls="collapse-new-traits">…make new traits</a></div>
+                <div class="my-2 j collapse" id="collapse-new-traits">
+                    There are two kinds of traits: <i>effect</i> traits, which provide a special effect; and <i>card</i> traits, which give the hero a special card. Vanilla AtO classes have <i>effect</i> traits for the passive and levels 3 and 5 (5 <i>effect</i> traits total) and <i>card</i> traits at levels 2 and 4 (4 <i>card</i> traits total).
+                    <ul>
+                        <li>
+                            Creating <i>effect traits</i>
+                            <ul>
+                                <li>
+                                    Most <i>effect</i> traits need to be <b><u>manually programmed into <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a></u></b> (sorry – I do want to make these accessible to non-programmers, but neither I nor the AtO devs have worked out a way to do this yet!).
+                                    <ul>
+                                        <li>Submit a trait request in [the AtO Discord thread] and I will add your trait as soon as I can. Please make sure to use the template provided, because that will make it significantly easier for me!</li>
+                                        <li>If you have any bright ideas for a flexible, non-programmer-friendly method of trait creation, let me know!</li>
+                                        <li>If you are a programmer (or want to learn), look at the <a href="https://github.com/stiffmeds/TraitMod" class="meds-link">example trait mod</a>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Effects that do not require programming:
+                                    <ul>
+                                        <li>+charges for (up to three) auras/curses</li>
+                                        <li>Immunity to (up to three) auras/curses</li>
+                                        <li>+damage for (up to three) damage types</li>
+                                        <li>+%damage for (up to three) damage types</li>
+                                        <li>+heal</li>
+                                        <li>+%heal</li>
+                                        <li>+heal received</li>
+                                        <li>+%heal received</li>
+                                        <li>+-%resistances for (up to three) damage types</li>
+                                        <li>(one of) speed, max HP, starting energy, energy per turn</li>
+                                    </ul>
+                                </li>
+                                <li>Download the <a class="meds-link" href="AtO_examples\exampleeffecttrait.json" target="_blank">example <i>effect</i> trait</a>.</li>
+                                <li>
+                                    Fill in the properties:
+                                    <ul>
+                                        <li><b>ID:</b> Unique identifier for your trait. Lowercase only, no spaces.</li>
+                                        <li><b>TraitName:</b> The name of the trait. Appears on the level up screen and when the trait is activated.</li>
+                                        <li><b>Activation:</b> When the (programmed) effect for this trait activates. Acceptable values [TBD from Enums, thanks]</li>
+                                        <li><b>AuraCurseBonus1:</b> Aura/curse that <i>AuraCurseBonusValue1</i> applies to.</li>
+                                        <li><b>AuraCurseBonus2:</b> Aura/curse that <i>AuraCurseBonusValue2</i> applies to.</li>
+                                        <li><b>AuraCurseBonus3:</b> Aura/curse that <i>AuraCurseBonusValue3</i> applies to.</li>
+                                        <li><b>AuraCurseBonusValue1:</b> Increase(/decrease? unsure if that works) in charges for the aura/curse specified in <i>AuraCurseBonus1</i>.</li>
+                                        <li><b>AuraCurseBonusValue2:</b> Increase(/decrease? unsure if that works) in charges for the aura/curse specified in <i>AuraCurseBonus2</i>.</li>
+                                        <li><b>AuraCurseBonusValue3:</b> Increase(/decrease? unsure if that works) in charges for the aura/curse specified in <i>AuraCurseBonus3</i>.</li>
+                                        <li><b>AuraCurseImmune1:</b> Aura/curse that the hero becomes immune to when they select this trait.</li>
+                                        <li><b>AuraCurseImmune2:</b> Aura/curse that the hero becomes immune to when they select this trait.</li>
+                                        <li><b>AuraCurseImmune3:</b> Aura/curse that the hero becomes immune to when they select this trait.</li>
+                                        <li><b>CharacterStatModified:</b> Character stat that <i>CharacterStatModifiedValue</i> applies to. Acceptable values: None (if not used), Hp (for max HP), Speed, Energy (for starting Energy), EnergyTurn (for Energy per turn).</li>
+                                        <li><b>CharacterStatModifiedValue:</b> Flat increase/decrease to the stat in <i>CharacterStatModified</i>.</li>
+                                        <li><b>DamageBonusFlat:</b> Damage type that <i>DamageBonusFlatValue</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusFlat2:</b> Damage type that <i>DamageBonusFlatValue2</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusFlat3:</b> Damage type that <i>DamageBonusFlatValue3</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusFlatValue:</b> Flat increase/decrease to damage of type <i>DamageBonusFlat</i>.</li>
+                                        <li><b>DamageBonusFlatValue2:</b> Flat increase/decrease to damage of type <i>DamageBonusFlat2</i>.</li>
+                                        <li><b>DamageBonusFlatValue3:</b> Flat increase/decrease to damage of type <i>DamageBonusFlat3</i>.</li>
+                                        <li><b>DamageBonusPercent:</b> Damage type that <i>DamageBonusPercentValue</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusPercent2:</b> Damage type that <i>DamageBonusPercentValue2</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusPercent3:</b> Damage type that <i>DamageBonusPercentValue3</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>DamageBonusPercentValue:</b> Percentage increase/decrease to damage of type <i>DamageBonusPercent</i>.</li>
+                                        <li><b>DamageBonusPercentValue2:</b> Percentage increase/decrease to damage of type <i>DamageBonusPercent2</i>.</li>
+                                        <li><b>DamageBonusPercentValue3:</b> Percentage increase/decrease to damage of type <i>DamageBonusPercent3</i>.</li>
+                                        <li><b>Description:</b> A short description of the trait; appears on the level up screen.</li>
+                                        <li><b>HealFlatBonus:</b> Flat increase/decrease in healing done by this character.</li>
+                                        <li><b>HealPercentBonus:</b> Percentage increase/decrease in healing done by this character.</li>
+                                        <li><b>HealReceivedFlatBonus:</b> Flat increase/decrease in heal received.</li>
+                                        <li><b>HealReceivedPercentBonus:</b> Percentage increase/decrease in heal received.</li>
+                                        <li><b>ResistModified1:</b> Damage type that <i>ResistModifiedValue1</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>ResistModified2:</b> Damage type that <i>ResistModifiedValue2</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>ResistModified3:</b> Damage type that <i>ResistModifiedValue3</i> applies to. Acceptable values: None (if not used), All (for all damage types), Slashing, Blunt, Piercing, Fire, Cold, Lightning, Holy, Dark, Mind.</li>
+                                        <li><b>ResistModifiedValue1:</b> Percentage increase/decrease to resistance <i>ResistModified1</i>.</li>
+                                        <li><b>ResistModifiedValue2:</b> Percentage increase/decrease to resistance <i>ResistModified2</i>.</li>
+                                        <li><b>ResistModifiedValue3:</b> Percentage increase/decrease to resistance <i>ResistModified3</i>.</li>
+                                        <li><b>TimesPerRound:</b> Number of times per combat round that this trait can activate.</li>
+                                        <li><b>TimesPerTurn:</b> Number of times per hero turn that this trait can activate.</li>
+                                        <li>The <b>TraitCard</b> and <b>TraitCardForAllHeroes</b> properties are only used for <i>card</i> traits (see below).</li>
+                                    </ul>
+                                </li>
+                                <li>Rename the file to match the <i>ID</i>.</li>
+                                <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\trait\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Creating <i>card</i> traits:
+                            <ul>
+                                <li>Download the <a class="meds-link" href="AtO_examples\examplecardtrait.json" target="_blank">example <i>card</i> trait</a>.</li>
+                                <li>
+                                    Fill in the properties:
+                                    <ul>
+                                        <li><b>ID:</b> Unique identifier for your trait. Lowercase only, no spaces.</li>
+                                        <li><b>TraitName:</b> The name of the trait. Appears on the level up screen and when the trait is activated.</li>
+                                        <li><b>TraitCard:</b> The ID of the card to be given to this hero only when this trait is selected.</li>
+                                        <li><b>TraitCardForAllHeroes:</b> The ID of the card to be given to all heroes when this trait is selected.</li>
+                                        <li>All other properties should remain as-is; they’re only used for <i>effect</i> traits.</li>
+                                    </ul>
+                                </li>
+                                <li>Rename the file to match the <i>ID</i>.</li>
+                                <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\trait\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-heroes" aria-expanded="false" aria-controls="collapse-new-heroes">…make new heroes</a></div>
+                <div class="my-2 j collapse" id="collapse-new-heroes">
+                    <ul class="mb-1">
+                        <li>
+                            Create at least one skin using the above instructions.
+                            <ul>
+                                <li>Make sure you set one skin as the default using the <i>BaseSkin</i> property!</li>
+                            </ul>
+                        </li>
+                        <li><i>Optional:</i> create cardbacks using the above instructions.</li>
+                        <li>
+                            <i>Optional:</i> create (at least) one Starter card, which is unique to this class.
+                            <ul>
+                                <li>Set the <i>Starter</i> property in the card to <i>true</i>. If using the <a href="AtO_Custom" target="_blank" class="meds-link">Card Creator</a>, you can find the <i>Starter</i> property in the <i>Advanced</i> section (which can be displayed using the cog in the top right).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i>Optional:</i> create a unique item for this class.
+                            <ul>
+                                <li>Set the <i>DropOnly</i> property in the item to <i>true</i> so that it doesn’t appear in shops or loot rewards. If using the <a href="AtO_Custom" target="_blank" class="meds-link">Card Creator</a>, you can find the <i>DropOnly</i> property in the <i>Advanced</i> section (which can be displayed using the cog in the top right).</li>
+                            </ul>
+                        </li>
+                        <li><i>Optional:</i> create Obelisk Challenge card packs using the above instructions.</li>
+                        <li>
+                            Create traits using the above instructions.
+                        </li>
+                        <li>
+                            Create a new SubClassData:
+                            <ul>
+                                <li>Download the <a class="meds-link" href="AtO_examples\examplesubclass.json" target="_blank">example subclass</a>.</li>
+                                <li>
+                                    Fill in the properties:
+                                    <ul>
+                                        <li><b>ActionSound:</b> [NB: consider removing from subclassdatatext?] The sound that the character makes when performing an action. Not used, as far as I can tell? It has instead been replaced by sounds on cards.</li>
+                                        <li><b>Cards:</b> An array showing the 15 cards that the subclass starts with. There can be a maximum of 7 <i>different</i> cards, and at least one of these should be a unique/starter card. The example subclass starts with 3*mass invisibility (wow!), 2*ice lance, 3*shadow bolt, 1*mana gem, 2*charge battery, 3*frost bolt and 1 examplestartercard.</li>
+                                        <li><b>ChallengePack0:</b> The first pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack1:</b> The second pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack2:</b> The third pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack3:</b> The fourth pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack4:</b> The fifth pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack5:</b> The sixth pack option in Obelisk Challenge mode.</li>
+                                        <li><b>ChallengePack6:</b> The seventh pack option in Obelisk Challenge mode (NB: the final/eighth pack option is random).</li>
+                                        <li><b>CharacterDescription:</b> A short description of the character, which appears when the character is selected in the Hero Selection screen.</li>
+                                        <li><b>CharacterDescriptionStrength:</b> A one-line description of the character’s strengths.</li>
+                                        <li><b>CharacterName:</b> The character’s name.</li>
+                                        <li><b>Energy:</b> The character’s starting energy.</li>
+                                        <li><b>EnergyTurn:</b> The amount of energy the character gains each turn.</li>
+                                        <li><b>Female:</b> Set to _true_ if the character should use female action sounds on cards where available (e.g. Battle Cry makes a different noise when Bree plays it than when Magnus plays it).</li>
+                                        <li><b>FluffOffsetX:</b> Horizontal offset for fluff text on played cards.</li>
+                                        <li><b>FluffOffsetY:</b> Vertical offset for fluff text on played cards.</li>
+                                        <li><b>GameObjectAnimated:</b> [NB: remove per Friday changes to SubclassDataText?]</li>
+                                        <li><b>HeroClass:</b> The character’s class.</li>
+                                        <li><b>HeroClassSecondary:</b> The character’s secondary class, or _None_ if they have only one class.</li>
+                                        <li><b>HitSound:</b> Sound made when the character takes damage.</li>
+                                        <li><b>HP:</b> Base max HP.</li>
+                                        <li><b>ID:</b> A unique identifier for your character. Lowercase only, no spaces. TEMPORARY NOTE: NEEDS TO BE THE SAME AS THE SUBCLASSNAME</li>
+                                        <li><b>Item:</b> The ID for this character’s unique item</li>
+                                        <li><b>MaxHP:</b> An array of numbers corresponding to the increase in max HP per level. The example subclass gets 6 additional max HP at each level from 2 to 5.</li>
+                                        <li><b>OrderInList:</b> The order that this character appears within its class (e.g. the example subclass appears in slot 5 in the Mage section). Slots 1-4 (corresponding to values 0-3 in this property) are used for vanilla classes.</li>
+                                        <li><b>ResistSlashing:</b> Base slashing resistance (%).</li>
+                                        <li><b>ResistBlunt:</b> Base blunt resistance (%).</li>
+                                        <li><b>ResistPiercing:</b> Base piercing resistance (%).</li>
+                                        <li><b>ResistFire:</b> Base fire resistance (%).</li>
+                                        <li><b>ResistCold:</b> Base cold resistance (%).</li>
+                                        <li><b>ResistLightning:</b> Base lightning resistance (%).</li>
+                                        <li><b>ResistHoly:</b> Base holy resistance (%).</li>
+                                        <li><b>ResistShadow:</b> Base shadow resistance (%).</li>
+                                        <li><b>ResistMind:</b> Base mind resistance (%).</li>
+                                        <li><b>Speed:</b> Base speed.</li>
+                                        <li><b>SpriteBorderLocked:</b> The filename for the image shown on the Hero Selection screen when the character has not yet been unlocked.<br />Do not include the <i>.png</i> file extension! If your file is <i>mySpriteBorderLocked.png</i>, enter <i>mySpriteBorderLocked</i>.</li>
+                                        <li><b>StickerBase:</b> The filename for the character’s base sticker (used with the “target” and “heal” emotes).<br />Do not include the <i>.png</i> file extension! If your file is <i>myStickerBase.png</i>, enter <i>myStickerBase</i>.</li>
+                                        <li><b>StickerAngry:</b> The filename for the character’s “angry” sticker.<br />Do not include the <i>.png</i> file extension! If your file is <i>myStickerAngry.png</i>, enter <i>myStickerAngry</i>.</li>
+                                        <li><b>StickerIndifferent:</b> The filename for the character’s “indifferent” sticker.<br />Do not include the <i>.png</i> file extension! If your file is <i>myStickerIndifferent.png</i>, enter <i>myStickerIndifferent</i>.</li>
+                                        <li><b>StickerLove:</b> The filename for the character’s “love” sticker.<br />Do not include the <i>.png</i> file extension! If your file is <i>myStickerLove.png</i>, enter <i>myStickerLove</i>.</li>
+                                        <li><b>StickerSurprise:</b> The filename for the character’s “surprised” sticker.<br />Do not include the <i>.png</i> file extension! If your file is <i>myStickerSurprise.png</i>, enter <i>myStickerSurprise</i>.</li>
+                                        <li><b>StickerOffsetX:</b> Horizontal offset for stickers.</li>
+                                        <li><b>SubclassName:</b> The name of the character’s class (e.g. Mercenary, Cleric, Elementalist), shown on the Hero Selection screen when they are selected. TEMPORARY NOTE: NEEDS TO BE THE SAME AS THE ID (but can have different case e.g. capital first letter)</li>
+                                        <li><b>Trait0:</b> The ID for the character’s innate trait.</li>
+                                        <li><b>Trait1A:</b> The ID for the character’s left-hand Level 2 trait option.</li>
+                                        <li><b>Trait1B:</b> The ID for the character’s right-hand Level 2 trait option.</li>
+                                        <li><b>Trait2A:</b> The ID for the character’s left-hand Level 3 trait option.</li>
+                                        <li><b>Trait2B:</b> The ID for the character’s right-hand Level 3 trait option.</li>
+                                        <li><b>Trait3A:</b> The ID for the character’s left-hand Level 4 trait option.</li>
+                                        <li><b>Trait3B:</b> The ID for the character’s right-hand Level 4 trait option.</li>
+                                        <li><b>Trait4A:</b> The ID for the character’s left-hand Level 5 trait option.</li>
+                                        <li><b>Trait4B:</b> The ID for the character’s right-hand Level 5 trait option.</li>
+                                    </ul>
+                                </li>
+                                <li>Rename the file to match the <i>SubclassID</i>.</li>
+                                <li>Put the file in the <i>Across the Obelisk\BepInEx\config\Obeliskial_importing\TESTING\subclass\</i> folder.<br />(if this folder does not exist, run AtO at least once with <a href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" class="meds-link">Obeliskial Content</a> installed, or make the folder yourself)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-enemies" aria-expanded="false" aria-controls="collapse-new-enemies">…make new enemies (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-enemies">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-enemies-in-combats" aria-expanded="false" aria-controls="collapse-enemies-in-combats">…make my enemies appear in combats (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-enemies-in-combats">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-choices-existing-events" aria-expanded="false" aria-controls="collapse-new-choices-existing-events">…make new choices for existing events (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-choices-existing-events">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-events" aria-expanded="false" aria-controls="collapse-new-events">…make new events (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-events">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-quests" aria-expanded="false" aria-controls="collapse-new-quests">…make new quests (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-quests">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-nodes-roads" aria-expanded="false" aria-controls="collapse-new-nodes-roads">…make new nodes (and roads) (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-nodes-roads">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-new-zones" aria-expanded="false" aria-controls="collapse-new-zones">…make new zones (and conditional map changes) (UNFINISHED)</a></div>
+                <div class="my-2 j collapse" id="collapse-new-zones">
+                    <ul class="mb-1">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="AtO_How_To.js"></script>
+</body>
+</html>

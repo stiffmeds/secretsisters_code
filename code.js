@@ -77,12 +77,30 @@ site_code.use(bodyParser.urlencoded({ extended: false }));
 site_code.get('/AtO', (req, res) => {
     res.sendFile(__dirname + '/public/AtO.html')
 });
+
+site_code.get('/AtO_How_To', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_How_To.html')
+});
+site_code.get('/AtO_HowTo', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_How_To.html')
+});
+
+site_code.get('/AtO_Rambling', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_Rambling.html')
+});
+
 site_code.get('/AtO_Custom', (req, res) => {
     res.sendFile(__dirname + '/public/AtO_Custom.html')
 });
-
 site_code.get('/AtOCustom', (req, res) => {
     res.sendFile(__dirname + '/public/AtO_Custom.html')
+});
+
+site_code.get('/AtOCustomNode', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_Custom_Node.html')
+});
+site_code.get('/AtO_Custom_Node', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_Custom_Node.html')
 });
 
 site_code.get('/AtO_Seeds', (req, res) => {
@@ -96,6 +114,15 @@ site_code.get('/AtOSeeds', (req, res) => {
 site_code.get('/AtO_Seeds_beta', (req, res) => {
     res.sendFile(__dirname + '/public/AtO_Seeds_beta.html')
 });
+
+site_code.get('/AtO_Profile', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_Profile.html')
+});
+
+site_code.get('/AtOProfile', (req, res) => {
+    res.sendFile(__dirname + '/public/AtO_Profile.html')
+});
+
 
 site_code.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');

@@ -170,10 +170,9 @@
                             <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-basics" aria-expanded="false" aria-controls="collapse-basics">The Basics</a></div>
                             <div class="my-2 j collapse" id="collapse-basics">
                                 <ul class="mb-1">
-                                    <li class="j">Install <a class="meds-link" href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Options/" target="_blank">Obeliskial Options</a>.</li>
+                                    <li class="j">Install <a class="meds-link" href="https://across-the-obelisk.thunderstore.io/package/meds/Obeliskial_Content/" target="_blank">Obeliskial Content</a>.</li>
                                     <li class="j">The easiest way to use the custom content creator is to&nbsp;<span class="text-primary fw-7"><i class="bi bi-plus-lg"></i>&nbsp;add a new card</span>&nbsp;and use a vanilla card as the template.</li>
-                                    <li class="j">When you are happy with your card (and its upgrades, which can be viewed from the&nbsp;<span class="text-secondary fw-7"><i class="bi bi-list"></i>&nbsp;card list</span>),&nbsp;<span class="text-success fw-7"><i class="bi bi-download"></i>&nbsp;download it</span>&nbsp; and extract it to <i>Across the Obelisk\BepInEx\config</i>.</li>
-                                    <li class="j">Ensure that Custom Content is enabled in the Obeliskial Options settings.</li>
+                                    <li class="j">When you are happy with your card (and its upgrades, which can be viewed from the&nbsp;<span class="text-secondary fw-7"><i class="bi bi-list"></i>&nbsp;card list</span>),&nbsp;<span class="text-success fw-7"><i class="bi bi-download"></i>&nbsp;download it</span>&nbsp; and extract it to <i>Across the Obelisk\BepInEx\config\TESTING\</i>.</li>
                                 </ul>
                             </div>
                             <div class="my-2 h3"><a class="meds-link" data-bs-toggle="collapse" href="#collapse-multiplayer" aria-expanded="false" aria-controls="collapse-multiplayer">Multiplayer</a></div>
@@ -187,7 +186,8 @@
                                     <li>Full review of ? text (and ideally adding to all?)</li>
                                     <li>Examples for help modal.</li>
                                     <li>Integrate special values into aura/curse/damage/healing sections.</li>
-                                    <li>Class changes don't appear to respect lock.</li>
+                                    <li>Class changes don't appear to respect lock?</li>
+                                    <li>"Easy card creator": datalist with "deal damage", "apply auracurse", etc for easy card creation? ideal.</li>
                                 </ul>
                                 <span class="fw-5">ideally</span>
                                 <ul class="mb-1">
@@ -204,7 +204,7 @@
                                 </ul>
                                 <span class="fw-5">maybe later</span>
                                 <ul class="mb-1">
-                                    <li>Missing Card Classes: Pet, Monster.</li>
+                                    <li>Missing Card Class: Pet.</li>
                                     <li>Add missing effects to the game: GoldGainQuantity, ShardGainQuantity.</li>
                                     <li>Better description text spacing (e.g. Requires aligned top).</li>
                                     <li>Dropper button for upgradea/b/rare (click on this then on card list item to assign?)</li>
@@ -306,1111 +306,6 @@
                                                     <input type="text" list="text_sprite_datalist" class="form-control border-end-0" id="text_sprite" meds-on-input="update-display">
                                                     <label for="text_sprite" class="fw-6">Sprite</label>
                                                     <datalist id="text_sprite_datalist">
-                                                        <option value="absorption">
-                                                        <option value="abyssalsonataspecial">
-                                                        <option value="acolytetunic">
-                                                        <option value="acrobaticstrike">
-                                                        <option value="adrenaline">
-                                                        <option value="advancedhandbook">
-                                                        <option value="adventureawaits">
-                                                        <option value="agateamulet">
-                                                        <option value="aimedshot">
-                                                        <option value="alarmbell">
-                                                        <option value="albatrosspendant">
-                                                        <option value="allin">
-                                                        <option value="allseeingamulet">
-                                                        <option value="amberamulet">
-                                                        <option value="ambidextrous">
-                                                        <option value="ambush">
-                                                        <option value="amethystring">
-                                                        <option value="ammunitions">
-                                                        <option value="amuletofprotection">
-                                                        <option value="amuletofspeed">
-                                                        <option value="amuletofthorns">
-                                                        <option value="ankhoflife">
-                                                        <option value="anklebiteitem">
-                                                        <option value="annoyingwhistle">
-                                                        <option value="anthemofhope">
-                                                        <option value="antimagicfieldspecial">
-                                                        <option value="antiquefigurine">
-                                                        <option value="aquamarinebracelet">
-                                                        <option value="arcaneconduit">
-                                                        <option value="architectsring">
-                                                        <option value="archmagebook">
-                                                        <option value="arenachampion">
-                                                        <option value="arsenal">
-                                                        <option value="asmody">
-                                                        <option value="assassintools">
-                                                        <option value="astralhowlpet">
-                                                        <option value="atonement">
-                                                        <option value="atonementstart">
-                                                        <option value="avoidancecollar">
-                                                        <option value="awfultantrumitem">
-                                                        <option value="backstab">
-                                                        <option value="badaugury">
-                                                        <option value="bakem">
-                                                        <option value="balllightning">
-                                                        <option value="ballofwool">
-                                                        <option value="balladofconquest">
-                                                        <option value="balladofevasion">
-                                                        <option value="bandages">
-                                                        <option value="bane">
-                                                        <option value="banish">
-                                                        <option value="banishstart">
-                                                        <option value="baptism">
-                                                        <option value="barbedwire">
-                                                        <option value="barrage">
-                                                        <option value="barricade">
-                                                        <option value="barrier">
-                                                        <option value="bass">
-                                                        <option value="basthetsgrace">
-                                                        <option value="bastion">
-                                                        <option value="battleaxe">
-                                                        <option value="battleplan">
-                                                        <option value="battleshout">
-                                                        <option value="beermug">
-                                                        <option value="bell">
-                                                        <option value="belphyorpipe">
-                                                        <option value="benediction">
-                                                        <option value="berserkpotion">
-                                                        <option value="berserkerclaw">
-                                                        <option value="betty">
-                                                        <option value="bewilderspecial">
-                                                        <option value="bindingheal">
-                                                        <option value="birdofprey">
-                                                        <option value="blackdeath">
-                                                        <option value="blackdeathstart">
-                                                        <option value="blackdeck">
-                                                        <option value="blackhole">
-                                                        <option value="blackkarma">
-                                                        <option value="blackpyramid">
-                                                        <option value="blacktalons">
-                                                        <option value="blackguard">
-                                                        <option value="bladedance">
-                                                        <option value="bladeflurry">
-                                                        <option value="bladestorm">
-                                                        <option value="bleedout">
-                                                        <option value="blizzard">
-                                                        <option value="bloodblobpet">
-                                                        <option value="bloodfeeding">
-                                                        <option value="bloodforblood">
-                                                        <option value="bloodgoblet">
-                                                        <option value="bloodrain">
-                                                        <option value="bloodsausage">
-                                                        <option value="bloodsplashpet">
-                                                        <option value="bloodbath">
-                                                        <option value="blooddguard">
-                                                        <option value="bloodrage">
-                                                        <option value="bloodseeker">
-                                                        <option value="bloodstone">
-                                                        <option value="bloodsuckeritem">
-                                                        <option value="bloodsuckeritemb">
-                                                        <option value="bludgeon">
-                                                        <option value="bluff">
-                                                        <option value="blur">
-                                                        <option value="boneclaws">
-                                                        <option value="bonering">
-                                                        <option value="bonk">
-                                                        <option value="bonkhammer">
-                                                        <option value="bookofnightmares">
-                                                        <option value="bookofthedead">
-                                                        <option value="bookworm">
-                                                        <option value="bootsofswiftness">
-                                                        <option value="bouncingshield">
-                                                        <option value="bouncyembersitem">
-                                                        <option value="brassamulet">
-                                                        <option value="brasslantern">
-                                                        <option value="breastplate">
-                                                        <option value="brigandarmor">
-                                                        <option value="broccoli">
-                                                        <option value="brokenbone">
-                                                        <option value="brokenitem">
-                                                        <option value="bronzegear">
-                                                        <option value="bucket">
-                                                        <option value="bulkheal">
-                                                        <option value="bulletshotm">
-                                                        <option value="bunny">
-                                                        <option value="burialmask">
-                                                        <option value="burneditem">
-                                                        <option value="burningblood">
-                                                        <option value="burningorb">
-                                                        <option value="burningshot">
-                                                        <option value="burntcarp">
-                                                        <option value="butcherblock">
-                                                        <option value="butchering">
-                                                        <option value="butchersknife">
-                                                        <option value="caltrops">
-                                                        <option value="camouflage">
-                                                        <option value="candy">
-                                                        <option value="captainshowl">
-                                                        <option value="captainshowlstart">
-                                                        <option value="captivatingvoice">
-                                                        <option value="carnage">
-                                                        <option value="carp">
-                                                        <option value="carrot">
-                                                        <option value="catharsis">
-                                                        <option value="cauterize">
-                                                        <option value="celestialbrillance">
-                                                        <option value="chainheal">
-                                                        <option value="chainlightning">
-                                                        <option value="chainsaw">
-                                                        <option value="chaliceofkings">
-                                                        <option value="chaliceofqueens">
-                                                        <option value="challengingshout">
-                                                        <option value="champy">
-                                                        <option value="changeweapon">
-                                                        <option value="chantofaccuracy">
-                                                        <option value="chantofinitiative">
-                                                        <option value="chaosblobpet">
-                                                        <option value="chaossplashpet">
-                                                        <option value="charge">
-                                                        <option value="chargebattery">
-                                                        <option value="chargedtrident">
-                                                        <option value="cheese">
-                                                        <option value="childofthestorm">
-                                                        <option value="chillinggaze">
-                                                        <option value="chompy">
-                                                        <option value="chumpy">
-                                                        <option value="circleofhealing">
-                                                        <option value="circuitoverload">
-                                                        <option value="citadel">
-                                                        <option value="clairvoyance">
-                                                        <option value="clairvoyanceitem">
-                                                        <option value="clairvoyanceitemb">
-                                                        <option value="clairvoyantscroll">
-                                                        <option value="clarity">
-                                                        <option value="clearinstructions">
-                                                        <option value="cleave">
-                                                        <option value="clergyamulet">
-                                                        <option value="cloackofevasion">
-                                                        <option value="cloackofspeed">
-                                                        <option value="cloudsong">
-                                                        <option value="club">
-                                                        <option value="coatofarms">
-                                                        <option value="coldbonegoblet">
-                                                        <option value="coldbook">
-                                                        <option value="coldfeet">
-                                                        <option value="coldrune">
-                                                        <option value="coldsnap">
-                                                        <option value="coldspark">
-                                                        <option value="coldsparkstart">
-                                                        <option value="colossalblow">
-                                                        <option value="combatbandages">
-                                                        <option value="combustion">
-                                                        <option value="commandandconquer">
-                                                        <option value="concussiveshotm">
-                                                        <option value="condemnation">
-                                                        <option value="consecrated">
-                                                        <option value="consecrationesp">
-                                                        <option value="continuumblade">
-                                                        <option value="coolingservos">
-                                                        <option value="corruptedblade">
-                                                        <option value="corruptedplate">
-                                                        <option value="craftgem">
-                                                        <option value="craftpanacea">
-                                                        <option value="craftpoison">
-                                                        <option value="crankcrossbow">
-                                                        <option value="crashlightningh">
-                                                        <option value="crescentlight">
-                                                        <option value="crescentmoon">
-                                                        <option value="crimsonraiment">
-                                                        <option value="crossbow">
-                                                        <option value="crusaderhelmet">
-                                                        <option value="crystalball">
-                                                        <option value="cuby">
-                                                        <option value="cubyd">
-                                                        <option value="culltheweakspecial">
-                                                        <option value="cupofdeath">
-                                                        <option value="curativetherapy">
-                                                        <option value="curseofagony">
-                                                        <option value="curseofdecay">
-                                                        <option value="curseofelements">
-                                                        <option value="curseofexhaustion">
-                                                        <option value="curseoffragility">
-                                                        <option value="curseofmadness">
-                                                        <option value="curseofshadows">
-                                                        <option value="curseoftorment">
-                                                        <option value="curseofvulnerability">
-                                                        <option value="curseofweakness">
-                                                        <option value="cursedcard">
-                                                        <option value="curseddagger">
-                                                        <option value="cursedjewelersring">
-                                                        <option value="cursemancy">
-                                                        <option value="cursenomicon">
-                                                        <option value="custodian">
-                                                        <option value="cycloneslashspecial">
-                                                        <option value="dagger">
-                                                        <option value="daley">
-                                                        <option value="darkblobpet">
-                                                        <option value="darkblow">
-                                                        <option value="darkconcoction">
-                                                        <option value="darkflashitem">
-                                                        <option value="darkfuture">
-                                                        <option value="darkhood">
-                                                        <option value="darkmiasma">
-                                                        <option value="darkoutbreak">
-                                                        <option value="darkpact">
-                                                        <option value="darkritual">
-                                                        <option value="darksplashpet">
-                                                        <option value="darkflamering">
-                                                        <option value="darknessfalls">
-                                                        <option value="dartpouch">
-                                                        <option value="dawnlight">
-                                                        <option value="deadlystrikes">
-                                                        <option value="deathcoil">
-                                                        <option value="deathsdoor">
-                                                        <option value="deathsembrace">
-                                                        <option value="deathsreach">
-                                                        <option value="debilitate">
-                                                        <option value="deepdarkness">
-                                                        <option value="defend">
-                                                        <option value="defensivestrategy">
-                                                        <option value="defiledlegacy">
-                                                        <option value="deflect">
-                                                        <option value="dejavu">
-                                                        <option value="delayresponse">
-                                                        <option value="demolishingblow">
-                                                        <option value="demonictutor">
-                                                        <option value="demoralizingshout">
-                                                        <option value="desertjam">
-                                                        <option value="desperateplayer">
-                                                        <option value="destiny">
-                                                        <option value="destroyergauntlets">
-                                                        <option value="detection">
-                                                        <option value="detoxpotion">
-                                                        <option value="detoxify">
-                                                        <option value="devastate">
-                                                        <option value="diamondring">
-                                                        <option value="dilute">
-                                                        <option value="dirtybandages">
-                                                        <option value="disengage">
-                                                        <option value="disintegrate">
-                                                        <option value="dislocatedjaw">
-                                                        <option value="dispelmagic">
-                                                        <option value="divinationorb">
-                                                        <option value="divinegrace">
-                                                        <option value="divinegracestart">
-                                                        <option value="divineguidance">
-                                                        <option value="divineinsight">
-                                                        <option value="divineire">
-                                                        <option value="divinepower">
-                                                        <option value="divineretribution">
-                                                        <option value="divinestrike">
-                                                        <option value="doityourself">
-                                                        <option value="doublebubble">
-                                                        <option value="doubleshot">
-                                                        <option value="doublestrike">
-                                                        <option value="downpouritem">
-                                                        <option value="dracomancerstaff">
-                                                        <option value="drainlife">
-                                                        <option value="dreamsphere">
-                                                        <option value="dreamcatcher">
-                                                        <option value="druidicamulet">
-                                                        <option value="dryadmask">
-                                                        <option value="dualstrike">
-                                                        <option value="dualwield">
-                                                        <option value="durandal">
-                                                        <option value="edgeoffury">
-                                                        <option value="eeriering">
-                                                        <option value="electricblobpet">
-                                                        <option value="electricdischarge">
-                                                        <option value="electricsaw">
-                                                        <option value="electricsplashpet">
-                                                        <option value="electricweapons">
-                                                        <option value="electricitymanual">
-                                                        <option value="electrocute">
-                                                        <option value="electroshock">
-                                                        <option value="elementalbolt">
-                                                        <option value="elementalproliferation">
-                                                        <option value="elementalward">
-                                                        <option value="elementalnovaspecial">
-                                                        <option value="elementalnovaspecialb">
-                                                        <option value="elvenagility">
-                                                        <option value="elvencuirass">
-                                                        <option value="elvenquiver">
-                                                        <option value="emberstorm">
-                                                        <option value="emberstormspecial">
-                                                        <option value="emeraldnecklace">
-                                                        <option value="emeraldstaff">
-                                                        <option value="enchantweapons">
-                                                        <option value="enchantment">
-                                                        <option value="enchantment2">
-                                                        <option value="encore">
-                                                        <option value="endlessabyss">
-                                                        <option value="endlessbag">
-                                                        <option value="energizingserenade">
-                                                        <option value="energyshield">
-                                                        <option value="enervate">
-                                                        <option value="enlightened">
-                                                        <option value="enrage">
-                                                        <option value="entomb">
-                                                        <option value="entrench">
-                                                        <option value="equivalentexchange">
-                                                        <option value="eternalcandle">
-                                                        <option value="eternallullaby">
-                                                        <option value="etherealknives">
-                                                        <option value="etherealweapons">
-                                                        <option value="evanescence">
-                                                        <option value="eviscerate">
-                                                        <option value="evocation">
-                                                        <option value="excaliburn">
-                                                        <option value="expectedprophecy">
-                                                        <option value="experttracker">
-                                                        <option value="experttrackerstart">
-                                                        <option value="exploitopenings">
-                                                        <option value="explosiveshot">
-                                                        <option value="exposearmor">
-                                                        <option value="fade">
-                                                        <option value="faeborgscale">
-                                                        <option value="faithring">
-                                                        <option value="falconshot">
-                                                        <option value="falconshotstart">
-                                                        <option value="familyjewels">
-                                                        <option value="fanofknives">
-                                                        <option value="fanaticism">
-                                                        <option value="farshot">
-                                                        <option value="faststrike">
-                                                        <option value="fatedfuture">
-                                                        <option value="feedtherich">
-                                                        <option value="feint">
-                                                        <option value="fenny">
-                                                        <option value="ferventring">
-                                                        <option value="fieryshield">
-                                                        <option value="fieryshieldstart">
-                                                        <option value="fierywand">
-                                                        <option value="fieryweapons">
-                                                        <option value="findweakness">
-                                                        <option value="fireblast">
-                                                        <option value="firebook">
-                                                        <option value="fireemberitem">
-                                                        <option value="firerune">
-                                                        <option value="fireball">
-                                                        <option value="fireproof">
-                                                        <option value="firestorm">
-                                                        <option value="firstaid">
-                                                        <option value="fishingrod">
-                                                        <option value="fistofthedamned">
-                                                        <option value="flail">
-                                                        <option value="flamestrike">
-                                                        <option value="flamingsword">
-                                                        <option value="flamy">
-                                                        <option value="flankingstrike">
-                                                        <option value="flare">
-                                                        <option value="flash">
-                                                        <option value="flashitem">
-                                                        <option value="flashfreeze">
-                                                        <option value="flashheal">
-                                                        <option value="flute">
-                                                        <option value="focusheal">
-                                                        <option value="followup">
-                                                        <option value="foresight">
-                                                        <option value="forestbanner">
-                                                        <option value="forestcrown">
-                                                        <option value="fortunetelling">
-                                                        <option value="fountainpen">
-                                                        <option value="fourleafclover">
-                                                        <option value="freelover">
-                                                        <option value="freezingink">
-                                                        <option value="freshmeatstart">
-                                                        <option value="freshmeatyogger">
-                                                        <option value="friendlytadpole">
-                                                        <option value="frightened">
-                                                        <option value="frostaxe">
-                                                        <option value="frostnova">
-                                                        <option value="frostweapons">
-                                                        <option value="frostbolt">
-                                                        <option value="frostfirering">
-                                                        <option value="frostguard">
-                                                        <option value="frozenarrows">
-                                                        <option value="frozencarp">
-                                                        <option value="frozenheirloom">
-                                                        <option value="frozenorb">
-                                                        <option value="frozentear">
-                                                        <option value="furiouscarp">
-                                                        <option value="furiousslash">
-                                                        <option value="fusionlaser">
-                                                        <option value="gardenofthorns">
-                                                        <option value="garnetearrings">
-                                                        <option value="gauntlets">
-                                                        <option value="geyser">
-                                                        <option value="gihlrunestone">
-                                                        <option value="gildedplate">
-                                                        <option value="givetothepoor">
-                                                        <option value="glacialhammer">
-                                                        <option value="gladiatorhelmet">
-                                                        <option value="gloves">
-                                                        <option value="glovesofagility">
-                                                        <option value="goblinamulet">
-                                                        <option value="goggles">
-                                                        <option value="goldcard">
-                                                        <option value="goldyshardscard">
-                                                        <option value="goldyshardscardb">
-                                                        <option value="goldchain">
-                                                        <option value="goldring">
-                                                        <option value="goldenbell">
-                                                        <option value="goldenchalice">
-                                                        <option value="goldencloak">
-                                                        <option value="goldencross">
-                                                        <option value="goldenharp">
-                                                        <option value="goldenlaurel">
-                                                        <option value="gorge">
-                                                        <option value="gourmetmeat">
-                                                        <option value="greaterheal">
-                                                        <option value="greaterhealthpotion">
-                                                        <option value="greatermanapotion">
-                                                        <option value="grimoireofflames">
-                                                        <option value="grindingwheel">
-                                                        <option value="groundslam">
-                                                        <option value="grudge">
-                                                        <option value="guard">
-                                                        <option value="guardianangel">
-                                                        <option value="hallucination">
-                                                        <option value="hamstring">
-                                                        <option value="handbook">
-                                                        <option value="harley">
-                                                        <option value="hawkeye">
-                                                        <option value="headbutt">
-                                                        <option value="heal">
-                                                        <option value="healingbook">
-                                                        <option value="healingrain">
-                                                        <option value="healingserenade">
-                                                        <option value="healingtotemh">
-                                                        <option value="healthpotion">
-                                                        <option value="heartamulet">
-                                                        <option value="heartofthorns">
-                                                        <option value="heatassimilationitem">
-                                                        <option value="heatlaser">
-                                                        <option value="heatlaserstart">
-                                                        <option value="heatsurge">
-                                                        <option value="heatwave">
-                                                        <option value="kiteshield">
-                                                        <option value="heavenlyblessing">
-                                                        <option value="heavenlyjustice">
-                                                        <option value="heavenlyprotection">
-                                                        <option value="heavybelt">
-                                                        <option value="heavymetal">
-                                                        <option value="heavypackage">
-                                                        <option value="heavystrike">
-                                                        <option value="hellmarkitem">
-                                                        <option value="hellblade">
-                                                        <option value="hellflame">
-                                                        <option value="helmet">
-                                                        <option value="helpinghand">
-                                                        <option value="heronscourage">
-                                                        <option value="hiddenhand">
-                                                        <option value="hiddenweapon">
-                                                        <option value="hightchancellorstaff">
-                                                        <option value="hitandrun">
-                                                        <option value="holyaegis">
-                                                        <option value="holyblast">
-                                                        <option value="holyblobpet">
-                                                        <option value="holybook">
-                                                        <option value="holycrusader">
-                                                        <option value="holyfire">
-                                                        <option value="holygrail">
-                                                        <option value="holyhammer">
-                                                        <option value="holynova">
-                                                        <option value="holyripple">
-                                                        <option value="holyrune">
-                                                        <option value="holyslashw">
-                                                        <option value="holysmite">
-                                                        <option value="holysmiteitem">
-                                                        <option value="holysplashpet">
-                                                        <option value="holystorm">
-                                                        <option value="divinireprotection">
-                                                        <option value="holysymbol">
-                                                        <option value="honorable">
-                                                        <option value="hornethelmet">
-                                                        <option value="hourglassofdeath">
-                                                        <option value="howl">
-                                                        <option value="howlpet">
-                                                        <option value="huntersmark">
-                                                        <option value="huntingring">
-                                                        <option value="hurryupitem">
-                                                        <option value="hydraegg">
-                                                        <option value="hypnoshell">
-                                                        <option value="icebarrier">
-                                                        <option value="icecomet">
-                                                        <option value="icelance">
-                                                        <option value="iceorb">
-                                                        <option value="iceshot">
-                                                        <option value="icebreaker">
-                                                        <option value="icicle">
-                                                        <option value="iciclebarrage">
-                                                        <option value="iciclelauncheritem">
-                                                        <option value="icyblobpet">
-                                                        <option value="icysplashpet">
-                                                        <option value="icyveins">
-                                                        <option value="icywand">
-                                                        <option value="ignidohscore">
-                                                        <option value="igniscloack">
-                                                        <option value="ignite">
-                                                        <option value="immolate">
-                                                        <option value="impstatuette">
-                                                        <option value="impale">
-                                                        <option value="improvedfireball">
-                                                        <option value="improvedlaser">
-                                                        <option value="improvedrapidfire">
-                                                        <option value="infestation">
-                                                        <option value="infuriate">
-                                                        <option value="infusecourage">
-                                                        <option value="innercombustion">
-                                                        <option value="innerfire">
-                                                        <option value="innervate">
-                                                        <option value="intercept">
-                                                        <option value="intimidate">
-                                                        <option value="invigoratingblow">
-                                                        <option value="invisibility">
-                                                        <option value="ironfortress">
-                                                        <option value="ironkanabo">
-                                                        <option value="ironwand">
-                                                        <option value="itchyburn">
-                                                        <option value="jadering">
-                                                        <option value="jewelersring">
-                                                        <option value="jinglebell">
-                                                        <option value="justicarring">
-                                                        <option value="killerinstinc">
-                                                        <option value="killerinstincstart">
-                                                        <option value="kingmaker">
-                                                        <option value="largeshield">
-                                                        <option value="lapisnecklace">
-                                                        <option value="largepouch">
-                                                        <option value="lastguardian">
-                                                        <option value="lasthope">
-                                                        <option value="lastrequiem">
-                                                        <option value="lastreward">
-                                                        <option value="laststand">
-                                                        <option value="lavablobpet">
-                                                        <option value="lavacrystal">
-                                                        <option value="lavaorb">
-                                                        <option value="lavapotion">
-                                                        <option value="lavasplashpet">
-                                                        <option value="layonpaws">
-                                                        <option value="layonpawsstart">
-                                                        <option value="leapslam">
-                                                        <option value="leatherarmor">
-                                                        <option value="leatherboots">
-                                                        <option value="leathergloves">
-                                                        <option value="lethalshot">
-                                                        <option value="liante">
-                                                        <option value="librarian">
-                                                        <option value="lifeessence">
-                                                        <option value="lifetap">
-                                                        <option value="lightfeet">
-                                                        <option value="lightbringer">
-                                                        <option value="lightningboltboon">
-                                                        <option value="lightningboltchallen">
-                                                        <option value="lightningboltitem">
-                                                        <option value="lightningbook">
-                                                        <option value="lightningrune">
-                                                        <option value="lightningspear">
-                                                        <option value="livingflame">
-                                                        <option value="lockpicks">
-                                                        <option value="longbow">
-                                                        <option value="lostmail">
-                                                        <option value="loveenhancer">
-                                                        <option value="lowselfesteem">
-                                                        <option value="luckypaw">
-                                                        <option value="lunaring">
-                                                        <option value="madnessring">
-                                                        <option value="magictome">
-                                                        <option value="magusstaff">
-                                                        <option value="maim">
-                                                        <option value="malediction">
-                                                        <option value="maledictionstart">
-                                                        <option value="maliciouseye">
-                                                        <option value="managem">
-                                                        <option value="manaloop">
-                                                        <option value="manapotion">
-                                                        <option value="manashield">
-                                                        <option value="manasurge">
-                                                        <option value="maneuver">
-                                                        <option value="martyrdom">
-                                                        <option value="massdispel">
-                                                        <option value="massinvisibility">
-                                                        <option value="matriarchsclaw">
-                                                        <option value="meat">
-                                                        <option value="meatbag">
-                                                        <option value="meditate">
-                                                        <option value="megabonk">
-                                                        <option value="megaphone">
-                                                        <option value="melodicrhythm">
-                                                        <option value="meltedplating">
-                                                        <option value="mentalshake">
-                                                        <option value="merchantbadge">
-                                                        <option value="merciful">
-                                                        <option value="merciless">
-                                                        <option value="mesmericmirage">
-                                                        <option value="metalblobpet">
-                                                        <option value="metalsplashpet">
-                                                        <option value="meteorshower">
-                                                        <option value="meteorite">
-                                                        <option value="mindblast">
-                                                        <option value="mindbook">
-                                                        <option value="mindtwist">
-                                                        <option value="mindvisions">
-                                                        <option value="minotaurhorn">
-                                                        <option value="mirrorimages">
-                                                        <option value="mirrorofkalandra">
-                                                        <option value="mixedsalad">
-                                                        <option value="mnemrunestone">
-                                                        <option value="moonfireitem">
-                                                        <option value="morningstar">
-                                                        <option value="mortalstrike">
-                                                        <option value="mountainking">
-                                                        <option value="mozzy">
-                                                        <option value="multishot">
-                                                        <option value="musicsheet">
-                                                        <option value="mysticstaff">
-                                                        <option value="necromancerrobe">
-                                                        <option value="necropotence">
-                                                        <option value="necroticburst">
-                                                        <option value="netherblade">
-                                                        <option value="neurotoxin">
-                                                        <option value="neverendingstory">
-                                                        <option value="neverfrost">
-                                                        <option value="nightterror">
-                                                        <option value="nightmare">
-                                                        <option value="nightveil">
-                                                        <option value="ninjascroll">
-                                                        <option value="nobleshield">
-                                                        <option value="noxiouseruption">
-                                                        <option value="nullifier">
-                                                        <option value="obsidiandagger">
-                                                        <option value="obsidianring">
-                                                        <option value="obsidianrod">
-                                                        <option value="oculy">
-                                                        <option value="odeofwar">
-                                                        <option value="oldhorseshoe">
-                                                        <option value="omenofperil">
-                                                        <option value="omnipotence">
-                                                        <option value="omniscience">
-                                                        <option value="onslaught">
-                                                        <option value="onyxamulet">
-                                                        <option value="opalring">
-                                                        <option value="openwound">
-                                                        <option value="orbofstorms">
-                                                        <option value="orby">
-                                                        <option value="osmiumfeet">
-                                                        <option value="overheatitem">
-                                                        <option value="overpower">
-                                                        <option value="owlblessing">
-                                                        <option value="painsupresion">
-                                                        <option value="paladingauntlets">
-                                                        <option value="palisadeitem">
-                                                        <option value="panacea">
-                                                        <option value="pandemonium">
-                                                        <option value="pandorasbox">
-                                                        <option value="panicscream">
-                                                        <option value="paralizingvenomitem">
-                                                        <option value="parry">
-                                                        <option value="pebblethrow">
-                                                        <option value="penance">
-                                                        <option value="penitencering">
-                                                        <option value="perseverance">
-                                                        <option value="pestilence">
-                                                        <option value="phoenix">
-                                                        <option value="piercinghowl">
-                                                        <option value="piggybank">
-                                                        <option value="pillage">
-                                                        <option value="piousring">
-                                                        <option value="plaguerat">
-                                                        <option value="plagueshot">
-                                                        <option value="platemail">
-                                                        <option value="platinumring">
-                                                        <option value="pointyhat">
-                                                        <option value="poisoncatalyst">
-                                                        <option value="poisondart">
-                                                        <option value="poisonflask">
-                                                        <option value="poisonsplashitem">
-                                                        <option value="poisonsplashitemb">
-                                                        <option value="poisonspray">
-                                                        <option value="poisoned">
-                                                        <option value="poisoneddagger">
-                                                        <option value="poisoneddaggers">
-                                                        <option value="poisonousbiteitem">
-                                                        <option value="poisonousblood">
-                                                        <option value="poisonousshot">
-                                                        <option value="pommel">
-                                                        <option value="powercoil">
-                                                        <option value="powerglove">
-                                                        <option value="powerslave">
-                                                        <option value="powerslavestart">
-                                                        <option value="praisethesun">
-                                                        <option value="prayerofhealing">
-                                                        <option value="prayerofprotection">
-                                                        <option value="precisestrike">
-                                                        <option value="premiummeat">
-                                                        <option value="prescription">
-                                                        <option value="primalnecklace">
-                                                        <option value="prismaticfield">
-                                                        <option value="profane">
-                                                        <option value="prophetstaff">
-                                                        <option value="protectspecial">
-                                                        <option value="protectfromevil">
-                                                        <option value="provoke">
-                                                        <option value="pufferfish">
-                                                        <option value="pulsingheal">
-                                                        <option value="pulverize">
-                                                        <option value="pummel">
-                                                        <option value="punch">
-                                                        <option value="puncture">
-                                                        <option value="purgethewicked">
-                                                        <option value="purgingray">
-                                                        <option value="purrification">
-                                                        <option value="pushforward">
-                                                        <option value="pyroblast">
-                                                        <option value="pyromancerrobe">
-                                                        <option value="quickshot">
-                                                        <option value="quill">
-                                                        <option value="quillrain">
-                                                        <option value="radiantassault">
-                                                        <option value="raggeddoll">
-                                                        <option value="raiderslicer">
-                                                        <option value="rain">
-                                                        <option value="rainofarrows">
-                                                        <option value="raincoat">
-                                                        <option value="raisemage">
-                                                        <option value="raisepriest">
-                                                        <option value="raisewarlock">
-                                                        <option value="rampage">
-                                                        <option value="rangerarmor">
-                                                        <option value="rapidfire">
-                                                        <option value="rapidshoots">
-                                                        <option value="ravenstaff">
-                                                        <option value="rayoffrost">
-                                                        <option value="rayofhope">
-                                                        <option value="razor">
-                                                        <option value="reactivelaser">
-                                                        <option value="recklesscharge">
-                                                        <option value="recurringnightmare">
-                                                        <option value="redcape">
-                                                        <option value="redstorm">
-                                                        <option value="redemption">
-                                                        <option value="redsteelcloack">
-                                                        <option value="reforgedcore">
-                                                        <option value="reinforcedarmor">
-                                                        <option value="reinforcedsteel">
-                                                        <option value="rejuvenationpotion">
-                                                        <option value="rend">
-                                                        <option value="renew">
-                                                        <option value="repairarmor">
-                                                        <option value="repetitiontraining">
-                                                        <option value="replenishment">
-                                                        <option value="reprisal">
-                                                        <option value="retaliator">
-                                                        <option value="revealingflask">
-                                                        <option value="reverberantverse">
-                                                        <option value="ricochet">
-                                                        <option value="ringoffire">
-                                                        <option value="ringofhope">
-                                                        <option value="ringofprotection">
-                                                        <option value="riposte">
-                                                        <option value="rob">
-                                                        <option value="roundshield">
-                                                        <option value="royalcoin">
-                                                        <option value="rubyamulet">
-                                                        <option value="rubycuirass">
-                                                        <option value="ruinbolt">
-                                                        <option value="runicdice">
-                                                        <option value="rupture">
-                                                        <option value="rustyarmor">
-                                                        <option value="sacredaxe">
-                                                        <option value="sacredbolt">
-                                                        <option value="sacredceremony">
-                                                        <option value="sacredtablet">
-                                                        <option value="safeguard">
-                                                        <option value="samuraiarmor">
-                                                        <option value="sanctification">
-                                                        <option value="sanctuary">
-                                                        <option value="sapphireamulet">
-                                                        <option value="sapphirering">
-                                                        <option value="sarcasticsonnet">
-                                                        <option value="sausagefactory">
-                                                        <option value="savantrobe">
-                                                        <option value="saveitforlater">
-                                                        <option value="sawblade">
-                                                        <option value="sawtoothknife">
-                                                        <option value="scarabshield">
-                                                        <option value="scaraby">
-                                                        <option value="scattershotm">
-                                                        <option value="scavenge">
-                                                        <option value="scholarrobe">
-                                                        <option value="scorchingheat">
-                                                        <option value="scorchingray">
-                                                        <option value="scrollofdefense">
-                                                        <option value="scrollofintellect">
-                                                        <option value="scrollofresurrection">
-                                                        <option value="scrollofspeed">
-                                                        <option value="scry">
-                                                        <option value="scryerstaff">
-                                                        <option value="searingblast">
-                                                        <option value="searingdagger">
-                                                        <option value="searingnova">
-                                                        <option value="searingtouch">
-                                                        <option value="seashellamulet">
-                                                        <option value="seashellring">
-                                                        <option value="secondwind">
-                                                        <option value="serenityring">
-                                                        <option value="serratedweapons">
-                                                        <option value="setup">
-                                                        <option value="severartery">
-                                                        <option value="severeburn">
-                                                        <option value="shacklesofwar">
-                                                        <option value="shadowbinding">
-                                                        <option value="shadowbolt">
-                                                        <option value="shadowbook">
-                                                        <option value="shadowcloack">
-                                                        <option value="shadowimbuement">
-                                                        <option value="shadowmend">
-                                                        <option value="shadoworb">
-                                                        <option value="shadowrune">
-                                                        <option value="shadowstep">
-                                                        <option value="shakeitoff">
-                                                        <option value="shardscard">
-                                                        <option value="sharingiscaring">
-                                                        <option value="sharpscimitar">
-                                                        <option value="sharpen">
-                                                        <option value="sharpenspecial">
-                                                        <option value="sharpeningknife">
-                                                        <option value="sharpy">
-                                                        <option value="shatter">
-                                                        <option value="shatteringfists">
-                                                        <option value="shieldbash">
-                                                        <option value="shieldbreaker">
-                                                        <option value="shieldcharge">
-                                                        <option value="shieldgeneratoritem">
-                                                        <option value="shieldofthorns">
-                                                        <option value="shieldofwarding">
-                                                        <option value="shieldslam">
-                                                        <option value="shieldstance">
-                                                        <option value="shieldthrow">
-                                                        <option value="shieldwall">
-                                                        <option value="shiftingscroll">
-                                                        <option value="shiningforce">
-                                                        <option value="shiv">
-                                                        <option value="shocknova">
-                                                        <option value="shortsword">
-                                                        <option value="shoulderplate">
-                                                        <option value="shrapnelshot">
-                                                        <option value="siegebreaker">
-                                                        <option value="silverchalice">
-                                                        <option value="silverring">
-                                                        <option value="simplehat">
-                                                        <option value="singingsword">
-                                                        <option value="siphonlife">
-                                                        <option value="skillful">
-                                                        <option value="skullsplitter">
-                                                        <option value="slice">
-                                                        <option value="slimy">
-                                                        <option value="slingshot">
-                                                        <option value="slippers">
-                                                        <option value="smallpouch">
-                                                        <option value="smokebomb">
-                                                        <option value="sneakpeek">
-                                                        <option value="sneakystrike">
-                                                        <option value="snipershot">
-                                                        <option value="soap">
-                                                        <option value="solring">
-                                                        <option value="solarflare">
-                                                        <option value="songofcelerity">
-                                                        <option value="songofquickness">
-                                                        <option value="soulharvest">
-                                                        <option value="soullantern">
-                                                        <option value="sparkoflife">
-                                                        <option value="spectralmissiles">
-                                                        <option value="spellecho">
-                                                        <option value="spiderqueeneye">
-                                                        <option value="spikedball">
-                                                        <option value="spikedbracers">
-                                                        <option value="spikedshield">
-                                                        <option value="spikedshoulderpads">
-                                                        <option value="spoiledmeat">
-                                                        <option value="sprint">
-                                                        <option value="spyglass">
-                                                        <option value="squall">
-                                                        <option value="squidtoken">
-                                                        <option value="stainlesscuirass">
-                                                        <option value="stampede">
-                                                        <option value="standardbearer">
-                                                        <option value="standardbearerstart">
-                                                        <option value="starfallitem">
-                                                        <option value="starfallottis">
-                                                        <option value="steadfastboots">
-                                                        <option value="steadfastshield">
-                                                        <option value="steelforge">
-                                                        <option value="steelrod">
-                                                        <option value="steelskin">
-                                                        <option value="stimulantpills">
-                                                        <option value="stockade">
-                                                        <option value="stoneamulet">
-                                                        <option value="stonemaul">
-                                                        <option value="stoneskin">
-                                                        <option value="stormitem">
-                                                        <option value="stormjavelin">
-                                                        <option value="stormtiara">
-                                                        <option value="stormwardspecial">
-                                                        <option value="stormwardspecialb">
-                                                        <option value="stormcallerfeather">
-                                                        <option value="stormy">
-                                                        <option value="strawhat">
-                                                        <option value="strongmojo">
-                                                        <option value="subterfuge">
-                                                        <option value="success">
-                                                        <option value="sunbeam">
-                                                        <option value="sunderarmor">
-                                                        <option value="superconductor">
-                                                        <option value="suppressionhelmet">
-                                                        <option value="surprisebox">
-                                                        <option value="surprisegiftbox">
-                                                        <option value="swap">
-                                                        <option value="sweepingstrike">
-                                                        <option value="sweetmelody">
-                                                        <option value="tabularasa">
-                                                        <option value="tabularasam">
-                                                        <option value="tacticalthinking">
-                                                        <option value="taintedrod">
-                                                        <option value="takecover">
-                                                        <option value="takingaimm">
-                                                        <option value="tantrumitem">
-                                                        <option value="targetshooting">
-                                                        <option value="tediouspoem">
-                                                        <option value="tempest">
-                                                        <option value="templeamulet">
-                                                        <option value="temporalchains">
-                                                        <option value="terrorring">
-                                                        <option value="terrorize">
-                                                        <option value="teslacoil">
-                                                        <option value="tesseract">
-                                                        <option value="theanvil">
-                                                        <option value="thechosenone">
-                                                        <option value="thedarkone">
-                                                        <option value="thedefiler">
-                                                        <option value="theencyclopedia">
-                                                        <option value="thejuggernaut">
-                                                        <option value="theone">
-                                                        <option value="thepolluter">
-                                                        <option value="theporcupine">
-                                                        <option value="theproficient">
-                                                        <option value="thewall">
-                                                        <option value="thewolfslayer">
-                                                        <option value="thermalamulet">
-                                                        <option value="thermalring">
-                                                        <option value="thorimsrod">
-                                                        <option value="thornyring">
-                                                        <option value="thousandneedles">
-                                                        <option value="throwbolas">
-                                                        <option value="thunderclap">
-                                                        <option value="thunderfuryspecial">
-                                                        <option value="tikimask">
-                                                        <option value="titanfall">
-                                                        <option value="titangauntlets">
-                                                        <option value="tomato">
-                                                        <option value="tombstone">
-                                                        <option value="tomeofintellect">
-                                                        <option value="topazring">
-                                                        <option value="torch">
-                                                        <option value="tormentofthorns">
-                                                        <option value="touristmap">
-                                                        <option value="toxicblobpet">
-                                                        <option value="toxicrain">
-                                                        <option value="toxicrainspecial">
-                                                        <option value="toxicsplashpet">
-                                                        <option value="toxicstrike">
-                                                        <option value="trace">
-                                                        <option value="transcribe">
-                                                        <option value="transfusion">
-                                                        <option value="transmision">
-                                                        <option value="treat">
-                                                        <option value="tremors">
-                                                        <option value="trick">
-                                                        <option value="trustwhorty">
-                                                        <option value="tuneup">
-                                                        <option value="turban">
-                                                        <option value="twilightswamp">
-                                                        <option value="twinblades">
-                                                        <option value="twinscrolls">
-                                                        <option value="twinscrollsstart">
-                                                        <option value="tyrantnecklace">
-                                                        <option value="undeathichor">
-                                                        <option value="undyingwill">
-                                                        <option value="unforgivingnature">
-                                                        <option value="unholyhammer">
-                                                        <option value="unholysmiteitem">
-                                                        <option value="unholystorm">
-                                                        <option value="unstablepower">
-                                                        <option value="untrustwhorty">
-                                                        <option value="unwaveringfaith">
-                                                        <option value="uproot">
-                                                        <option value="uselessletter">
-                                                        <option value="vaccine">
-                                                        <option value="valiantdefender">
-                                                        <option value="vampirictouch">
-                                                        <option value="vampirictutor">
-                                                        <option value="vanish">
-                                                        <option value="vengeance">
-                                                        <option value="vengeancestart">
-                                                        <option value="venomamulet">
-                                                        <option value="venomfang">
-                                                        <option value="venomflask">
-                                                        <option value="veteranarmor">
-                                                        <option value="vexingcrescendo">
-                                                        <option value="vigilance">
-                                                        <option value="vigorousfury">
-                                                        <option value="vigorousfurystart">
-                                                        <option value="vilegas">
-                                                        <option value="vilelance">
-                                                        <option value="vilering">
-                                                        <option value="viperring">
-                                                        <option value="viperstrike">
-                                                        <option value="virulentring">
-                                                        <option value="visionring">
-                                                        <option value="vitalize">
-                                                        <option value="vitalizingserenade">
-                                                        <option value="voidcrush">
-                                                        <option value="voidmemory">
-                                                        <option value="volcanicaxe">
-                                                        <option value="volley">
-                                                        <option value="voodoodoll">
-                                                        <option value="warbanner">
-                                                        <option value="wardrum">
-                                                        <option value="warhammer">
-                                                        <option value="warpaint">
-                                                        <option value="warriorcode">
-                                                        <option value="waterblobpet">
-                                                        <option value="waterjet">
-                                                        <option value="watersplashpet">
-                                                        <option value="watervase">
-                                                        <option value="weaponcache">
-                                                        <option value="weaponpouch">
-                                                        <option value="wellfed">
-                                                        <option value="whirlwind">
-                                                        <option value="whisperinglies">
-                                                        <option value="wickedcraftsman">
-                                                        <option value="wildhunt">
-                                                        <option value="windblessingitem">
-                                                        <option value="windblessingitemb">
-                                                        <option value="wingedwand">
-                                                        <option value="winteriscoming">
-                                                        <option value="winterorb">
-                                                        <option value="wintersnighttale">
-                                                        <option value="wolfguard">
-                                                        <option value="wolfskincloack">
-                                                        <option value="wolfy">
-                                                        <option value="woodencrosier">
-                                                        <option value="woollyhat">
-                                                        <option value="worldinflames">
-                                                        <option value="wreckingball">
-                                                        <option value="xulrunestone">
-                                                        <option value="yangritual">
-                                                        <option value="yggdrasilroot">
-                                                        <option value="yinritual">
-                                                        <option value="yinyangbadge">
-                                                        <option value="yinyangbolt">
-                                                        <option value="ylmerbranch">
-                                                        <option value="yoggercleaver">
-                                                        <option value="zap">
-                                                        <option value="zapm">
                                                     </datalist>
                                                 </div>
                                                 <span class="input-group-text text-secondary meds-bg-darker i border-start-0 custom">.png</span>
@@ -1484,7 +379,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card">
+                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card" id="col_autoplay">
                                             <div class="input-group flex-nowrap">
                                                 <div class="form-floating">
                                                     <select class="form-select" id="select_autoplay" meds-on-input="update-display">
@@ -1496,7 +391,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card">
+                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card" id="col_types_1">
                                             <div class="input-group flex-nowrap">
                                                 <div class="form-floating">
                                                     <input disabled type="text" class="form-control" id="text_card_type">
@@ -1505,7 +400,7 @@
                                                 <button id="btn_card_type_clear" class="btn btn-danger border-secondary mw-40px" type="button"><i class="bi bi-x-lg"></i></button>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card">
+                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card" id="col_types_2">
                                             <div class="input-group flex-nowrap">
                                                 <div class="form-floating">
                                                     <select class="form-select" meds-select-enums="CardType" id="select_card_type" meds-on-input="update-display">
@@ -1515,7 +410,7 @@
                                                 <button id="btn_card_type_add" class="btn btn-success border-secondary mw-40px" type="button"><i class="bi bi-plus-lg"></i></button>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card">
+                                        <div class="col col-6 col-lg-3 meds-xxl-20 show-group-card" id="col_requires">
                                             <div class="input-group flex-nowrap">
                                                 <div class="form-floating">
                                                     <select class="form-select" meds-select-enums="Aura, Curse" id="select_requires" meds-on-input="update-display">
@@ -1525,7 +420,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 show-group-card">
+                                        <div class="col col-12 col-md-6 col-lg-4 col-xl-3 show-group-card" id="col_resources">
                                             <div class="input-group flex-nowrap">
                                                 <span class="input-group-text">Resources</span>
                                                 <div class="form-floating">
@@ -1539,7 +434,7 @@
                                                 <span class="input-group-text px-3" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Doesn't appear to actually function ingame :(.">?</span>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-md-3 col-lg-1 meds-xxl-auto d-flex show-group-card">
+                                        <div class="col col-6 col-md-3 col-lg-1 meds-xxl-auto d-flex show-group-card" id="col_innate">
                                             <div class="my-auto ms-0 me-auto">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="check_innate" meds-on-input="update-display">
@@ -1549,7 +444,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-md-2 col-lg-1 meds-xxl-auto d-flex show-group-card">
+                                        <div class="col col-6 col-md-2 col-lg-1 meds-xxl-auto d-flex show-group-card" id="col_vanish">
                                             <div class="my-auto ms-0 me-auto">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="check_vanish" checked meds-on-input="update-display">
@@ -1559,13 +454,143 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col col-6 col-md-2 col-lg-1 meds-xxl-auto d-flex show-group-item">
+                                        <div class="col col-6 col-md-2 col-lg-1 meds-xxl-auto d-flex show-group-item" id="col_cursed">
                                             <div class="my-auto ms-0 me-auto">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="check_curseditem" meds-on-input="update-display">
                                                     <label class="form-check-label" for="check_curseditem">
                                                         Cursed
                                                     </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Energy & Target-->
+                        <div class="accordion-item show-group-card" id="accordion_group_energy_target">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-6" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-energy-target">
+                                    Energy &amp; Target
+                                </button>
+                            </h2>
+                            <div id="accordion-energy-target" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="row gx-4 gy-2 mb-2">
+                                        <div class="col col-12 col-md-6 col-lg-4 col-xl-3" id="col_energy">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text">Energy</span>
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="amount_energy_cost" min="0" max="99" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_energy_cost" class="fw-6">Cost</label>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="amount_energy_recharge" min="-10" max="99" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_energy_recharge" class="fw-6">Recharge</label>
+                                                </div>
+                                                <span class="input-group-text px-3" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Recharge: energy gain when card is played.">?</span>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6 col-md-4 col-lg-3">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="select_target_type" meds-on-input="update-display">
+                                                        <option selected="selected" value="Anyone">Anyone</option>
+                                                        <option value="Self">Self</option>
+                                                        <option value="AnyHero">Any Hero</option>
+                                                        <option value="OtherHero">Other Hero</option>
+                                                        <option value="AnyMonster">Any Monster</option>
+                                                        <option value="AllHeroes">All Heroes</option>
+                                                        <option value="AllMonsters">All Monsters</option>
+                                                        <option value="Global">Global</option>
+                                                    </select>
+                                                    <label for="select_target_type" class="fw-6">Target Type</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6 col-md-4 col-lg-3" id="col_target_position">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="form-floating">
+                                                    <select class="form-select" meds-select-enums="CardTargetPosition" id="select_target_position" meds-on-input="update-display">
+                                                    </select>
+                                                    <label for="select_target_position" class="fw-6">Target Position</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-4 gy-2" id="row_repeat">
+                                        <div class="col col-6 col-md-4 col-lg-3" id="col_repeat">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text">Repeat</span>
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="select_repeat" meds-on-input="update-display">
+                                                        <option selected="selected" value="NoRepeat">No Repeat</option>
+                                                        <option value="Overcharge">Overcharge</option>
+                                                        <option value="RepeatX">Repeat X</option>
+                                                        <option value="RepeatUpToX">Repeat Up To X</option>
+                                                    </select>
+                                                    <label for="select_repeat" class="fw-6">Repeat</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_amount">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="amount_repeat" min="1" max="99" step="1" value="1" meds-on-input="update-display">
+                                                    <label for="amount_repeat" class="fw-6">How many times?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_modifier">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="amount_repeat_modifier" min="-99" max="1000" step="5" value="50" meds-on-input="update-display">
+                                                    <label for="amount_repeat_modifier" class="fw-6">% increase per jump</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_target">
+                                            <div class="input-group flex-nowrap">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="select_repeat_target" meds-on-input="update-display">
+                                                        <option selected="selected" value="Same">Same</option>
+                                                        <option value="Random">Random</option>
+                                                    </select>
+                                                    <label for="select_repeat_target" class="fw-6">Repeat Target</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-12 visually-hidden" id="col_overcharge" style="max-width: 945px;">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text">Overcharge (per energy)</span>
+                                                <div class="form-floating">
+                                                    <select class="form-select" meds-select-enums="Aura, Curse" id="select_auracurse1_overcharge" meds-on-input="update-display">
+                                                        <option selected="selected" value="">None</option>
+                                                    </select>
+                                                    <label for="select_auracurse1_overcharge" class="fw-6">Aura/Curse 1</label>
+                                                </div>
+                                                <div class="form-floating mw-60px">
+                                                    <input type="number" class="form-control" id="amount_auracurse1_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_auracurse1_overcharge" class="fw-6">#</label>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <select class="form-select" meds-select-enums="Aura, Curse" id="select_auracurse2_overcharge" meds-on-input="update-display">
+                                                        <option selected="selected" value="">None</option>
+                                                    </select>
+                                                    <label for="select_auracurse1_overcharge" class="fw-6">Aura/Curse 2</label>
+                                                </div>
+                                                <div class="form-floating mw-90px">
+                                                    <input type="number" class="form-control" id="amount_auracurse2_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_auracurse2_overcharge" class="fw-6">#</label>
+                                                </div>
+                                                <div class="form-floating mw-90px">
+                                                    <input type="number" class="form-control" id="amount_damage_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_damage_overcharge" class="fw-6">Damage</label>
+                                                </div>
+                                                <div class="form-floating mw-90px">
+                                                    <input type="number" class="form-control" id="amount_healing_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
+                                                    <label for="amount_healing_overcharge" class="fw-6">Healing</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -2020,7 +1045,7 @@
                                                     <label for="amount_cardsreduced" class="fw-6">Cards to Reduce</label>
                                                 </div>
                                                 <div class="form-floating w-50">
-                                                    <select class="form-select meds-text-bg-darker" meds-select-enums="CardType" id="select_cardtoreducetype" meds-on-input="update-display">
+                                                    <select class="form-select meds-text-bg-darker" meds-select-enums="CardTypeFull" id="select_cardtoreducetype" meds-on-input="update-display">
                                                         <option selected="selected" value="None">Any</option>
                                                     </select>
                                                     <label for="select_cardtoreducetype" class="fw-6">Type</label>
@@ -2322,136 +1347,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Energy & Target-->
-                        <div class="accordion-item show-group-card">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-6" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-energy-target">
-                                    Energy &amp; Target
-                                </button>
-                            </h2>
-                            <div id="accordion-energy-target" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <div class="row gx-4 gy-2 mb-2">
-                                        <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
-                                            <div class="input-group flex-nowrap">
-                                                <span class="input-group-text">Energy</span>
-                                                <div class="form-floating">
-                                                    <input type="number" class="form-control" id="amount_energy_cost" min="0" max="99" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_energy_cost" class="fw-6">Cost</label>
-                                                </div>
-                                                <div class="form-floating">
-                                                    <input type="number" class="form-control" id="amount_energy_recharge" min="-10" max="99" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_energy_recharge" class="fw-6">Recharge</label>
-                                                </div>
-                                                <span class="input-group-text px-3" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Recharge: energy gain when card is played.">?</span>
-                                            </div>
-                                        </div>
-                                        <div class="col col-6 col-md-4 col-lg-3">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <select class="form-select" id="select_target_type" meds-on-input="update-display">
-                                                        <option selected="selected" value="Anyone">Anyone</option>
-                                                        <option value="Self">Self</option>
-                                                        <option value="AnyHero">Any Hero</option>
-                                                        <option value="OtherHero">Other Hero</option>
-                                                        <option value="AnyMonster">Any Monster</option>
-                                                        <option value="AllHeroes">All Heroes</option>
-                                                        <option value="AllMonsters">All Monsters</option>
-                                                        <option value="Global">Global</option>
-                                                    </select>
-                                                    <label for="select_target_type" class="fw-6">Target Type</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-6 col-md-4 col-lg-3" id="col_target_position">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <select class="form-select" meds-select-enums="CardTargetPosition" id="select_target_position" meds-on-input="update-display">
-                                                    </select>
-                                                    <label for="select_target_position" class="fw-6">Target Position</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row gx-4 gy-2">
-                                        <div class="col col-6 col-md-4 col-lg-3" id="col_repeat">
-                                            <div class="input-group flex-nowrap">
-                                                <span class="input-group-text">Repeat</span>
-                                                <div class="form-floating">
-                                                    <select class="form-select" id="select_repeat" meds-on-input="update-display">
-                                                        <option selected="selected" value="NoRepeat">No Repeat</option>
-                                                        <option value="Overcharge">Overcharge</option>
-                                                        <option value="RepeatX">Repeat X</option>
-                                                        <option value="RepeatUpToX">Repeat Up To X</option>
-                                                    </select>
-                                                    <label for="select_repeat" class="fw-6">Repeat</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_amount">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <input type="number" class="form-control" id="amount_repeat" min="1" max="99" step="1" value="1" meds-on-input="update-display">
-                                                    <label for="amount_repeat" class="fw-6">How many times?</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_modifier">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <input type="number" class="form-control" id="amount_repeat_modifier" min="-99" max="1000" step="5" value="50" meds-on-input="update-display">
-                                                    <label for="amount_repeat_modifier" class="fw-6">% increase per jump</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-6 col-md-4 col-lg-3 visually-hidden" id="col_repeat_target">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <select class="form-select" id="select_repeat_target" meds-on-input="update-display">
-                                                        <option selected="selected" value="Same">Same</option>
-                                                        <option value="Random">Random</option>
-                                                    </select>
-                                                    <label for="select_repeat_target" class="fw-6">Repeat Target</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-12 visually-hidden" id="col_overcharge" style="max-width: 945px;">
-                                            <div class="input-group flex-nowrap">
-                                                <span class="input-group-text">Overcharge (per energy)</span>
-                                                <div class="form-floating">
-                                                    <select class="form-select" meds-select-enums="Aura, Curse" id="select_auracurse1_overcharge" meds-on-input="update-display">
-                                                        <option selected="selected" value="">None</option>
-                                                    </select>
-                                                    <label for="select_auracurse1_overcharge" class="fw-6">Aura/Curse 1</label>
-                                                </div>
-                                                <div class="form-floating mw-60px">
-                                                    <input type="number" class="form-control" id="amount_auracurse1_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_auracurse1_overcharge" class="fw-6">#</label>
-                                                </div>
-                                                <div class="form-floating">
-                                                    <select class="form-select" meds-select-enums="Aura, Curse" id="select_auracurse2_overcharge" meds-on-input="update-display">
-                                                        <option selected="selected" value="">None</option>
-                                                    </select>
-                                                    <label for="select_auracurse1_overcharge" class="fw-6">Aura/Curse 2</label>
-                                                </div>
-                                                <div class="form-floating mw-90px">
-                                                    <input type="number" class="form-control" id="amount_auracurse2_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_auracurse2_overcharge" class="fw-6">#</label>
-                                                </div>
-                                                <div class="form-floating mw-90px">
-                                                    <input type="number" class="form-control" id="amount_damage_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_damage_overcharge" class="fw-6">Damage</label>
-                                                </div>
-                                                <div class="form-floating mw-90px">
-                                                    <input type="number" class="form-control" id="amount_healing_overcharge" min="0" max="100" step="1" value="0" meds-on-input="update-display">
-                                                    <label for="amount_healing_overcharge" class="fw-6">Healing</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <!--Draw, Look, Discard & Discover-->
                         <div class="accordion-item show-group-card">
                             <h2 class="accordion-header">
@@ -2997,7 +1893,7 @@
                                         <div class="col col-12 col-md-6 col-lg-4 col-xl-3 show-group-card">
                                             <div class="input-group flex-nowrap">
                                                 <div class="form-floating">
-                                                    <select class="form-select" meds-select-enums="SoundPreAction" id="select_sound_pre_action" meds-on-input="update-display">
+                                                    <select class="form-select" meds-select-enums="Sound" id="select_sound_pre_action" meds-on-input="update-display">
                                                         <option selected="selected" value="">None</option>
                                                     </select>
                                                     <label for="select_sound_pre_action" class="fw-6">SoundPreAction</label>
@@ -3504,22 +2400,6 @@
                                                 <div class="form-floating">
                                                     <input type="number" class="form-control" id="amount_effect_trail_speed" min="0" max="5" step="0.1" value="0" meds-on-input="update-display">
                                                     <label for="amount_effect_trail_speed" class="fw-6">EffectTrailSpeed</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="text_item" meds-on-input="update-display">
-                                                    <label for="text_item" class="fw-6">Item</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="input-group flex-nowrap">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="text_item_enchantment" meds-on-input="update-display">
-                                                    <label for="text_item_enchantment" class="fw-6">Item Enchantment</label>
                                                 </div>
                                             </div>
                                         </div>

@@ -44,6 +44,11 @@ body {
     text-shadow: 0 0 2px #D59812, 0 0 2px #D59812, 0 0 2px #D59812, 0 0 2px #D59812;
 }
 
+.meds-text-purple-shadow {
+    font-weight: 700;
+    text-shadow: 0 0 2px #E380FF, 0 0 2px #E380FF, 0 0 2px #E380FF, 0 0 2px #E380FF;
+}
+
 .meds-bg-darkest {
     background-color: var(--meds-darkest-bg) !important;
 }
@@ -593,4 +598,94 @@ button.btn {
 	--bs-modal-title-line-height: #{$modal-title-line-height};
 	--bs-modal-footer-gap: #{$modal-footer-margin-between};
 	--bs-modal-footer-border-width: #{$modal-footer-border-width};*/
+}
+
+.popover {
+    max-width: 600px !important;
+}
+
+ul {
+    padding-left: 18px !important;
+}
+
+div.my-2 ul, div.mt-2 ul {
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+}
+
+div.my-2 ul li, div.mt-2 ul li {
+    margin-bottom: 4px !important;
+}
+
+div.j ul li {
+    text-align: justify;
+}
+
+.shimmer-jank {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.1);
+    background: -webkit-gradient(linear, left top, right bottom, from(#840), to(#840), color-stop(0.5, #D3BE1D));
+    background: -moz-gradient(linear, left top, right bottom, from(#840), to(#840), color-stop(0.5, #D3BE1D));
+    background: gradient(linear, left top, right bottom, from(#840), to(#840), color-stop(0.5, #D3BE1D));
+    -webkit-background-size: 150px 100%;
+    -moz-background-size: 150px 100%;
+    background-size: 150px 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-animation-name: shimmer-jank;
+    -moz-animation-name: shimmer-jank;
+    animation-name: shimmer-jank;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-direction: alternate;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #840;
+}
+
+@-moz-keyframes shimmer-jank {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
+}
+
+@-webkit-keyframes shimmer-jank {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
+}
+
+@-o-keyframes shimmer-jank {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
+}
+
+@keyframes shimmer-jank {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
 }

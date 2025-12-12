@@ -18,27 +18,32 @@ const optimalNodes = [
     new optimalNode("sen_6", "Betty", "event", ["e_sen6_b"], "Senenthia"),
     new optimalNode("sen_9", "Farm Corral", "combat", [], "Senenthia"),
     new optimalNode("secta_2", "Corridor", "combat", [], "Senenthia"),
-    new optimalNode("sen_19", "Northern Plains", "combat", [], "Senenthia"),
-    new optimalNode("sen_37", "Soldier Trainer", "event", ["e_sen37_a"], "Senenthia"),
-    new optimalNode("sen_28", "South Fang Gate", "combat", [], "Senenthia"),
+    new optimalNode("sen_47", "Eldritch Rift", "event", ["e_sen47_a"], "Senenthia"),
+    new optimalNode("sen_23", "Forest Border", "combat", [], "Senenthia"),
+    new optimalNode("sen_26", "River Path", "combat", [], "Senenthia"),
+    new optimalNode("sen_43", "Forest", "event", ["e_sen43_a"], "Senenthia"),
+    new optimalNode("sen_32", "Forest Deeps", "combat", [], "Senenthia"),
 
     // Aquarfall: 7 corruptors
     new optimalNode("aqua_4", "East Path", "combat", [], "Aquarfall"),
     new optimalNode("aqua_12", "Patrol Point", "combat", [], "Aquarfall"),
     new optimalNode("aqua_10", "Creeper Bridge", "combat", [], "Aquarfall"),
     new optimalNode("aqua_15", "Poisonous Zone", "combat", [], "Aquarfall"),
+    new optimalNode("aqua_46", "Eldritch Rift", "event", ["e_aquar46_a"], "Aquarfall"),
     new optimalNode("spider_3", "Cave Passage", "combat", [], "Aquarfall"),
     new optimalNode("spider_4", "Cave Center", "combat", [], "Aquarfall"),
     new optimalNode("aqua_33", "Temple Ruins", "combat", [], "Aquarfall"),
 
-    // Faeborg: 2 events, 6 corruptors
+    // Faeborg: 3 events, 7 corruptors
     new optimalNode("faen_7", "Monster Trainer", "event", ["e_faen7_a"], "Faeborg"),
     new optimalNode("faen_8", "Shore", "combat", [], "Faeborg"),
     new optimalNode("faen_14", "Closed Gate", "combat", [], "Faeborg"),
     new optimalNode("faen_24", "City Gates", "combat", [], "Faeborg"),
     new optimalNode("faen_40", "Binks/Charls", "event", ["e_faen40_a", "e_faen40_b"], "Faeborg"),
     new optimalNode("sewers_2", "Corridor", "combat", [], "Faeborg"),
-    new optimalNode("sewers_12", "Drain", "combat", [], "Faeborg"),
+    new optimalNode("sewers_13", "Ice", "event", ["e_sewers13_a"], "Faeborg"),
+    new optimalNode("sewers_6", "Corridor", "combat", [], "Faeborg"),
+    new optimalNode("sewers_7", "Drain", "combat", [], "Faeborg"),
     new optimalNode("faen_37", "Palace Stairs", "combat", [], "Faeborg"),
 
     // Velkarath: 6 corruptors
@@ -47,9 +52,30 @@ const optimalNodes = [
     new optimalNode("velka_13", "Stone Staircase", "combat", [], "Velkarath"),
     new optimalNode("forge_1", "Corridor", "combat", [], "Velkarath"), // using upper path because it's more consistent
     new optimalNode("velka_28", "Stone Bridge", "combat", [], "Velkarath"),
+    new optimalNode("velka_38", "Bridge", "event", ["e_velka38_a"], "Velkarath"),
     new optimalNode("velka_31", "Volcano Summit", "combat", [], "Velkarath"),
 
-    // Ulminin: TBD!
+    // Ulminin: 4 events, 6 corruptors
+    new optimalNode("ulmin_4", "Desert", "combat", [], "Ulminin"),
+    new optimalNode("ulmin_13", "Bridges", "event", ["e_ulmin13_a"], "Ulminin"),
+    new optimalNode("ulmin_11", "Cliff Trail", "combat", [], "Ulminin"),
+    new optimalNode("ulmin_12", "Binks/Charls", "event", ["e_ulmin12_a", "e_ulmin12_b"], "Ulminin"),
+    // nvm this one is 100% spawn? new optimalNode("ulmin_19", "Heron Head", "event", ["e_ulmin19_a"], "Ulminin"),
+    new optimalNode("ulmin_61", "Eldritch Rift", "event", ["e_ulmin61_a"], "Ulminin"),
+    new optimalNode("ulmin_26", "Pyramid Entrance", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("ulmin_31", "Great Pyramid", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("pyr_0", "Entrance", "combat", [], "Ulminin"),
+    new optimalNode("pyr_1", "Corridor", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("pyr_10", "Arsenal", "combat", [], "Ulminin"),
+    new optimalNode("pyr_5", "Corridor", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("pyr_6", "Desert", "combat", [], "Ulminin"),
+    new optimalNode("pyr_12", "Stairs", "event", ["e_pyr12_a"], "Ulminin"),
+    // 100% spawn; new optimalNode("pyr_7", "Great Hall", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("pyr_8", "Portal", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("ulmin_57", "Portal", "combat", [], "Ulminin"),
+    new optimalNode("ulmin_54", "Hall", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("ulmin_56", "Great Hall", "combat", [], "Ulminin"),
+    // 100% spawn; new optimalNode("ulmin_40", "Ulminin Obelisk", "combat", [], "Ulminin"),
 
     // Voidlow: 1 event, 5 corruptors
     new optimalNode("voidlow_2", "Ruins", "combat", [], "Voidlow"),
@@ -64,11 +90,26 @@ const optimalNodes = [
     new optimalNode("voidhigh_10", "Ruins", "combat", [], "Voidhigh")
 ];
 
-const optimalNodeList = ["sen_0", "sen_41", "sen_44", "sen_2", "sen_6", "sen_9", "sen_39", "sen_12", "secta_0", "secta_1", "secta_2", "secta_6", "secta_7", "secta_5", "secta_8", "sen_19", "sen_37", "sen_25", "sen_28", "sen_27", "sen_45", "sen_33", "sen_34", "aqua_0", "aqua_1", "aqua_4", "aqua_8", "aqua_12", "aqua_11", "aqua_10", "aqua_13", "aqua_15", "aqua_16", "spider_1", "spider_3", "spider_4", "spider_6", "spider_8", "spider_9", "aqua_32", "aqua_33", "aqua_35", "velka_0", "velka_1", "velka_2", "velka_5", "velka_12", "velka_13", "velka_16", "velka_17", "forge_0", "forge_9", "forge_1", "forge_3", "forge_5", "forge_6", "forge_7", "velka_29", "velka_28", "velka_31", "velka_32", "velka_33", "faen_0", "faen_1", "faen_3", "faen_7", "faen_8", "faen_14", "faen_19", "faen_24", "faen_32", "faen_40", "faen_28", "sewers_1", "sewers_2", "sewers_10", "sewers_12", "sewers_8", "sewers_9", "faen_36", "faen_37", "faen_38", "faen_39", "voidlow_0", "voidlow_1", "voidlow_2", "voidlow_4", "voidlow_9", "voidlow_10", "voidlow_27", "voidlow_19", "voidlow_21", "voidlow_22", "voidlow_25", "voidlow_26", "voidhigh_0", "voidhigh_2", "voidhigh_4", "voidhigh_6", "voidhigh_8", "voidhigh_10", "voidhigh_12", "voidhigh_13"];
+const optimalNodeCount = {
+    "senenthia": 24,
+    "aquarfall": 21,
+    "velkarath": 21,
+    "faeborg": 22,
+    "ulminin": 23,
+    "voidlow": 12,
+    "voidhigh": 8
+}
 
-const fullNodeList = ["sen_0", "sen_1", "sen_2", "sen_3", "sen_4", "sen_5", "sen_6", "sen_7", "sen_8", "sen_9", "sen_10", "sen_11", "sen_12", "sen_13", "sen_14", "sen_15", "sen_16", "sen_17", "sen_18", "sen_19", "sen_20", "sen_21", "sen_22", "sen_23", "sen_24", "sen_25", "sen_26", "sen_27", "sen_28", "sen_29", "sen_30", "sen_31", "sen_32", "sen_33", "sen_34", "sen_35", "sen_36", "sen_37", "sen_38", "sen_39", "sen_40", "sen_41", "sen_42", "sen_43", "sen_44", "sen_45", "sen_46", "secta_0", "secta_1", "secta_2", "secta_3", "secta_4", "secta_5", "secta_6", "secta_7", "secta_8", "aqua_0", "aqua_1", "aqua_2", "aqua_3", "aqua_4", "aqua_5", "aqua_6", "aqua_7", "aqua_8", "aqua_9", "aqua_10", "aqua_11", "aqua_12", "aqua_13", "aqua_14", "aqua_15", "aqua_16", "aqua_17", "aqua_18", "aqua_19", "aqua_20", "aqua_21", "aqua_22", "aqua_23", "aqua_24", "aqua_25", "aqua_26", "aqua_27", "aqua_28", "aqua_29", "aqua_30", "aqua_31", "aqua_32", "aqua_33", "aqua_34", "aqua_35", "aqua_36", "aqua_37", "aqua_38", "aqua_39", "aqua_40", "aqua_41", "aqua_42", "aqua_43", "spider_0", "spider_1", "spider_2", "spider_3", "spider_4", "spider_5", "spider_6", "spider_7", "spider_8", "spider_9", "velka_0", "velka_1", "velka_2", "velka_3", "velka_4", "velka_5", "velka_6", "velka_7", "velka_8", "velka_9", "velka_10", "velka_11", "velka_12", "velka_13", "velka_14", "velka_15", "velka_16", "velka_17", "velka_18", "velka_19", "velka_20", "velka_21", "velka_22", "velka_23", "velka_24", "velka_25", "velka_26", "velka_27", "velka_28", "velka_29", "velka_30", "velka_31", "velka_32", "velka_33", "velka_34", "velka_35", "velka_36", "forge_0", "forge_1", "forge_2", "forge_3", "forge_4", "forge_5", "forge_6", "forge_7", "forge_8", "forge_9", "faen_0", "faen_1", "faen_2", "faen_3", "faen_4", "faen_5", "faen_6", "faen_7", "faen_8", "faen_9", "faen_10", "faen_11", "faen_12", "faen_13", "faen_14", "faen_15", "faen_16", "faen_17", "faen_18", "faen_19", "faen_20", "faen_21", "faen_22", "faen_23", "faen_24", "faen_25", "faen_26", "faen_27", "faen_28", "faen_29", "faen_30", "faen_31", "faen_32", "faen_33", "faen_34", "faen_35", "faen_36", "faen_37", "faen_38", "faen_39", "faen_40", "sewers_0", "sewers_1", "sewers_2", "sewers_3", "sewers_4", "sewers_5", "sewers_6", "sewers_7", "sewers_8", "sewers_9", "sewers_10", "sewers_11", "sewers_12", "ulmin_0", "ulmin_1", "ulmin_2", "ulmin_3", "ulmin_4", "ulmin_5", "ulmin_6", "ulmin_7", "ulmin_8", "ulmin_9", "ulmin_10", "ulmin_11", "ulmin_12", "ulmin_13", "ulmin_14", "ulmin_15", "ulmin_16", "ulmin_17", "ulmin_18", "ulmin_19", "ulmin_20", "ulmin_21", "ulmin_22", "ulmin_23", "ulmin_24", "ulmin_25", "ulmin_26", "ulmin_27", "ulmin_28", "ulmin_29", "ulmin_30", "ulmin_31", "ulmin_32", "ulmin_33", "ulmin_34", "ulmin_35", "ulmin_36", "ulmin_37", "ulmin_38", "ulmin_39", "ulmin_40", "ulmin_41", "ulmin_42", "ulmin_43", "ulmin_44", "ulmin_45", "ulmin_46", "ulmin_47", "ulmin_48", "ulmin_49", "ulmin_50", "ulmin_51", "ulmin_52", "ulmin_53", "ulmin_54", "ulmin_55", "ulmin_56", "ulmin_57", "ulmin_58", "pyr_0", "pyr_1", "pyr_2", "pyr_3", "pyr_4", "pyr_5", "pyr_6", "pyr_7", "pyr_8", "pyr_9", "pyr_10", "pyr_11", "voidlow_0", "voidlow_1", "voidlow_2", "voidlow_3", "voidlow_4", "voidlow_5", "voidlow_6", "voidlow_7", "voidlow_8", "voidlow_9", "voidlow_10", "voidlow_11", "voidlow_12", "voidlow_13", "voidlow_14", "voidlow_15", "voidlow_16", "voidlow_17", "voidlow_18", "voidlow_19", "voidlow_20", "voidlow_21", "voidlow_22", "voidlow_23", "voidlow_24", "voidlow_25", "voidlow_26", "voidlow_27", "voidlow_28", "voidhigh_0", "voidhigh_1", "voidhigh_2", "voidhigh_3", "voidhigh_4", "voidhigh_5", "voidhigh_6", "voidhigh_7", "voidhigh_8", "voidhigh_9", "voidhigh_10", "voidhigh_11", "voidhigh_12", "voidhigh_13", "voidhigh_14", "voidhigh_15"];
+const optimalNodeList = ["sen_0", "sen_41", "sen_44", "sen_2", "sen_6", "sen_9", "sen_39", "sen_12", "secta_0", "secta_1", "secta_2", "secta_6", "secta_7", "secta_5", "secta_8", "sen_47", "sen_21", "sen_23", "sen_26", "sen_31", "sen_43", "sen_32", "sen_33", "sen_34", "velka_0", "velka_1", "velka_2", "velka_5", "velka_12", "velka_13", "velka_16", "velka_17", "forge_0", "forge_9", "forge_1", "forge_3", "forge_5", "forge_6", "forge_7", "velka_29", "velka_28", "velka_38", "velka_31", "velka_32", "velka_33", "aqua_0", "aqua_1", "aqua_4", "aqua_8", "aqua_12", "aqua_11", "aqua_10", "aqua_13", "aqua_15", "aqua_46", "aqua_16", "spider_1", "spider_3", "spider_4", "spider_6", "spider_8", "spider_9", "aqua_32", "aqua_33", "aqua_35", "aqua_36", "faen_0", "faen_1", "faen_3", "faen_7", "faen_8", "faen_14", "faen_19", "faen_24", "faen_32", "faen_40", "faen_28", "sewers_1", "sewers_2", "sewers_13", "sewers_6", "sewers_7", "sewers_8", "sewers_9", "faen_36", "faen_37", "faen_38", "faen_39", "ulmin_0", "ulmin_1", "ulmin_4", "ulmin_8", "ulmin_13", "ulmin_11", "ulmin_12", "ulmin_19", "ulmin_61", "ulmin_26", "ulmin_31", "pyr_0", "pyr_1", "pyr_10", "pyr_5", "pyr_6", "pyr_12", "pyr_7", "pyr_8", "ulmin_57", "ulmin_54", "ulmin_56", "ulmin_40", "voidlow_0", "voidlow_1", "voidlow_2", "voidlow_4", "voidlow_9", "voidlow_10", "voidlow_27", "voidlow_19", "voidlow_21", "voidlow_22", "voidlow_25", "voidlow_26", "voidhigh_0", "voidhigh_2", "voidhigh_4", "voidhigh_6", "voidhigh_8", "voidhigh_10", "voidhigh_12", "voidhigh_13"];
 
-const corruptorIndex = ["bloodpuddle", "bloodpuddlea", "bloodpuddleb", "chaospuddle", "chaospuddlea", "chaospuddleb", "colorfulpuddle", "colorfulpuddlea", "colorfulpuddleb", "colorfulpuddlerare", "darkpuddle", "darkpuddlea", "darkpuddleb", "deathgrip", "deathgripa", "deathgripb", "electricpuddle", "electricpuddlea", "electricpuddleb", "holypuddle", "holypuddlea", "holypuddleb", "icypuddle", "icypuddlea", "icypuddleb", "lavapuddle", "lavapuddlea", "lavapuddleb", "lonelyblob", "lonelybloba", "lonelyblobb", "lonelyblobrare", "metalpuddle", "metalpuddlea", "metalpuddleb", "spookynight", "spookynighta", "spookynightb", "sugarrush", "sugarrusha", "sugarrushb", "toxicpuddle", "toxicpuddlea", "toxicpuddleb", "trickortreat", "trickortreata", "trickortreatb", "waterpuddle", "waterpuddlea", "waterpuddleb", "armageddon", "armageddona", "armageddonb", "armageddonrare", "ashysky", "ashyskya", "ashyskyb", "ashyskyrare", "backlash", "backlasha", "backlashb", "backlashrare", "bomblottery", "bomblotterya", "bomblotteryb", "bomblotteryrare", "burningweapons", "burningweaponsa", "burningweaponsb", "burningweaponsrare", "chaoticwind", "chaoticwinda", "chaoticwindb", "chaoticwindrare", "coldfront", "coldfronta", "coldfrontb", "empower", "empowera", "empowerb", "empowerrare", "forestallies", "forestalliesa", "forestalliesb", "fungaloutbreak", "fungaloutbreaka", "fungaloutbreakb", "fungaloutbreakrare", "heavenlyarmaments", "heavenlyarmamentsa", "heavenlyarmamentsb", "heavenlyarmamentsrare", "heavyweaponry", "heavyweaponrya", "heavyweaponryb", "heavyweaponryrare", "hexproof", "hexproofa", "hexproofb", "hexproofrare", "hypotermia", "hypotermiaa", "hypotermiab", "hypotermiarare", "ironclad", "ironclada", "ironcladb", "ironcladrare", "lavabursts", "lavaburstsa", "lavaburstsb", "livingforest", "livingforesta", "livingforestb", "livingforestrare", "meatfeast", "meatfeasta", "meatfeastb", "melancholy", "melancholya", "melancholyb", "melancholyrare", "noxiousparasites", "noxiousparasitesa", "noxiousparasitesb", "noxiousparasitesrare", "pacifism", "pacifisma", "pacifismb", "pacifismrare", "poisonfields", "poisonfieldsa", "poisonfieldsb", "poisonfieldsrare", "putrefaction", "putrefactiona", "putrefactionb", "putrefactionrare", "resurrection", "resurrectiona", "resurrectionb", "resurrectionrare", "revenge", "revengea", "revengeb", "revengerare", "rosegarden", "rosegardena", "rosegardenb", "rosegardenrare", "sacredground", "sacredgrounda", "sacredgroundb", "sacredgroundrare", "snowfall", "snowfalla", "snowfallb", "snowfallrare", "starrynight", "starrynighta", "starrynightb", "starrynightrare", "subzero", "subzeroa", "subzerob", "subzerorare", "thornproliferation", "thornproliferationa", "thornproliferationb", "thornproliferationrare", "thunderstorm", "thunderstorma", "thunderstormb", "thunderstormrare", "upwind", "upwinda", "upwindb", "upwindrare", "vigorous", "vigorousa", "vigorousb", "vigorousrare", "windsofamnesia", "windsofamnesiaa", "windsofamnesiab", "windsofamnesiarare"];
+const fullNodeList = ["sen_0", "sen_41", "sen_44", "sen_1", "sen_2", "sen_3", "sen_4", "sen_5", "sen_6", "sen_7", "sen_8", "sen_39", "sen_9", "sen_10", "sen_11", "sen_40", "sen_42", "sen_12", "sen_47", "sen_13", "sen_35", "sen_14", "sen_15", "sen_16", "sen_17", "sen_18", "sen_48", "sen_19", "sen_36", "sen_37", "sen_20", "sen_21", "sen_22", "sen_23", "sen_24", "sen_25", "sen_26", "sen_28", "sen_27", "sen_45", "sen_46", "sen_38", "sen_29", "sen_30", "sen_31", "sen_43", "sen_32", "sen_33", "sen_34", "secta_0", "secta_1", "secta_2", "secta_3", "secta_4", "secta_5", "secta_6", "secta_7", "secta_8", "aqua_0", "aqua_1", "aqua_2", "aqua_3", "aqua_4", "aqua_5", "aqua_6", "aqua_7", "aqua_8", "aqua_9", "aqua_10", "aqua_11", "aqua_12", "aqua_13", "aqua_14", "aqua_15", "aqua_16", "aqua_17", "aqua_18", "aqua_19", "aqua_20", "aqua_21", "aqua_22", "aqua_23", "aqua_24", "aqua_25", "aqua_26", "aqua_27", "aqua_28", "aqua_29", "aqua_30", "aqua_31", "aqua_32", "aqua_33", "aqua_34", "aqua_35", "aqua_36", "aqua_37", "aqua_38", "aqua_39", "aqua_40", "aqua_41", "aqua_42", "aqua_43", "aqua_44", "aqua_45", "aqua_46", "aqua_47", "spider_0", "spider_1", "spider_2", "spider_3", "spider_4", "spider_5", "spider_6", "spider_7", "spider_8", "spider_9", "velka_0", "velka_1", "velka_2", "velka_3", "velka_4", "velka_5", "velka_6", "velka_7", "velka_8", "velka_9", "velka_10", "velka_11", "velka_12", "velka_13", "velka_14", "velka_15", "velka_16", "velka_17", "velka_18", "velka_19", "velka_20", "velka_21", "velka_22", "velka_23", "velka_24", "velka_25", "velka_26", "velka_27", "velka_28", "velka_29", "velka_30", "velka_31", "velka_32", "velka_33", "velka_34", "velka_35", "velka_36", "velka_37", "velka_38", "velka_39", "velka_40", "forge_0", "forge_1", "forge_2", "forge_3", "forge_4", "forge_5", "forge_6", "forge_7", "forge_8", "forge_9", "faen_0", "faen_1", "faen_2", "faen_3", "faen_4", "faen_5", "faen_6", "faen_7", "faen_8", "faen_9", "faen_10", "faen_11", "faen_12", "faen_13", "faen_14", "faen_15", "faen_16", "faen_17", "faen_18", "faen_19", "faen_20", "faen_21", "faen_22", "faen_23", "faen_24", "faen_25", "faen_26", "faen_27", "faen_28", "faen_29", "faen_30", "faen_31", "faen_32", "faen_33", "faen_34", "faen_35", "faen_36", "faen_37", "faen_38", "faen_39", "faen_40", "faen_41", "faen_42", "faen_43", "sewers_0", "sewers_1", "sewers_2", "sewers_3", "sewers_4", "sewers_5", "sewers_6", "sewers_7", "sewers_8", "sewers_9", "sewers_10", "sewers_11", "sewers_12", "sewers_13", "ulmin_0", "ulmin_1", "ulmin_2", "ulmin_3", "ulmin_4", "ulmin_5", "ulmin_6", "ulmin_7", "ulmin_8", "ulmin_9", "ulmin_10", "ulmin_11", "ulmin_12", "ulmin_13", "ulmin_14", "ulmin_15", "ulmin_16", "ulmin_17", "ulmin_18", "ulmin_19", "ulmin_20", "ulmin_21", "ulmin_22", "ulmin_23", "ulmin_24", "ulmin_25", "ulmin_26", "ulmin_27", "ulmin_28", "ulmin_29", "ulmin_30", "ulmin_31", "ulmin_32", "ulmin_33", "ulmin_34", "ulmin_35", "ulmin_36", "ulmin_37", "ulmin_38", "ulmin_39", "ulmin_40", "ulmin_41", "ulmin_42", "ulmin_43", "ulmin_44", "ulmin_45", "ulmin_46", "ulmin_47", "ulmin_48", "ulmin_49", "ulmin_50", "ulmin_51", "ulmin_52", "ulmin_53", "ulmin_54", "ulmin_55", "ulmin_56", "ulmin_57", "ulmin_58", "ulmin_59", "ulmin_60", "ulmin_61", "pyr_0", "pyr_1", "pyr_2", "pyr_3", "pyr_4", "pyr_5", "pyr_6", "pyr_7", "pyr_8", "pyr_9", "pyr_10", "pyr_11", "pyr_12", "voidlow_0", "voidlow_1", "voidlow_2", "voidlow_3", "voidlow_4", "voidlow_5", "voidlow_6", "voidlow_7", "voidlow_8", "voidlow_9", "voidlow_10", "voidlow_11", "voidlow_12", "voidlow_13", "voidlow_14", "voidlow_15", "voidlow_16", "voidlow_17", "voidlow_18", "voidlow_19", "voidlow_20", "voidlow_21", "voidlow_22", "voidlow_23", "voidlow_24", "voidlow_25", "voidlow_26", "voidlow_27", "voidlow_28", "voidhigh_0", "voidhigh_1", "voidhigh_2", "voidhigh_3", "voidhigh_4", "voidhigh_5", "voidhigh_6", "voidhigh_7", "voidhigh_8", "voidhigh_9", "voidhigh_10", "voidhigh_11", "voidhigh_12", "voidhigh_13", "voidhigh_14", "voidhigh_15"];
+
+const corruptorIndex = Object.freeze({
+    easy: ["christmastree", "christmastreea", "christmastreeb", "holynight", "holynighta", "holynightb", "thegrinch", "thegrincha", "thegrinchb", "threeghost", "threeghosta", "threeghostb", "bloodpuddle", "bloodpuddlea", "bloodpuddleb", "chaospuddle", "chaospuddlea", "chaospuddleb", "colorfulpuddle", "colorfulpuddlea", "colorfulpuddleb", "colorfulpuddlerare", "darkpuddle", "darkpuddlea", "darkpuddleb", "deathgrip", "deathgripa", "deathgripb", "electricpuddle", "electricpuddlea", "electricpuddleb", "holypuddle", "holypuddlea", "holypuddleb", "icypuddle", "icypuddlea", "icypuddleb", "lavapuddle", "lavapuddlea", "lavapuddleb", "lonelyblob", "lonelybloba", "lonelyblobb", "lonelyblobrare", "metalpuddle", "metalpuddlea", "metalpuddleb", "spookynight", "spookynighta", "spookynightb", "sugarrush", "sugarrusha", "sugarrushb", "toxicpuddle", "toxicpuddlea", "toxicpuddleb", "trickortreat", "trickortreata", "trickortreatb", "waterpuddle", "waterpuddlea", "waterpuddleb", "armageddon", "armageddona", "armageddonb", "armageddonrare", "ashysky", "ashyskya", "ashyskyb", "ashyskyrare", "backlash", "backlasha", "backlashb", "backlashrare", "bomblottery", "bomblotterya", "bomblotteryb", "bomblotteryrare", "burningweapons", "burningweaponsa", "burningweaponsb", "burningweaponsrare", "chaoticwind", "chaoticwinda", "chaoticwindb", "chaoticwindrare", "coldfront", "coldfronta", "coldfrontb", "empower", "empowera", "empowerb", "empowerrare", "forestallies", "forestalliesa", "forestalliesb", "fungaloutbreak", "fungaloutbreaka", "fungaloutbreakb", "fungaloutbreakrare", "heavenlyarmaments", "heavenlyarmamentsa", "heavenlyarmamentsb", "heavenlyarmamentsrare", "heavyweaponry", "heavyweaponrya", "heavyweaponryb", "heavyweaponryrare", "hexproof", "hexproofa", "hexproofb", "hexproofrare", "hypotermia", "hypotermiaa", "hypotermiab", "hypotermiarare", "ironclad", "ironclada", "ironcladb", "ironcladrare", "lavabursts", "lavaburstsa", "lavaburstsb", "livingforest", "livingforesta", "livingforestb", "livingforestrare", "meatfeast", "meatfeasta", "meatfeastb", "melancholy", "melancholya", "melancholyb", "melancholyrare", "noxiousparasites", "noxiousparasitesa", "noxiousparasitesb", "noxiousparasitesrare", "pacifism", "pacifisma", "pacifismb", "pacifismrare", "poisonfields", "poisonfieldsa", "poisonfieldsb", "poisonfieldsrare", "putrefaction", "putrefactiona", "putrefactionb", "putrefactionrare", "resurrection", "resurrectiona", "resurrectionb", "resurrectionrare", "revenge", "revengea", "revengeb", "revengerare", "rosegarden", "rosegardena", "rosegardenb", "rosegardenrare", "sacredground", "sacredgrounda", "sacredgroundb", "sacredgroundrare", "snowfall", "snowfalla", "snowfallb", "snowfallrare", "starrynight", "starrynighta", "starrynightb", "starrynightrare", "subzero", "subzeroa", "subzerob", "subzerorare", "thornproliferation", "thornproliferationa", "thornproliferationb", "thornproliferationrare", "thunderstorm", "thunderstorma", "thunderstormb", "thunderstormrare", "upwind", "upwinda", "upwindb", "upwindrare", "vigorous", "vigorousa", "vigorousb", "vigorousrare", "windsofamnesia", "windsofamnesiaa", "windsofamnesiab", "windsofamnesiarare"],
+    average: ["christmastree", "christmastreea", "christmastreeb", "thegrinch", "thegrincha", "thegrinchb", "threeghost", "threeghosta", "threeghostb", "bloodpuddle", "bloodpuddlea", "bloodpuddleb", "chaospuddle", "chaospuddlea", "chaospuddleb", "colorfulpuddle", "colorfulpuddlea", "colorfulpuddleb", "colorfulpuddlerare", "darkpuddle", "darkpuddlea", "darkpuddleb", "deathgrip", "deathgripa", "deathgripb", "electricpuddle", "electricpuddlea", "electricpuddleb", "holypuddle", "holypuddlea", "holypuddleb", "icypuddle", "icypuddlea", "icypuddleb", "lavapuddle", "lavapuddlea", "lavapuddleb", "metalpuddle", "metalpuddlea", "metalpuddleb", "sugarrush", "sugarrusha", "sugarrushb", "toxicpuddle", "toxicpuddlea", "toxicpuddleb", "trickortreat", "trickortreata", "trickortreatb", "waterpuddle", "waterpuddlea", "waterpuddleb", "armageddon", "armageddona", "armageddonb", "armageddonrare", "ashysky", "ashyskya", "ashyskyb", "ashyskyrare", "backlash", "backlasha", "backlashb", "backlashrare", "burningweapons", "burningweaponsa", "burningweaponsb", "burningweaponsrare", "chaoticwind", "chaoticwinda", "chaoticwindb", "chaoticwindrare", "coldfront", "coldfronta", "coldfrontb", "empower", "empowera", "empowerb", "empowerrare", "forestallies", "forestalliesa", "forestalliesb", "fungaloutbreak", "fungaloutbreaka", "fungaloutbreakb", "fungaloutbreakrare", "heavenlyarmaments", "heavenlyarmamentsa", "heavenlyarmamentsb", "heavenlyarmamentsrare", "heavyweaponry", "heavyweaponrya", "heavyweaponryb", "heavyweaponryrare", "hexproof", "hexproofa", "hexproofb", "hexproofrare", "hypotermia", "hypotermiaa", "hypotermiab", "hypotermiarare", "lavabursts", "lavaburstsa", "lavaburstsb", "livingforest", "livingforesta", "livingforestb", "livingforestrare", "meatfeast", "meatfeasta", "meatfeastb", "melancholy", "melancholya", "melancholyb", "melancholyrare", "noxiousparasites", "noxiousparasitesa", "noxiousparasitesb", "noxiousparasitesrare", "pacifism", "pacifisma", "pacifismb", "pacifismrare", "poisonfields", "poisonfieldsa", "poisonfieldsb", "poisonfieldsrare", "putrefaction", "putrefactiona", "putrefactionb", "putrefactionrare", "resurrection", "resurrectiona", "resurrectionb", "resurrectionrare", "revenge", "revengea", "revengeb", "revengerare", "sacredground", "sacredgrounda", "sacredgroundb", "sacredgroundrare", "snowfall", "snowfalla", "snowfallb", "snowfallrare", "starrynight", "starrynighta", "starrynightb", "starrynightrare", "subzero", "subzeroa", "subzerob", "subzerorare", "thornproliferation", "thornproliferationa", "thornproliferationb", "thornproliferationrare", "thunderstorm", "thunderstorma", "thunderstormb", "thunderstormrare", "upwind", "upwinda", "upwindb", "upwindrare"],
+    hard: ["thegrinch", "thegrincha", "thegrinchb", "threeghost", "threeghosta", "threeghostb", "bloodpuddle", "bloodpuddlea", "bloodpuddleb", "chaospuddle", "chaospuddlea", "chaospuddleb", "darkpuddle", "darkpuddlea", "darkpuddleb", "deathgrip", "deathgripa", "deathgripb", "electricpuddle", "electricpuddlea", "electricpuddleb", "holypuddle", "holypuddlea", "holypuddleb", "icypuddle", "icypuddlea", "icypuddleb", "lavapuddle", "lavapuddlea", "lavapuddleb", "metalpuddle", "metalpuddlea", "metalpuddleb", "sugarrush", "sugarrusha", "sugarrushb", "toxicpuddle", "toxicpuddlea", "toxicpuddleb", "waterpuddle", "waterpuddlea", "waterpuddleb", "armageddon", "armageddona", "armageddonb", "armageddonrare", "ashysky", "ashyskya", "ashyskyb", "ashyskyrare", "backlash", "backlasha", "backlashb", "backlashrare", "forestallies", "forestalliesa", "forestalliesb", "heavenlyarmaments", "heavenlyarmamentsa", "heavenlyarmamentsb", "heavenlyarmamentsrare", "heavyweaponry", "heavyweaponrya", "heavyweaponryb", "heavyweaponryrare", "hexproof", "hexproofa", "hexproofb", "hexproofrare", "livingforest", "livingforesta", "livingforestb", "livingforestrare", "meatfeast", "meatfeasta", "meatfeastb", "melancholy", "melancholya", "melancholyb", "melancholyrare", "noxiousparasites", "noxiousparasitesa", "noxiousparasitesb", "noxiousparasitesrare", "poisonfields", "poisonfieldsa", "poisonfieldsb", "poisonfieldsrare", "putrefaction", "putrefactiona", "putrefactionb", "putrefactionrare", "resurrection", "resurrectiona", "resurrectionb", "resurrectionrare", "revenge", "revengea", "revengeb", "revengerare", "snowfall", "snowfalla", "snowfallb", "snowfallrare", "subzero", "subzeroa", "subzerob", "subzerorare", "thornproliferation", "thornproliferationa", "thornproliferationb", "thornproliferationrare", "upwind", "upwinda", "upwindb", "upwindrare"],
+    extreme: ["threeghost", "threeghosta", "threeghostb", "holypuddle", "holypuddlea", "holypuddleb", "sugarrush", "sugarrusha", "sugarrushb", "armageddon", "armageddona", "armageddonb", "armageddonrare", "heavenlyarmaments", "heavenlyarmamentsa", "heavenlyarmamentsb", "heavenlyarmamentsrare", "heavyweaponry", "heavyweaponrya", "heavyweaponryb", "heavyweaponryrare", "melancholy", "melancholya", "melancholyb", "melancholyrare", "noxiousparasites", "noxiousparasitesa", "noxiousparasitesb", "noxiousparasitesrare", "subzero", "subzeroa", "subzerob", "subzerorare", "thornproliferation", "thornproliferationa", "thornproliferationb", "thornproliferationrare"]
+});
 
 const zoneList = ["senenthia", "aquarfall", "velkarath", "faeborg", "ulminin", "voidlow", "voidhigh"];
 
@@ -95,6 +136,7 @@ const subclassIndex = Object.freeze({
     "priest": "Ottis",
     "prophet": "Nezglekt",
     "pyromancer": "Cornelius",
+    "queen": "Amelia",
     "ranger": "Andrin",
     "sentinel": "Heiner",
     "voodoowitch": "Malukah",
@@ -125,7 +167,7 @@ var maxCorruptorScore = {};
 
 $(document).ready(function () {
     document.title = "AtO Seed Checker";
-    $("#loading_data").text("AtO v1.2.1 data has loaded!");
+    $("#loading_data").text("AtO v1.3.01 data has loaded!");
     $("#loading_data").addClass("fw-5");
     $("#text_seed").on('keyup', function () {
         $("#text_seed").val($("#text_seed").val().toUpperCase());
@@ -213,10 +255,10 @@ $(document).ready(function () {
                     var combatID = nodeData[curNodeID].NodeCombat[0];
                     unyRandom.initState(GetDeterministicHashCode(curNodeID + seed));
                     var stringList = [];
-                    for (var index = 0; index < corruptorIndex.length; ++index) {
+                    for (var index = 0; index < corruptorIndex[$("#select_minimum_corruptor").val()].length; ++index) {
                         //console.log(index);
-                        if (!corruptorData[corruptorIndex[index]].OnlyInWeekly) {
-                            stringList.push(corruptorIndex[index]);
+                        if (!corruptorData[corruptorIndex[$("#select_minimum_corruptor").val()][index]].OnlyInWeekly) {
+                            stringList.push(corruptorIndex[$("#select_minimum_corruptor").val()][index]);
                         };
                     };
                     var flag3 = false;
@@ -355,20 +397,20 @@ $(document).ready(function () {
                     switch (corruptorData[curNode.outcome].CardRarity) {
                         case "Common":
                             typeof combatCommon[zone] === "undefined" ? combatCommon[zone] = 1 : combatCommon[zone]++;
-                            result = corruptorData[curNode.outcome].CardName + `<span class="i ms-1 text-secondary">(Easy)</span>`;
+                            result = `<a tabindex="0" class="meds-link" card-display="` + curNode.outcome + `">` + corruptorData[curNode.outcome].CardName + `</a><span class="i ms-1 text-secondary">(Easy)</span>`;
                             break;
                         case "Uncommon":
                             typeof combatUncommon[zone] === "undefined" ? combatUncommon[zone] = 1 : combatUncommon[zone]++;
-                            result = corruptorData[curNode.outcome].CardName + `<span class="i ms-1 text-success">(Average)</span>`;
+                            result = `<a tabindex="0" class="meds-link" card-display="` + curNode.outcome + `">` + corruptorData[curNode.outcome].CardName + `</a><span class="i ms-1 text-success">(Average)</span>`;
                             break;
                         case "Rare":
                             typeof combatRare[zone] === "undefined" ? combatRare[zone] = 1 : combatRare[zone]++;
-                            result = corruptorData[curNode.outcome].CardName + `<span class="i ms-1 text-primary">(Hard)</span>`;
+                            result = `<a tabindex="0" class="meds-link" card-display="` + curNode.outcome + `">` + corruptorData[curNode.outcome].CardName + `</a><span class="i ms-1 text-primary">(Hard)</span>`;
                             resultColor = " text-bg-primary";
                             break;
                         case "Epic":
                             typeof combatEpic[zone] === "undefined" ? combatEpic[zone] = 1 : combatEpic[zone]++;
-                            result = corruptorData[curNode.outcome].CardName + `<span class="i ms-1 meds-text-epic">(Extreme)</span>`;
+                            result = `<a tabindex="0" class="meds-link" card-display="` + curNode.outcome + `">` + corruptorData[curNode.outcome].CardName + `</a><span class="i ms-1 meds-text-epic">(Extreme)</span>`;
                             break;
                     }
                     var optNode = optimalNodes.find(n => { return n.ID == curNode.nodeID });
@@ -502,7 +544,7 @@ $(document).ready(function () {
             var newHTML = totalEvents[zone] == 0 ? "" : `<span class="text-` + (optimalEvents[zone] == totalEvents[zone] ? `success` : `danger`) + `">` + optimalEvents[zone] + `/` + totalEvents[zone] + ` events</span>, ` + `<span class="text-` + (combatMissing[zone] == 0 ? `success` : `danger`) + `">` + doneCombats[zone] + `/` + totalCombats[zone] + ` corruptors</span> (<span class="meds-text-epic">` + combatEpic[zone] + ` Extreme</span>, <span class="text-primary">` + combatRare[zone] + ` Hard</span>, <span class="text-success">` + combatUncommon[zone] + ` Average</span>, <span class="text-secondary">` + combatCommon[zone] + ` Easy</span>)`;
             $('[data-bs-target="#accordion-' + zone + '"] div span.ms-auto.me-2').html(newHTML);
             newHTML = `<tr><th scope="row" class="fw-7">` + zoneName[zone] + `</th>
-    <td class="fw-5 text-` + (missingNodes[zone] == 0 ? `success` : `danger`) + `">` + missingNodes[zone] + `</td>
+    <td class="fw-5 text-` + (missingNodes[zone] == 0 ? `success` : `danger`) + `">` + (optimalNodeCount[zone] - missingNodes[zone]) + `/` + optimalNodeCount[zone] + `</td>
     <td class="fw-5 text-` + (eventMissing[zone] == 0 ? `success` : `danger`) + `">` + optimalEvents[zone] + `/` + totalEvents[zone] + `</td>
     <td class="fw-5 text-` + (combatMissing[zone] == 0 ? `success` : `danger`) + `">` + doneCombats[zone] + `/` + totalCombats[zone] + `</td>
     <td class="fw-5 meds-text-epic">` + combatEpic[zone] + `</td>
@@ -559,7 +601,7 @@ $(document).ready(function () {
                 <th scope="row" class="fw-7 i">
                     <a id="total-row-tooltip" class="meds-link" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="${sZoneNames.join(", ")}">Total</a>
                 </th>
-                <td class="i">${iMissingNodes}</td>
+                <td class="i">${iMissingNodes} missing</td>
                 <td class="i">${iOptimalEvents}/${iTotalEvents}</td>
                 <td class="i">${iDoneCombats}/${iTotalCombats}</td>
                 <td class="i">${iCombatEpic}</td>
@@ -571,6 +613,21 @@ $(document).ready(function () {
         `;
         $("#summary-tbody").append(extrHTML);
         const tooltip = bootstrap.Tooltip.getOrCreateInstance('#total-row-tooltip');
+        $("[card-display]").popover({
+            html: true,
+            content: function () {
+                var content = `<img src="AtO_images/fullcard/` + $(this).attr("card-display") + `.png"/>`;
+                return content;
+            },
+            title: function () {
+                if ($(this).is("[card-name]")) {
+                    return `<div class="text-center">` + $(this).attr("card-name") + `</div>`;
+                } else {
+                    return `<div class="text-center">` + $(this).text() + `</div>`;
+                };
+            },
+            trigger: 'focus hover'
+        });
         $(".accordion.visually-hidden").removeClass("visually-hidden");
 
     });
@@ -584,6 +641,7 @@ $(document).ready(function () {
         } else {
             localStorage.setItem("check_nodes_all", true);
         };
+        $("#btn_checkseed").click();
     });
     $("#check_nodes_all").on('change', function () {
         if (localStorage.getItem("check_nodes_all") == "true") {
@@ -591,6 +649,7 @@ $(document).ready(function () {
         } else {
             localStorage.setItem("check_nodes_all", true);
         };
+        $("#btn_checkseed").click();
     });
     if (localStorage.getItem("check_nodes_all") === "false") { $("#check_nodes_optimal").prop('checked', true); };
 
@@ -615,6 +674,11 @@ $(document).ready(function () {
         $("#btn_checkseed").click();
     });
 
+    if (localStorage.hasOwnProperty("select_minimum_corruptor")) { $("#select_minimum_corruptor").val(localStorage.getItem("select_minimum_corruptor")); };
+    $("#select_minimum_corruptor").on('change', function () {
+        localStorage.setItem("select_minimum_corruptor", $("#select_minimum_corruptor").val());
+        $("#btn_checkseed").click();
+    });
 
     $("#btn_checkseed").prop("disabled", false);
 });
@@ -637,7 +701,7 @@ function deletePropertiesByType(obj, type) {
     Object.keys(obj).forEach(key => {
         switch (type) {
             case "eventReply":
-                newobj[key] = (({ DustCost, GoldCost, ReplyActionText, RequiredClass, Requirement, RequirementBlocked, RequirementCard, RequirementItem, RequirementMultiplayer, RequirementSku, SSCombat, SSEvent, SSExperienceReward, SSNodeTravel, SSCCombat, SSCEvent, SSCExperienceReward, SSCNodeTravel, FLCombat, FLEvent, FLExperienceReward, FLNodeTravel, FLCCombat, FLCEvent, FLCExperienceReward, FLCNodeTravel }) => ({ DustCost, GoldCost, ReplyActionText, RequiredClass, Requirement, RequirementBlocked, RequirementCard, RequirementItem, RequirementMultiplayer, RequirementSku, SSCombat, SSEvent, SSExperienceReward, SSNodeTravel, SSCCombat, SSCEvent, SSCExperienceReward, SSCNodeTravel, FLCombat, FLEvent, FLExperienceReward, FLNodeTravel, FLCCombat, FLCEvent, FLCExperienceReward, FLCNodeTravel }))(obj[key]);
+                newobj[key] = (({ ReplyActionText, RequiredClass, Requirement, SSExperienceReward, SSCExperienceReward, FLExperienceReward, FLCExperienceReward }) => ({ ReplyActionText, RequiredClass, Requirement, SSExperienceReward, SSCExperienceReward, FLExperienceReward, FLCExperienceReward }))(obj[key]);
                 break;
             case "event":
                 newobj[key] = (({ EventID, EventName, EventSpriteMap, EventTier, Replies, RequiredClass, Requirement }) => ({ EventID, EventName, EventSpriteMap, EventTier, Replies, RequiredClass, Requirement }))(obj[key]);
@@ -656,5 +720,10 @@ function deletePropertiesByType(obj, type) {
                 break;
         };
     });
-    return newobj;
+    var json = JSON.stringify(newobj, undefined, 4);
+    var w = window.open();
+    var html = "<head><style>pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; } .string { color: green; } ";
+    html += " .number { color: darkorange; } .boolean { color: blue; } .null { color: magenta; } .key { color: red; }</style></head><body>";
+    html += "<pre>" + json + "</pre>";
+    w.document.writeln(html)
 };
